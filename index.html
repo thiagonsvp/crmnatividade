@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
 <style>
 /* ── THEMES ─────────────────────────────────────────────────────────────────── */
 [data-theme="dark"] {
@@ -306,6 +307,36 @@ select.form-control option{background:var(--card)}
   .modal{border-radius:14px;max-height:96vh}
   .page-title{font-size:15px}
 }
+
+/* ── KANBAN ──────────────────────────────────────────────────────────────────── */
+.kanban-board{display:flex;gap:14px;overflow-x:auto;padding-bottom:12px;align-items:flex-start;min-height:60vh}
+.kanban-board::-webkit-scrollbar{height:5px}
+.kanban-col{flex:0 0 260px;background:var(--card2);border:1px solid var(--border);border-radius:14px;display:flex;flex-direction:column;overflow:hidden;transition:.2s;box-shadow:0 2px 8px var(--shadow)}
+.kanban-col.drag-over{border-color:var(--accent);box-shadow:0 0 0 2px rgba(79,142,247,.25),0 4px 16px var(--shadow)}
+.kanban-col-header{padding:13px 14px 11px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border);background:linear-gradient(135deg,rgba(79,142,247,.05),transparent)}
+.kanban-col-title{font-family:'Syne',sans-serif;font-size:13px;font-weight:700;display:flex;align-items:center;gap:7px}
+.kanban-count{background:var(--border);color:var(--text2);font-size:11px;font-weight:600;padding:2px 8px;border-radius:20px;min-width:22px;text-align:center}
+.kanban-cards{flex:1;padding:10px;display:flex;flex-direction:column;gap:8px;min-height:80px;max-height:calc(100vh - 280px);overflow-y:auto}
+.kanban-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:12px;cursor:grab;transition:.18s;position:relative;animation:fadeUp .25s ease;box-shadow:0 1px 4px var(--shadow)}
+.kanban-card:hover{border-color:var(--accent);box-shadow:0 4px 14px var(--shadow);transform:translateY(-2px)}
+.kanban-card.dragging{opacity:.45;cursor:grabbing;transform:scale(.97)}
+.kanban-card-name{font-weight:600;font-size:13px;margin-bottom:6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.kanban-card-phone{font-size:11px;color:var(--text2);margin-bottom:8px}
+.kanban-card-badges{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:8px}
+.kanban-card-footer{display:flex;justify-content:space-between;align-items:center;padding-top:7px;border-top:1px solid var(--border);margin-top:2px}
+.kanban-card-date{font-size:10px;color:var(--text2)}
+.kanban-card-actions{display:flex;gap:4px}
+.kanban-card-actions button{background:none;border:none;cursor:pointer;color:var(--text2);padding:2px 4px;border-radius:4px;font-size:12px;transition:.12s}
+.kanban-card-actions button:hover{color:var(--accent);background:rgba(79,142,247,.1)}
+.kanban-empty{text-align:center;padding:24px 10px;color:var(--text2);font-size:12px;opacity:.6}
+.kanban-drop-hint{border:2px dashed var(--accent);border-radius:8px;height:60px;background:rgba(79,142,247,.04);display:none;align-items:center;justify-content:center;color:var(--accent);font-size:12px}
+.kanban-col.drag-over .kanban-drop-hint{display:flex}
+/* column accent lines */
+.col-prospecto .kanban-col-header{border-top:3px solid #8892a4}
+.col-qualificado .kanban-col-header{border-top:3px solid var(--accent)}
+.col-proposta .kanban-col-header{border-top:3px solid #a78bfa}
+.col-fechado .kanban-col-header{border-top:3px solid var(--green)}
+.col-perdido .kanban-col-header{border-top:3px solid var(--red)}
 </style>
 </head>
 <body>
@@ -435,26 +466,18 @@ select.form-control option{background:var(--card)}
         </div>
       </div>
 
-      <!-- LEADS -->
+      <!-- LEADS / KANBAN -->
       <div class="view" id="view-leads">
-        <div class="section-header"><h2>Leads / Clientes</h2></div>
+        <div class="section-header">
+          <h2>Leads / Clientes</h2>
+          <div style="font-size:12px;color:var(--text2)">Arraste os cards para mover entre etapas</div>
+        </div>
         <div class="filters-bar">
           <input class="filter-input" type="text" id="leadsSearch" placeholder="🔍 Nome ou telefone..." oninput="filterLeads()" style="flex:1;min-width:180px">
           <select class="filter-input" id="leadsFilterStatus" onchange="filterLeads()"><option value="">Todos os Status</option></select>
           <select class="filter-input" id="leadsFilterTemp" onchange="filterLeads()"><option value="">Temperatura</option><option>Quente</option><option>Morno</option><option>Frio</option></select>
-          <select class="filter-input" id="leadsFilterFunil" onchange="filterLeads()"><option value="">Etapa do Funil</option><option>Prospecto</option><option>Qualificado</option><option>Proposta</option><option>Fechado</option><option>Perdido</option></select>
         </div>
-        <div class="table-wrap">
-          <div class="table-scroll">
-            <table>
-              <thead><tr>
-                <th>Cliente</th><th>Telefone</th><th class="col-empresa" style="display:none">Empresa</th><th>Status</th><th>Entrada</th><th>Temperatura</th><th>Funil</th><th>Ações</th>
-              </tr></thead>
-              <tbody id="leadsBody"></tbody>
-            </table>
-          </div>
-          <div class="pagination" id="leadsPagination"></div>
-        </div>
+        <div class="kanban-board" id="kanbanBoard"></div>
       </div>
 
       <!-- ATENDIMENTOS -->
@@ -463,7 +486,7 @@ select.form-control option{background:var(--card)}
         <div class="filters-bar">
           <input class="filter-input" type="text" id="atSearch" placeholder="🔍 Cliente ou atendente..." oninput="filterAtendimentos()" style="flex:1;min-width:180px">
           <select class="filter-input" id="atFilterStatus" onchange="filterAtendimentos()"><option value="">Todos os Status</option></select>
-          <select class="filter-input" id="atFilterFunil" onchange="filterAtendimentos()"><option value="">Etapa do Funil</option><option>Prospecto</option><option>Qualificado</option><option>Proposta</option><option>Fechado</option><option>Perdido</option></select>
+          <select class="filter-input" id="atFilterFunil" onchange="filterAtendimentos()"><option value="">Etapa do Funil</option><option>Lead</option><option>Atendimento</option><option>Proposta</option><option>Ganho</option><option>Perdido</option></select>
           <select class="filter-input" id="atFilterTemp" onchange="filterAtendimentos()"><option value="">Temperatura</option><option>Quente</option><option>Morno</option><option>Frio</option></select>
         </div>
         <div class="table-wrap">
@@ -564,6 +587,58 @@ select.form-control option{background:var(--card)}
   </div>
 </div>
 
+<!-- ── MODAL EDITAR ATENDIMENTO ───────────────────────────────────────────────── -->
+<div class="modal-overlay" id="modalEditAt">
+  <div class="modal modal-sm">
+    <div class="modal-header">
+      <div>
+        <h2>Editar Atendimento</h2>
+        <div id="editAtClienteNome" style="font-size:12px;color:var(--text2);margin-top:2px"></div>
+      </div>
+      <button class="btn-close" onclick="closeModal('modalEditAt')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    </div>
+    <div class="modal-body">
+      <input type="hidden" id="editAtId">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+        <div class="form-group" style="margin-bottom:0">
+          <label>Etapa do Funil</label>
+          <select class="form-control" id="editAtFunil">
+            <option>Lead</option><option>Atendimento</option><option>Proposta</option><option>Ganho</option><option>Perdido</option>
+          </select>
+        </div>
+        <div class="form-group" style="margin-bottom:0">
+          <label>Temperatura</label>
+          <select class="form-control" id="editAtTemp">
+            <option value="">—</option><option>Quente</option><option>Morno</option><option>Frio</option>
+          </select>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px">
+        <div class="form-group" style="margin-bottom:0">
+          <label>Status</label>
+          <input class="form-control" type="text" id="editAtStatus" placeholder="Ex: Em andamento">
+        </div>
+        <div class="form-group" style="margin-bottom:0">
+          <label>Atendente</label>
+          <input class="form-control" type="text" id="editAtAtendente" placeholder="Nome do atendente">
+        </div>
+      </div>
+      <div class="form-group" style="margin-top:12px">
+        <label>Interesse</label>
+        <input class="form-control" type="text" id="editAtInteresse" placeholder="Produto ou serviço de interesse">
+      </div>
+      <div class="form-group">
+        <label>Resumo</label>
+        <textarea class="form-control" id="editAtResumo" rows="3" placeholder="Resumo do atendimento..." style="resize:vertical"></textarea>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-ghost" onclick="closeModal('modalEditAt')">Cancelar</button>
+      <button class="btn btn-primary" onclick="saveAtendimento()">💾 Salvar</button>
+    </div>
+  </div>
+</div>
+
 <!-- ── MODAL USUÁRIO ──────────────────────────────────────────────────────────── -->
 <div class="modal-overlay" id="modalAddUser">
   <div class="modal modal-sm">
@@ -601,6 +676,13 @@ const ADMIN_EMAILS = ['thiagonsvp@gmail.com', 'saulo@natividadedigital.com.br'];
 const PAGE_SIZE    = 20;
 // tipo_mensagem values treated as plain text
 const TEXT_TYPES   = ['text','chat','texto','message','msg',''];
+const DEFAULT_FUNIL_STAGE = 'Lead';
+const FUNIL_STAGES = ['Lead','Atendimento','Proposta','Ganho','Perdido'];
+const LEGACY_FUNIL_STAGE_MAP = {
+  Prospecto: 'Lead',
+  Qualificado: 'Atendimento',
+  Fechado: 'Ganho'
+};
 
 // ── STATE ─────────────────────────────────────────────────────────────────────
 let currentUser   = null;
@@ -612,6 +694,9 @@ let allUsers = [];
 let dateFilter = { type: '7d' };
 let charts = {};
 let chatRaw = [];
+
+// ── REGISTER CHART PLUGINS ───────────────────────────────────────────────────
+Chart.register(ChartDataLabels);
 
 // ── THEME ─────────────────────────────────────────────────────────────────────
 function applyTheme(t) {
@@ -659,6 +744,10 @@ const sbGet    = (t, p='') => sbFetch(`${t}?${p}`);
 const sbPost   = (t, d)    => sbFetch(t, { method:'POST', body:JSON.stringify(d) });
 const sbPatch  = (t, f, d) => sbFetch(`${t}?${f}`, { method:'PATCH', body:JSON.stringify(d) });
 const sbDelete = (t, f)    => sbFetch(`${t}?${f}`, { method:'DELETE', prefer:'return=minimal' });
+function requireChangedRow(rows, action = 'alterar') {
+  if (Array.isArray(rows) && rows.length) return rows[0];
+  throw new Error(`O Supabase não retornou nenhuma linha ao ${action}. Verifique as policies/RLS da tabela.`);
+}
 
 // ── AUTH ──────────────────────────────────────────────────────────────────────
 async function doLogin() {
@@ -880,10 +969,32 @@ function tickColor()  { return isDark() ? '#8892a4' : '#64748b'; }
 
 function destroyChart(id) { if (charts[id]) { charts[id].destroy(); delete charts[id]; } }
 
+function dlBase(fmt) {
+  // datalabels config for bar/line charts
+  return {
+    display: ctx => (ctx.dataset.data[ctx.dataIndex] || 0) > 0,
+    color: tickColor(),
+    font: { size: 11, weight: '600', family: "'DM Sans',sans-serif" },
+    anchor: 'end', align: 'end', offset: 4,
+    formatter: fmt || (v => v > 0 ? v : null)
+  };
+}
+function dlDonut(fmt) {
+  return {
+    display: ctx => (ctx.dataset.data[ctx.dataIndex] || 0) > 0,
+    color: '#fff',
+    font: { size: 11, weight: '700', family: "'DM Sans',sans-serif" },
+    formatter: fmt || (v => v > 0 ? v : null)
+  };
+}
+
 function baseOpts(extra = {}) {
   return {
     responsive: true, maintainAspectRatio: false,
-    plugins: { legend: { labels: { color: tickColor(), boxWidth: 12, padding: 14 } } },
+    plugins: {
+      legend: { labels: { color: tickColor(), boxWidth: 12, padding: 14 } },
+      datalabels: dlBase(extra.dlFmt)
+    },
     scales: {
       x: { ticks:{ color:tickColor() }, grid:{ color:gridColor() }, ...(extra.x||{}) },
       y: { ticks:{ color:tickColor() }, grid:{ color:gridColor() }, beginAtZero:true, ...(extra.y||{}) }
@@ -891,42 +1002,47 @@ function baseOpts(extra = {}) {
     ...(extra.indexAxis ? { indexAxis: extra.indexAxis } : {})
   };
 }
-function donutOpts() {
-  return { responsive:true, maintainAspectRatio:false,
-    plugins:{ legend:{ position:'bottom', labels:{ color:tickColor(), boxWidth:12, padding:14 } } },
+function donutOpts(dlFmt) {
+  return {
+    responsive:true, maintainAspectRatio:false,
+    plugins:{
+      legend:{ position:'bottom', labels:{ color:tickColor(), boxWidth:12, padding:14 } },
+      datalabels: dlDonut(dlFmt)
+    },
     cutout: '62%'
   };
 }
 
 function renderCharts(leads, atends, props) {
-  // 1. Leads por dia
+  // 1. Leads por dia — BARRAS
   destroyChart('leads');
   const ldMap = {};
   leads.forEach(l => { const d=(l.criado||'').split('T')[0]; if(d) ldMap[d]=(ldMap[d]||0)+1; });
   const ldKeys = Object.keys(ldMap).sort();
   charts['leads'] = new Chart(document.getElementById('chartLeads'), {
-    type:'line',
-    data:{ labels:ldKeys.map(k=>fmtDateShort(k)), datasets:[{ label:'Leads', data:ldKeys.map(k=>ldMap[k]), borderColor:'#4f8ef7', backgroundColor:'rgba(79,142,247,.1)', fill:true, tension:.45, pointRadius:4, pointBackgroundColor:'#4f8ef7' }]},
-    options: baseOpts()
+    type:'bar',
+    data:{ labels:ldKeys.map(k=>fmtDateShort(k)), datasets:[{ label:'Leads', data:ldKeys.map(k=>ldMap[k]), backgroundColor:'rgba(79,142,247,.75)', borderRadius:6, borderSkipped:false }]},
+    options: baseOpts({ dlFmt: v => v > 0 ? v : null })
   });
 
   // 2. Funil
   destroyChart('funil');
-  const funilOrder = ['Prospecto','Qualificado','Proposta','Fechado','Perdido'];
-  const fCounts = {}; atends.forEach(a => { if(a.etapa_funil) fCounts[a.etapa_funil]=(fCounts[a.etapa_funil]||0)+1; });
+  const funilOrder = FUNIL_STAGES;
+  const fCounts = {}; atends.forEach(a => { const f = normalizeFunilStage(a.etapa_funil); fCounts[f]=(fCounts[f]||0)+1; });
   charts['funil'] = new Chart(document.getElementById('chartFunil'), {
     type:'bar',
-    data:{ labels:funilOrder, datasets:[{ label:'Atendimentos', data:funilOrder.map(f=>fCounts[f]||0), backgroundColor:['rgba(136,146,164,.7)','rgba(79,142,247,.8)','rgba(124,58,237,.8)','rgba(16,185,129,.8)','rgba(239,68,68,.8)'], borderRadius:6 }]},
-    options: baseOpts({ indexAxis:'y' })
+    data:{ labels:funilOrder, datasets:[{ label:'Atendimentos', data:funilOrder.map(f=>fCounts[f]||0), backgroundColor:['rgba(136,146,164,.75)','rgba(79,142,247,.8)','rgba(124,58,237,.8)','rgba(16,185,129,.8)','rgba(239,68,68,.8)'], borderRadius:6 }]},
+    options: baseOpts({ indexAxis:'y', dlFmt: v => v > 0 ? v : null })
   });
 
-  // 3. Temperatura
+  // 3. Temperatura — DONUT com % e qtd
   destroyChart('temp');
   const tCounts = {}; atends.forEach(a => { if(a.temperatura) tCounts[a.temperatura]=(tCounts[a.temperatura]||0)+1; });
+  const tTotal = Object.values(tCounts).reduce((a,b)=>a+b,0)||1;
   charts['temp'] = new Chart(document.getElementById('chartTemp'), {
     type:'doughnut',
     data:{ labels:Object.keys(tCounts), datasets:[{ data:Object.values(tCounts), backgroundColor:['#ef4444','#f59e0b','#4f8ef7'], borderWidth:0, hoverOffset:6 }]},
-    options: donutOpts()
+    options: donutOpts(v => v > 0 ? `${v}\n(${((v/tTotal)*100).toFixed(0)}%)` : null)
   });
 
   // 4. Propostas por status
@@ -936,38 +1052,53 @@ function renderCharts(leads, atends, props) {
   charts['props'] = new Chart(document.getElementById('chartProps'), {
     type:'bar',
     data:{ labels:Object.keys(psCounts), datasets:[{ label:'Propostas', data:Object.values(psCounts), backgroundColor:Object.keys(psCounts).map(k=>psColors[k]||'#8892a4'), borderRadius:6 }]},
-    options: baseOpts()
+    options: baseOpts({ dlFmt: v => v > 0 ? v : null })
   });
 
-  // 5. Valor por mês
+  // 5. Valor por mês — datalabel com R$
   destroyChart('mes');
   const mesData = {}; props.forEach(p => { const m=(p.criado||'').substring(0,7); if(m) mesData[m]=(mesData[m]||0)+(parseFloat(p.valor)||0); });
   const mesKeys = Object.keys(mesData).sort();
   charts['mes'] = new Chart(document.getElementById('chartMes'), {
     type:'bar',
     data:{ labels:mesKeys.map(m=>{ const[y,mo]=m.split('-'); return `${mo}/${y}`; }), datasets:[{ label:'Valor (R$)', data:mesKeys.map(k=>mesData[k]), backgroundColor:'rgba(124,58,237,.75)', borderRadius:6 }]},
-    options: baseOpts({ y:{ ticks:{ callback: v=>'R$'+fmtNumber(v), color:tickColor() } } })
+    options: baseOpts({
+      y:{ ticks:{ callback: v=>'R$'+fmtNumber(v), color:tickColor() } },
+      dlFmt: v => v > 0 ? 'R$'+fmtNumber(v) : null
+    })
   });
 
-  // 6. Tempo médio de resposta
+  // 6. Tempo médio de resposta — DONUT com dias
   destroyChart('tempo');
   const tempos = atends.filter(a=>a.criado&&a.update).map(a => Math.max(0,(new Date(a.update)-new Date(a.criado))/86400000));
   const avg = tempos.length ? +(tempos.reduce((a,b)=>a+b,0)/tempos.length).toFixed(1) : 0;
-  const max30 = Math.max(0, 30 - avg);
+  const max30 = Math.max(0.1, 30 - avg);
   charts['tempo'] = new Chart(document.getElementById('chartTempo'), {
     type:'doughnut',
-    data:{ labels:[`Média: ${avg} dias`,'Restante'], datasets:[{ data:[avg, max30||1], backgroundColor:['#4f8ef7','rgba(79,142,247,.1)'], borderWidth:0 }]},
-    options:{ ...donutOpts(), plugins:{ ...donutOpts().plugins, tooltip:{ callbacks:{ label:ctx=>ctx.dataIndex===0?`${avg} dias médios`:'' } } } }
+    data:{ labels:[`Média (dias)`,'Restante até 30d'], datasets:[{ data:[avg||0.01, max30], backgroundColor:['#4f8ef7','rgba(79,142,247,.12)'], borderWidth:0 }]},
+    options: {
+      ...donutOpts(v => null),
+      plugins: {
+        legend:{ position:'bottom', labels:{ color:tickColor(), boxWidth:12, padding:14 } },
+        datalabels:{
+          display: ctx => ctx.dataIndex === 0,
+          color:'#fff', font:{ size:18, weight:'800', family:"'Syne',sans-serif" },
+          formatter: () => `${avg}d`
+        },
+        tooltip:{ callbacks:{ label: ctx => ctx.dataIndex===0 ? `${avg} dias em média` : `${max30.toFixed(1)}d restantes` } }
+      }
+    }
   });
 
-  // 7. Horário comercial
+  // 7. Horário comercial — DONUT com % e qtd
   destroyChart('horario');
   let comerc=0, fora=0;
   atends.forEach(a => { if(!a.criado) return; const d=new Date(a.criado); const h=d.getHours(); const wd=d.getDay(); (wd>=1&&wd<=5&&h>=8&&h<18)?comerc++:fora++; });
+  const hTotal = (comerc+fora)||1;
   charts['horario'] = new Chart(document.getElementById('chartHorario'), {
     type:'doughnut',
     data:{ labels:['Horário comercial','Fora do horário'], datasets:[{ data:[comerc,fora], backgroundColor:['#10b981','#ef4444'], borderWidth:0, hoverOffset:6 }]},
-    options: donutOpts()
+    options: donutOpts(v => v > 0 ? `${v}\n(${((v/hTotal)*100).toFixed(0)}%)` : null)
   });
 }
 
@@ -978,13 +1109,16 @@ async function loadLeads() {
     const cf = cfParam();
     const [clients, atends] = await Promise.all([
       sbGet('crm_clientes', `select=*&order=criado.desc${cf}`),
-      sbGet('crm_atendimentos', `select=id_atendimento,id_cliente,temperatura,etapa_funil,status&order=update.desc`)
+      sbGet('crm_atendimentos', `select=id_atendimento,id_cliente,temperatura,etapa_funil,status,update&order=update.desc.nullslast,criado.desc`)
     ]);
 
     // Map latest atendimento per client
     const atMap = {};
     (atends||[]).forEach(a => { if (!atMap[a.id_cliente]) atMap[a.id_cliente] = a; });
-    allLeads = (clients||[]).map(c => ({ ...c, _at: atMap[c.id_cliente] || {} }));
+    allLeads = (clients||[]).map(c => {
+      const at = atMap[c.id_cliente] ? { ...atMap[c.id_cliente], etapa_funil: normalizeFunilStage(atMap[c.id_cliente].etapa_funil) } : {};
+      return { ...c, _at: at };
+    });
 
     const statuses = [...new Set(allLeads.map(c=>c.status).filter(Boolean))];
     const sel = document.getElementById('leadsFilterStatus');
@@ -993,11 +1127,9 @@ async function loadLeads() {
     statuses.forEach(s => { const o=document.createElement('option'); o.value=s; o.textContent=s; sel.appendChild(o); });
     sel.value = prev;
 
-    document.querySelectorAll('.col-empresa').forEach(el => el.style.display = isAdmin() ? '' : 'none');
-
     filteredLeads = [...allLeads];
     leadsPage = 1;
-    renderLeads();
+    renderKanban();
   } catch(e) { toast('Erro ao carregar leads: '+e.message,'error'); console.error(e); } finally { hideLoader(); }
 }
 
@@ -1005,38 +1137,150 @@ function filterLeads() {
   const q   = document.getElementById('leadsSearch').value.toLowerCase();
   const st  = document.getElementById('leadsFilterStatus').value;
   const tmp = document.getElementById('leadsFilterTemp').value;
-  const fn  = document.getElementById('leadsFilterFunil').value;
   filteredLeads = allLeads.filter(l => {
     if (q && !(l.cliente||'').toLowerCase().includes(q) && !(l.telefone||'').includes(q)) return false;
     if (st  && l.status !== st)           return false;
     if (tmp && l._at.temperatura !== tmp) return false;
-    if (fn  && l._at.etapa_funil !== fn)  return false;
     return true;
   });
-  leadsPage = 1; renderLeads();
+  renderKanban();
 }
 
-function renderLeads() {
-  const start = (leadsPage-1)*PAGE_SIZE;
-  const page  = filteredLeads.slice(start, start+PAGE_SIZE);
-  const showE = isAdmin();
-  const tbody = document.getElementById('leadsBody');
-  if (!page.length) { tbody.innerHTML = emptyRow(8); renderPagination('leads', filteredLeads.length); return; }
-  tbody.innerHTML = page.map(l => `<tr>
-    <td><strong>${esc(l.cliente||'—')}</strong></td>
-    <td style="color:var(--text2)">${esc(l.telefone||'—')}</td>
-    ${showE ? `<td style="color:var(--text2)">${esc(l.empresa||'—')}</td>` : ''}
-    <td>${badgeStatus(l.status)}</td>
-    <td style="color:var(--text2);white-space:nowrap">${fmtDateTime(l.criado)}</td>
-    <td>${badgeTemp(l._at.temperatura)}</td>
-    <td>${badgeFunil(l._at.etapa_funil)}</td>
-    <td><div class="actions-cell">
-      <button class="btn btn-ghost btn-sm" onclick="openConversa('${l.id_cliente}','${esc2(l.cliente)}','${esc2(l.telefone)}')">💬 Conversa</button>
-      <button class="btn btn-ghost btn-sm" onclick="openAtCliente('${l.id_cliente}','${esc2(l.cliente)}')">📋 Atendimentos</button>
-    </div></td>
-  </tr>`).join('');
-  renderPagination('leads', filteredLeads.length);
+// ── KANBAN ────────────────────────────────────────────────────────────────────
+const FUNIL_COLS = [
+  { key:'Lead',       label:'Lead',       cls:'col-prospecto',  icon:'🔵' },
+  { key:'Atendimento',label:'Atendimento',cls:'col-qualificado', icon:'⚡' },
+  { key:'Proposta',   label:'Proposta',   cls:'col-proposta',   icon:'📄' },
+  { key:'Ganho',      label:'Ganho',      cls:'col-fechado',    icon:'✅' },
+  { key:'Perdido',    label:'Perdido',    cls:'col-perdido',    icon:'❌' }
+];
+
+let dragCardId = null;  // id_atendimento being dragged
+
+function renderKanban() {
+  const board = document.getElementById('kanbanBoard');
+
+  const byCol = {};
+  FUNIL_COLS.forEach(c => byCol[c.key] = []);
+  filteredLeads.forEach(l => {
+    const stage = normalizeFunilStage(l._at.etapa_funil);
+    (byCol[stage] ? byCol[stage] : byCol[DEFAULT_FUNIL_STAGE]).push(l);
+  });
+
+  board.innerHTML = FUNIL_COLS.map(col => `
+    <div class="kanban-col ${col.cls}" id="kcol-${col.key}" data-col="${col.key}">
+      <div class="kanban-col-header">
+        <div class="kanban-col-title">${col.icon} ${col.label}</div>
+        <span class="kanban-count">${byCol[col.key].length}</span>
+      </div>
+      <div class="kanban-cards" id="kcards-${col.key}" data-col="${col.key}">
+        <div class="kanban-drop-hint">Soltar aqui</div>
+        ${byCol[col.key].length === 0
+          ? `<div class="kanban-empty">Nenhum lead</div>`
+          : byCol[col.key].map(l => kanbanCard(l)).join('')}
+      </div>
+    </div>`).join('');
+
+  // Attach drag events to each card after render
+  board.querySelectorAll('.kanban-card').forEach(card => {
+    card.addEventListener('dragstart', e => {
+      dragCardId = { clienteId: card.dataset.cid, atId: card.dataset.atid };
+      card.classList.add('dragging');
+      e.dataTransfer.effectAllowed = 'move';
+      e.dataTransfer.setData('text/plain', card.dataset.cid);
+    });
+    card.addEventListener('dragend', () => {
+      card.classList.remove('dragging');
+      board.querySelectorAll('.kanban-col').forEach(c => c.classList.remove('drag-over'));
+    });
+  });
 }
+
+function kanbanCard(l) {
+  const atId = l._at.id_atendimento || '';
+  return `<div class="kanban-card"
+    draggable="true"
+    data-cid="${l.id_cliente}"
+    data-atid="${atId}">
+    <div class="kanban-card-name" title="${esc(l.cliente||'')}">${esc(l.cliente||'—')}</div>
+    <div class="kanban-card-phone">${esc(l.telefone||'—')}</div>
+    <div class="kanban-card-badges">
+      ${badgeTemp(l._at.temperatura)}
+      ${badgeStatus(l.status)}
+    </div>
+    <div class="kanban-card-footer">
+      <div class="kanban-card-date">${fmtDate(l.criado)}</div>
+      <div class="kanban-card-actions">
+        <button title="Ver conversa" onclick="openConversa('${l.id_cliente}','${esc2(l.cliente)}','${esc2(l.telefone)}')">💬</button>
+        <button title="Atendimentos" onclick="openAtCliente('${l.id_cliente}','${esc2(l.cliente)}')">📋</button>
+        ${atId ? `<button title="Editar atendimento" onclick="openEditAt('${atId}','${esc2(l.cliente)}')">✏️</button>` : ''}
+      </div>
+    </div>
+  </div>`;
+}
+
+// ── KANBAN DRAG-DROP via document delegation ──────────────────────────────────
+// Using document-level listeners avoids child elements blocking dragover/drop.
+document.addEventListener('dragover', e => {
+  const col = e.target.closest('[data-col]');
+  if (!col || !dragCardId) return;
+  e.preventDefault();
+  e.dataTransfer.dropEffect = 'move';
+  // highlight target column
+  document.querySelectorAll('.kanban-col').forEach(c => c.classList.remove('drag-over'));
+  const colEl = document.getElementById(`kcol-${col.dataset.col}`);
+  if (colEl) colEl.classList.add('drag-over');
+});
+
+document.addEventListener('drop', async e => {
+  const col = e.target.closest('[data-col]');
+  if (!col || !dragCardId) return;
+  e.preventDefault();
+
+  const newStage   = col.dataset.col;
+  const { clienteId, atId } = dragCardId;
+  dragCardId = null;
+  document.querySelectorAll('.kanban-col').forEach(c => c.classList.remove('drag-over'));
+
+  const lead = allLeads.find(l => l.id_cliente === clienteId);
+  if (!lead) return;
+
+  const oldStage = normalizeFunilStage(lead._at.etapa_funil);
+  if (oldStage === newStage) return;
+
+  // Optimistic update — re-render immediately
+  lead._at.etapa_funil = newStage;
+  filterLeads();
+
+  // Persist to Supabase
+  try {
+    const now = new Date().toISOString();
+    if (atId) {
+      requireChangedRow(await sbPatch('crm_atendimentos', `id_atendimento=eq.${atId}`, {
+        etapa_funil: newStage,
+        update: now
+      }), 'atualizar o atendimento');
+    } else {
+      // Lead has no atendimento yet — create one
+      const novoAtendimento = requireChangedRow(await sbPost('crm_atendimentos', {
+        id_cliente:  clienteId,
+        etapa_funil: newStage,
+        criado:      now,
+        update:      now
+      }), 'criar o atendimento');
+      lead._at.id_atendimento = novoAtendimento.id_atendimento;
+      lead._at.update = now;
+      filterLeads();
+    }
+    toast(`✅ Movido para ${newStage}`, 'success', 2000);
+  } catch(err) {
+    // Rollback on error
+    lead._at.etapa_funil = oldStage;
+    filterLeads();
+    toast('Erro ao mover: ' + err.message, 'error');
+    console.error(err);
+  }
+});
 
 // ── ATENDIMENTOS ──────────────────────────────────────────────────────────────
 async function loadAtendimentos() {
@@ -1049,7 +1293,7 @@ async function loadAtendimentos() {
     ]);
     const cMap = {}; (clients||[]).forEach(c => cMap[c.id_cliente] = c);
     const rows = (atends||[]).filter(a => !currentCompany || cMap[a.id_cliente]);
-    allAtendimentos = rows.map(a => ({ ...a, _cliente: cMap[a.id_cliente] || {} }));
+    allAtendimentos = rows.map(a => ({ ...a, etapa_funil: normalizeFunilStage(a.etapa_funil), _cliente: cMap[a.id_cliente] || {} }));
 
     const statuses = [...new Set(allAtendimentos.map(a=>a.status).filter(Boolean))];
     const sel = document.getElementById('atFilterStatus');
@@ -1073,7 +1317,7 @@ function filterAtendimentos() {
     const at   = (a.atendente||'').toLowerCase();
     if (q && !nome.includes(q) && !at.includes(q)) return false;
     if (st  && a.status      !== st)  return false;
-    if (fn  && a.etapa_funil !== fn)  return false;
+    if (fn  && normalizeFunilStage(a.etapa_funil) !== fn)  return false;
     if (tmp && a.temperatura !== tmp) return false;
     return true;
   });
@@ -1094,11 +1338,65 @@ function renderAtendimentos() {
     <td style="color:var(--text2);max-width:130px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${esc(a.interesse||'')}">${esc(a.interesse||'—')}</td>
     <td style="color:var(--text2);white-space:nowrap">${fmtDateTime(a.update||a.criado)}</td>
     <td><div class="actions-cell">
+      <button class="btn btn-ghost btn-sm" onclick="openEditAt('${a.id_atendimento}','${esc2(a._cliente.cliente)}')">✏️ Editar</button>
       <button class="btn btn-ghost btn-sm" onclick="openPropostasAt('${a.id_atendimento}')">💰 Propostas</button>
       <button class="btn btn-ghost btn-sm" onclick="openConversaAt('${a.id_atendimento}','${esc2(a._cliente.cliente)}','${esc2(a._cliente.telefone)}')">💬 Conversa</button>
     </div></td>
   </tr>`).join('');
   renderPagination('at', filteredAt.length);
+}
+
+// ── EDITAR ATENDIMENTO ────────────────────────────────────────────────────────
+function openEditAt(atId, clienteNome) {
+  const at = allAtendimentos.find(a => a.id_atendimento === atId);
+  if (!at) { toast('Atendimento não encontrado','error'); return; }
+  document.getElementById('editAtId').value        = atId;
+  document.getElementById('editAtClienteNome').textContent = clienteNome || at._cliente.cliente || '';
+  document.getElementById('editAtFunil').value     = normalizeFunilStage(at.etapa_funil);
+  document.getElementById('editAtTemp').value      = at.temperatura || '';
+  document.getElementById('editAtStatus').value    = at.status || '';
+  document.getElementById('editAtAtendente').value = at.atendente || '';
+  document.getElementById('editAtInteresse').value = at.interesse || '';
+  document.getElementById('editAtResumo').value    = at.resumo || '';
+  openModal('modalEditAt');
+}
+
+async function saveAtendimento() {
+  const atId = document.getElementById('editAtId').value;
+  if (!atId) return;
+  const payload = {
+    etapa_funil: document.getElementById('editAtFunil').value,
+    temperatura: document.getElementById('editAtTemp').value || null,
+    status:      document.getElementById('editAtStatus').value || null,
+    atendente:   document.getElementById('editAtAtendente').value || null,
+    interesse:   document.getElementById('editAtInteresse').value || null,
+    resumo:      document.getElementById('editAtResumo').value || null,
+    update:      new Date().toISOString()
+  };
+  showLoader();
+  try {
+    requireChangedRow(await sbPatch('crm_atendimentos', `id_atendimento=eq.${atId}`, payload), 'salvar o atendimento');
+
+    // Update local state immediately (both atendimentos list and leads kanban)
+    const at = allAtendimentos.find(a => a.id_atendimento === atId);
+    if (at) Object.assign(at, payload);
+
+    // Also sync _at on any lead that has this atendimento
+    allLeads.forEach(l => {
+      if (l._at.id_atendimento === atId) Object.assign(l._at, payload);
+    });
+
+    closeModal('modalEditAt');
+    toast('Atendimento salvo com sucesso', 'success');
+
+    // Refresh whichever view is active
+    const activeView = document.querySelector('.nav-item.active')?.dataset.view;
+    if (activeView === 'atendimentos') { filterAtendimentos(); }
+    else if (activeView === 'leads')   { filterLeads(); }
+  } catch(e) {
+    toast('Erro ao salvar: ' + e.message, 'error');
+    console.error(e);
+  } finally { hideLoader(); }
 }
 
 // ── PROPOSTAS ─────────────────────────────────────────────────────────────────
@@ -1472,6 +1770,11 @@ function emptyRow(cols) { return `<tr><td colspan="${cols}" style="text-align:ce
 function loadingMsg() { return `<div style="text-align:center;padding:40px;color:var(--text2);font-size:13px">⏳ Carregando...</div>`; }
 function emptyChat(msg,type='') { return `<div style="text-align:center;padding:40px;color:${type==='error'?'var(--red)':'var(--text2)'};font-size:13px">${msg}</div>`; }
 
+function normalizeFunilStage(stage) {
+  if (!stage) return DEFAULT_FUNIL_STAGE;
+  return LEGACY_FUNIL_STAGE_MAP[stage] || (FUNIL_STAGES.includes(stage) ? stage : DEFAULT_FUNIL_STAGE);
+}
+
 function badgeTemp(t) {
   if (!t) return '<span style="color:var(--text2);font-size:12px">—</span>';
   const m = { Quente:['badge-quente','🔥'], Morno:['badge-morno','🌤️'], Frio:['badge-frio','❄️'] };
@@ -1480,8 +1783,9 @@ function badgeTemp(t) {
 }
 function badgeFunil(f) {
   if (!f) return '<span style="color:var(--text2);font-size:12px">—</span>';
-  const m = { Prospecto:'badge-prospecto', Qualificado:'badge-qualificado', Proposta:'badge-proposta', Fechado:'badge-fechado', Perdido:'badge-perdido' };
-  return `<span class="badge ${m[f]||'badge-prospecto'}">${esc(f)}</span>`;
+  const stage = normalizeFunilStage(f);
+  const m = { Lead:'badge-prospecto', Atendimento:'badge-qualificado', Proposta:'badge-proposta', Ganho:'badge-fechado', Perdido:'badge-perdido' };
+  return `<span class="badge ${m[stage]||'badge-prospecto'}">${esc(stage)}</span>`;
 }
 function badgeStatus(s) {
   if (!s) return '<span style="color:var(--text2);font-size:12px">—</span>';
