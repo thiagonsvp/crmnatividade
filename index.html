@@ -27,8 +27,8 @@
       --text: #e2e8f0;
       --text2: #8892a4;
       --shadow: rgba(0, 0, 0, .5);
-      --grad-card: linear-gradient(135deg, rgba(79, 142, 247, .04) 0%, rgba(124, 58, 237, .03) 100%);
-      --grad-sidebar: linear-gradient(180deg, #0f1420 0%, #0b0f1c 100%);
+      --grad-card: linear-gradient(135deg, rgba(79, 142, 247, .04) 0%, rgba(73, 47, 119, 0.03) 100%);
+      --grad-sidebar: linear-gradient(180deg, #1a294d 0%, #0b0f1c 100%);
       --grad-login: radial-gradient(ellipse at 60% 40%, #0d1535 0%, #0a0d14 70%);
       --input-bg: #080b12;
       --chat-sent: #1a3a5c;
@@ -645,10 +645,15 @@
       background: var(--grad-card);
       border: 1px solid var(--border);
       border-radius: 14px;
-      padding: 20px;
-      display: flex;
-      align-items: flex-start;
-      gap: 16px;
+      padding: 16px 18px;
+      display: grid;
+      grid-template-columns: 46px minmax(0, 1fr);
+      grid-template-rows: auto auto auto;
+      align-items: center;
+      justify-items: center;
+      column-gap: 12px;
+      row-gap: 7px;
+      min-height: 116px;
       transition: .25s;
       position: relative;
       overflow: hidden;
@@ -681,7 +686,9 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-shrink: 0
+      grid-column: 1;
+      grid-row: 1;
+      justify-self: end
     }
 
     .kpi-icon svg {
@@ -689,31 +696,57 @@
       height: 22px
     }
 
+    .kpi-body {
+      display: contents
+    }
+
     .kpi-body h3 {
-      font-size: 10px;
+      grid-column: 2;
+      grid-row: 1;
+      font-size: 9px;
       font-weight: 600;
       color: var(--text2);
       text-transform: uppercase;
       letter-spacing: .7px;
-      margin-bottom: 6px
+      margin-bottom: 0;
+      line-height: 1.3;
+      align-self: center;
+      justify-self: start;
+      max-width: 100%;
+      min-width: 0;
+      overflow-wrap: anywhere
     }
 
     .kpi-body .val {
+      grid-column: 1 / -1;
+      grid-row: 2;
       font-family: 'Syne', sans-serif;
-      font-size: 26px;
+      font-size: 31px;
       font-weight: 800;
-      line-height: 1;
+      line-height: .95;
+      white-space: nowrap;
+      text-align: center;
+      justify-self: center;
       background: linear-gradient(135deg, var(--text) 40%, var(--text2));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent
     }
 
     .kpi-body .delta {
+      grid-column: 1 / -1;
+      grid-row: 3;
       font-size: 12px;
-      margin-top: 5px;
+      margin-top: 0;
       display: flex;
       align-items: center;
-      gap: 4px
+      justify-content: center;
+      gap: 4px;
+      text-align: center
+    }
+
+    .kpi-card.kpi-money .kpi-body .val {
+      justify-self: end;
+      text-align: right
     }
 
     .delta.up {
@@ -1977,7 +2010,7 @@
       -webkit-backdrop-filter: blur(20px);
       border: 1px solid rgba(255, 255, 255, .1);
       border-radius: 18px;
-      padding: 22px;
+      padding: 16px 18px;
       box-shadow: 0 4px 24px rgba(0, 0, 0, .35);
     }
 
@@ -2004,30 +2037,31 @@
     }
 
     .kpi-icon {
-      width: 50px;
-      height: 50px;
+      width: 46px;
+      height: 46px;
       border-radius: 14px;
       box-shadow: 0 4px 16px rgba(0, 0, 0, .3)
     }
 
     .kpi-icon svg {
-      width: 24px;
-      height: 24px
+      width: 22px;
+      height: 22px
     }
 
     .kpi-body h3 {
       color: rgba(255, 255, 255, .4);
       letter-spacing: .8px;
-      margin-bottom: 8px
+      margin-bottom: 0
     }
 
     .kpi-body .val {
       font-family: 'DM Sans', sans-serif;
-      font-size: 30px;
+      font-size: 31px;
       font-weight: 800;
       line-height: .95;
       letter-spacing: 0;
       font-variant-numeric: tabular-nums;
+      white-space: nowrap;
       background: linear-gradient(135deg, #fff 40%, rgba(255, 255, 255, .65));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -2322,6 +2356,188 @@
       border-radius: 8px
     }
 
+    .proposal-value {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--green);
+      font-weight: 700;
+      white-space: nowrap;
+      font-variant-numeric: tabular-nums
+    }
+
+    .kanban-card-proposal {
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid var(--border);
+      font-size: 13px
+    }
+
+    [data-theme="light"] {
+      --bg: #f4f7fb;
+      --sidebar: rgba(255, 255, 255, .86);
+      --card: rgba(255, 255, 255, .9);
+      --card2: rgba(248, 250, 252, .92);
+      --border: rgba(148, 163, 184, .28);
+      --accent: #2563eb;
+      --accent2: #7c3aed;
+      --green: #059669;
+      --yellow: #d97706;
+      --red: #dc2626;
+      --text: #172033;
+      --text2: #64748b;
+      --shadow: rgba(15, 23, 42, .12);
+      --grad-card: rgba(255, 255, 255, .86);
+      --grad-sidebar: rgba(255, 255, 255, .88);
+      --grad-login: transparent;
+      --input-bg: rgba(255, 255, 255, .9);
+      --chat-sent: #dbeafe;
+      --chat-recv: #eef2f7;
+      --hover-row: rgba(37, 99, 235, .05);
+      --scrollbar: rgba(100, 116, 139, .35);
+    }
+
+    [data-theme="light"],
+    [data-theme="light"] body {
+      background: var(--bg);
+      color: var(--text)
+    }
+
+    [data-theme="light"] body {
+      background-image:
+        radial-gradient(ellipse 80% 60% at 10% -10%, rgba(37, 99, 235, .16) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 50% at 90% 110%, rgba(16, 185, 129, .12) 0%, transparent 55%),
+        radial-gradient(ellipse 40% 40% at 50% 50%, rgba(124, 58, 237, .08) 0%, transparent 70%);
+    }
+
+    [data-theme="light"] .login-box,
+    [data-theme="light"] .table-wrap,
+    [data-theme="light"] .modal,
+    [data-theme="light"] .kanban-col,
+    [data-theme="light"] .kanban-card,
+    [data-theme="light"] .kpi-card,
+    [data-theme="light"] .chart-card,
+    [data-theme="light"] .stat-pill {
+      background: rgba(255, 255, 255, .82);
+      border-color: rgba(148, 163, 184, .28);
+      box-shadow: 0 8px 28px rgba(15, 23, 42, .1)
+    }
+
+    [data-theme="light"] .sidebar {
+      background: rgba(255, 255, 255, .86);
+      border-right-color: rgba(148, 163, 184, .24);
+      box-shadow: 0 12px 40px rgba(15, 23, 42, .08)
+    }
+
+    [data-theme="light"] .sidebar-header,
+    [data-theme="light"] .sidebar-footer,
+    [data-theme="light"] thead th,
+    [data-theme="light"] .summary-table thead th {
+      background: rgba(248, 250, 252, .82);
+      border-color: rgba(148, 163, 184, .24);
+      color: #64748b
+    }
+
+    [data-theme="light"] .topbar {
+      background: rgba(255, 255, 255, .82) !important;
+      border-bottom-color: rgba(148, 163, 184, .24)
+    }
+
+    [data-theme="light"] .login-box input,
+    [data-theme="light"] .filter-input,
+    [data-theme="light"] .form-control,
+    [data-theme="light"] .company-select,
+    [data-theme="light"] .date-range-inputs input {
+      background: rgba(255, 255, 255, .9);
+      border-color: rgba(148, 163, 184, .34);
+      color: var(--text)
+    }
+
+    [data-theme="light"] .btn-toggle,
+    [data-theme="light"] .btn-theme,
+    [data-theme="light"] .btn-ghost,
+    [data-theme="light"] .btn-logout,
+    [data-theme="light"] .date-btn,
+    [data-theme="light"] .chart-badge,
+    [data-theme="light"] .user-chip,
+    [data-theme="light"] .badge-gray {
+      background: rgba(255, 255, 255, .72);
+      border-color: rgba(148, 163, 184, .3);
+      color: #475569
+    }
+
+    [data-theme="light"] .btn-toggle:hover,
+    [data-theme="light"] .btn-theme:hover,
+    [data-theme="light"] .btn-ghost:hover,
+    [data-theme="light"] .btn-logout:hover,
+    [data-theme="light"] .date-btn:hover,
+    [data-theme="light"] .date-btn.active {
+      background: rgba(37, 99, 235, .1);
+      border-color: rgba(37, 99, 235, .28);
+      color: #1d4ed8
+    }
+
+    [data-theme="light"] .nav-section,
+    [data-theme="light"] .section-sub,
+    [data-theme="light"] .kpi-body h3,
+    [data-theme="light"] .delta-neutral,
+    [data-theme="light"] .delta.neutral,
+    [data-theme="light"] .stat-pill-label {
+      color: #64748b
+    }
+
+    [data-theme="light"] .nav-item {
+      color: #64748b
+    }
+
+    [data-theme="light"] .nav-item:hover {
+      background: rgba(37, 99, 235, .07);
+      border-color: rgba(37, 99, 235, .18);
+      color: #1e293b
+    }
+
+    [data-theme="light"] .nav-item.active {
+      background: linear-gradient(135deg, rgba(37, 99, 235, .12), rgba(124, 58, 237, .08));
+      border-color: rgba(37, 99, 235, .22);
+      color: #1d4ed8
+    }
+
+    [data-theme="light"] .section-title,
+    [data-theme="light"] .kpi-body .val {
+      background: linear-gradient(135deg, #172033 35%, #64748b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent
+    }
+
+    [data-theme="light"] .chart-title,
+    [data-theme="light"] .chart-card h3,
+    [data-theme="light"] .rank-label {
+      color: #1e293b
+    }
+
+    [data-theme="light"] .rank-num.other {
+      background: rgba(148, 163, 184, .12);
+      border-color: rgba(148, 163, 184, .28);
+      color: #64748b
+    }
+
+    [data-theme="light"] .rank-bar-wrap {
+      background: rgba(148, 163, 184, .18)
+    }
+
+    [data-theme="light"] tbody tr {
+      border-bottom-color: rgba(148, 163, 184, .18)
+    }
+
+    [data-theme="light"] tbody tr:hover,
+    [data-theme="light"] tbody tr:nth-child(even) {
+      background: rgba(37, 99, 235, .035)
+    }
+
+    [data-theme="light"] .section-divider {
+      background: linear-gradient(90deg, transparent, rgba(148, 163, 184, .32), transparent)
+    }
+
     @media(max-width:900px) {
       .charts-grid {
         grid-template-columns: 1fr
@@ -2515,7 +2731,7 @@
             <button class="date-btn" onclick="setDateFilter('custom',this)">Personalizado</button>
             <div class="date-range-inputs date-range" id="customDateRange" style="display:none">
               <input type="date" id="dateFrom" onchange="loadDashboard()">
-              <span style="color:rgba(255,255,255,.35);font-size:12px">até</span>
+              <span style="color:var(--text2);font-size:12px">até</span>
               <input type="date" id="dateTo" onchange="loadDashboard()">
             </div>
           </div>
@@ -2743,7 +2959,8 @@
               <option value="">Todos os Status</option>
             </select>
             <select class="filter-input" id="atFilterFunil" onchange="filterAtendimentos()">
-              <option value="">Etapa do Funil</option>
+              <option value="__sem_outros" selected>Etapa do Funil</option>
+              <option value="">Todas as etapas</option>
               <option>Lead</option>
               <option>Atendimento</option>
               <option>Proposta</option>
@@ -2765,7 +2982,7 @@
                   <tr>
                     <th>Cliente</th>
                     <th>Atendente</th>
-                    <th>Status</th>
+                    <th>Proposta</th>
                     <th>Temperatura</th>
                     <th>Funil</th>
                     <th>Interesse</th>
@@ -3175,7 +3392,7 @@
         const rows = await sbGet('crm_usuarios', `email=eq.${encodeURIComponent(email)}&senha=eq.${encodeURIComponent(pass)}`);
         if (!rows || !rows.length) { errEl.textContent = 'E-mail ou senha inválidos.'; return; }
         currentUser = rows[0];
-        currentCompany = currentUser.empresa || '';
+        currentCompany = isAdmin() ? (getSavedCompany() ?? (currentUser.empresa || '')) : (currentUser.empresa || '');
         localStorage.setItem('crm_session', JSON.stringify(currentUser));
         startApp();
       } catch (e) {
@@ -3188,7 +3405,11 @@
     function loadSession() {
       try {
         const s = localStorage.getItem('crm_session');
-        if (s) { currentUser = JSON.parse(s); currentCompany = currentUser.empresa || ''; return true; }
+        if (s) {
+          currentUser = JSON.parse(s);
+          currentCompany = isAdmin() ? (getSavedCompany() ?? (currentUser.empresa || '')) : (currentUser.empresa || '');
+          return true;
+        }
       } catch { }
       return false;
     }
@@ -3223,16 +3444,34 @@
         const data = await sbGet('crm_clientes', 'select=empresa&empresa=not.is.null');
         const sel = document.getElementById('companySelect');
         const list = [...new Set((data || []).map(d => d.empresa).filter(Boolean))].sort();
+        const savedCompany = getSavedCompany();
+        sel.innerHTML = '<option value="">Todas as empresas</option>';
         list.forEach(c => {
           const o = document.createElement('option');
           o.value = c; o.textContent = c; sel.appendChild(o);
         });
+        currentCompany = savedCompany !== null && (savedCompany === '' || list.includes(savedCompany))
+          ? savedCompany
+          : (currentCompany && list.includes(currentCompany) ? currentCompany : '');
+        sel.value = currentCompany;
       } catch (e) { console.error('dropdown:', e); }
     }
 
     function onCompanyChange() {
       currentCompany = document.getElementById('companySelect').value;
+      saveSelectedCompany(currentCompany);
       loadCurrentView();
+    }
+
+    function companyStorageKey() {
+      return `crm_selected_company_${currentUser?.email || 'default'}`;
+    }
+    function getSavedCompany() {
+      const key = companyStorageKey();
+      return localStorage.getItem(key);
+    }
+    function saveSelectedCompany(company) {
+      localStorage.setItem(companyStorageKey(), company || '');
     }
 
     function cfParam(field = 'empresa') {
@@ -3242,16 +3481,16 @@
     // ── NAVIGATION ────────────────────────────────────────────────────────────────
     const pageTitles = { dashboard: 'Dashboard', leads: 'Leads / Clientes', atendimentos: 'Atendimentos', propostas: 'Propostas', usuarios: 'Usuários' };
 
-function showView(name) {
-  document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
-  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
-  document.getElementById(`view-${name}`).classList.add('active');
-  document.querySelector(`[data-view="${name}"]`).classList.add('active');
-  document.getElementById('pageTitle').textContent = pageTitles[name] || name;
-  document.getElementById('mainContent').classList.toggle('leads-mode', name === 'leads');
-  closeMobileSidebar();
-  loadView(name);
-}
+    function showView(name) {
+      document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+      document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+      document.getElementById(`view-${name}`).classList.add('active');
+      document.querySelector(`[data-view="${name}"]`).classList.add('active');
+      document.getElementById('pageTitle').textContent = pageTitles[name] || name;
+      document.getElementById('mainContent').classList.toggle('leads-mode', name === 'leads');
+      closeMobileSidebar();
+      loadView(name);
+    }
     function loadView(n) {
       if (n === 'dashboard') loadDashboard();
       else if (n === 'leads') loadLeads();
@@ -3372,8 +3611,59 @@ function showView(name) {
       if (n >= 1e3) return 'R$ ' + (n / 1e3).toFixed(1) + 'k';
       return 'R$ ' + n.toFixed(0);
     }
+    function reportNumber(v) {
+      if (typeof v === 'number') return v;
+      const s = (v ?? '').toString().trim();
+      if (!s) return 0;
+      const clean = s.replace(/[^\d,.-]/g, '');
+      if (clean.includes(',')) return parseFloat(clean.replace(/\./g, '').replace(',', '.')) || 0;
+      if (/^-?\d{1,3}(\.\d{3})+$/.test(clean)) return parseFloat(clean.replace(/\./g, '')) || 0;
+      return parseFloat(clean) || 0;
+    }
+    function reportNormText(v) {
+      return (v || '').toString().trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    }
     function reportStatusIncludes(p, token) {
-      return (p.status || '').toLowerCase().includes(token);
+      return reportNormText(p.status).includes(reportNormText(token));
+    }
+    function reportIsApproved(p) {
+      return reportStatusIncludes(p, 'aprov') || reportStatusIncludes(p, 'ganh');
+    }
+    function reportIsNegotiation(p) {
+      return reportStatusIncludes(p, 'negocia') || reportStatusIncludes(p, 'proposta') || reportStatusIncludes(p, 'atendimento') || reportStatusIncludes(p, 'enviada');
+    }
+    function reportIsRejected(p) {
+      return reportStatusIncludes(p, 'recus') || reportStatusIncludes(p, 'perdid');
+    }
+    function reportTempLabel(v) {
+      const n = reportNormText(v);
+      if (n.includes('quent')) return 'Quente';
+      if (n.includes('morn')) return 'Morno';
+      if (n.includes('frio') || n.includes('fria')) return 'Frio';
+      return (v || '').toString().trim() || 'Sem temperatura';
+    }
+    function reportTempColor(label, index = 0) {
+      const n = reportNormText(label);
+      if (n.includes('quent')) return REPORT_COLORS.red;
+      if (n.includes('morn')) return REPORT_COLORS.amber;
+      if (n.includes('frio')) return REPORT_COLORS.blue;
+      return REPORT_PALETTE[(index + 4) % REPORT_PALETTE.length];
+    }
+    function reportProposalStatusLabel(v) {
+      const n = reportNormText(v);
+      if (n.includes('aprov') || n.includes('ganh')) return 'Aprovada';
+      if (n.includes('negocia')) return 'Em negociação';
+      if (n.includes('recus') || n.includes('perdid')) return 'Recusada';
+      if (n.includes('enviada')) return 'Enviada';
+      return (v || '').toString().trim() || 'Sem status';
+    }
+    function reportProposalStatusColor(label, index = 0) {
+      const n = reportNormText(label);
+      if (n.includes('aprov')) return REPORT_COLORS.green;
+      if (n.includes('negocia')) return REPORT_COLORS.amber;
+      if (n.includes('recus')) return REPORT_COLORS.red;
+      if (n.includes('enviada')) return REPORT_COLORS.blue;
+      return REPORT_PALETTE[(index + 3) % REPORT_PALETTE.length];
     }
     function reportDestroyChart(id) {
       if (charts[id]) {
@@ -3381,8 +3671,32 @@ function showView(name) {
         delete charts[id];
       }
     }
-    function reportTC() { return 'rgba(255,255,255,.45)'; }
-    function reportGC() { return 'rgba(255,255,255,.08)'; }
+    const REPORT_COLORS = {
+      blue: 'rgba(79,142,247,.86)',
+      blueSoft: 'rgba(79,142,247,.18)',
+      cyan: 'rgba(6,182,212,.82)',
+      green: 'rgba(16,185,129,.84)',
+      greenSoft: 'rgba(16,185,129,.18)',
+      amber: 'rgba(245,158,11,.84)',
+      red: 'rgba(239,68,68,.78)',
+      purple: 'rgba(124,58,237,.78)',
+      purpleSoft: 'rgba(124,58,237,.18)',
+      slate: 'rgba(100,116,139,.55)'
+    };
+    const REPORT_PALETTE = [
+      REPORT_COLORS.blue,
+      REPORT_COLORS.green,
+      REPORT_COLORS.amber,
+      REPORT_COLORS.purple,
+      REPORT_COLORS.cyan,
+      REPORT_COLORS.red,
+      REPORT_COLORS.slate
+    ];
+    function reportPalette(count, offset = 0) {
+      return Array.from({ length: count }, (_, i) => REPORT_PALETTE[(i + offset) % REPORT_PALETTE.length]);
+    }
+    function reportTC() { return document.documentElement.getAttribute('data-theme') === 'light' ? '#64748b' : 'rgba(255,255,255,.45)'; }
+    function reportGC() { return document.documentElement.getAttribute('data-theme') === 'light' ? 'rgba(148,163,184,.22)' : 'rgba(255,255,255,.08)'; }
     function reportBaseOpts(extra = {}) {
       return {
         responsive: true,
@@ -3413,21 +3727,21 @@ function showView(name) {
     function renderKPIs(leads, atends, props) {
       const total = leads.length;
       const atTotal = atends.length;
-      const propsAprov = props.filter(p => reportStatusIncludes(p, 'aprov'));
+      const propsAprov = props.filter(reportIsApproved);
       const propsAll = props.length;
-      const receita = propsAprov.reduce((s, p) => s + (parseFloat(p.valor) || 0), 0);
-      const receitaTot = props.reduce((s, p) => s + (parseFloat(p.valor) || 0), 0);
+      const receita = propsAprov.reduce((s, p) => s + reportNumber(p.valor), 0);
+      const receitaTot = props.reduce((s, p) => s + reportNumber(p.valor), 0);
       const ticket = propsAprov.length ? receita / propsAprov.length : 0;
       const taxa = propsAll ? ((propsAprov.length / propsAll) * 100).toFixed(1) : 0;
       const ganhoCount = atends.filter(a => normalizeFunilStage(a.etapa_funil) === 'Ganho').length;
       const perdidoCount = atends.filter(a => normalizeFunilStage(a.etapa_funil) === 'Perdido').length;
       document.getElementById('kpiGrid').innerHTML = `
     <div class="kpi-card" style="animation-delay:.05s"><div class="kpi-icon" style="background:rgba(79,142,247,.18);box-shadow:0 0 20px rgba(79,142,247,.2)"><svg viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div><div class="kpi-body"><h3>Total de Leads</h3><div class="val">${total}</div><div class="delta delta-neutral">${atTotal} atendimentos</div></div></div>
-    <div class="kpi-card" style="animation-delay:.1s"><div class="kpi-icon" style="background:rgba(52,211,153,.18);box-shadow:0 0 20px rgba(52,211,153,.2)"><svg viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div><div class="kpi-body"><h3>Receita Aprovada</h3><div class="val">${reportMoneyShort(receita)}</div><div class="delta delta-up">${propsAprov.length} propostas</div></div></div>
-    <div class="kpi-card" style="animation-delay:.15s"><div class="kpi-icon" style="background:rgba(167,139,250,.18);box-shadow:0 0 20px rgba(167,139,250,.2)"><svg viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div><div class="kpi-body"><h3>Volume Total em Propostas</h3><div class="val">${reportMoneyShort(receitaTot)}</div><div class="delta delta-neutral">${propsAll} propostas</div></div></div>
+    <div class="kpi-card kpi-money" style="animation-delay:.1s"><div class="kpi-icon" style="background:rgba(52,211,153,.18);box-shadow:0 0 20px rgba(52,211,153,.2)"><svg viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div><div class="kpi-body"><h3>Receita Aprovada</h3><div class="val">${reportMoneyShort(receita)}</div><div class="delta delta-up">${propsAprov.length} propostas</div></div></div>
+    <div class="kpi-card kpi-money" style="animation-delay:.15s"><div class="kpi-icon" style="background:rgba(167,139,250,.18);box-shadow:0 0 20px rgba(167,139,250,.2)"><svg viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div><div class="kpi-body"><h3>Volume Total em Propostas</h3><div class="val">${reportMoneyShort(receitaTot)}</div><div class="delta delta-neutral">${propsAll} propostas</div></div></div>
     <div class="kpi-card" style="animation-delay:.2s"><div class="kpi-icon" style="background:rgba(251,191,36,.18);box-shadow:0 0 20px rgba(251,191,36,.2)"><svg viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><div class="kpi-body"><h3>Taxa de Aprovação</h3><div class="val">${taxa}%</div><div class="delta delta-neutral">${propsAprov.length}/${propsAll}</div></div></div>
     <div class="kpi-card" style="animation-delay:.25s"><div class="kpi-icon" style="background:rgba(52,211,153,.15);box-shadow:0 0 20px rgba(52,211,153,.15)"><svg viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><div class="kpi-body"><h3>Negócios Ganhos</h3><div class="val">${ganhoCount}</div><div class="delta delta-down">${perdidoCount} perdidos</div></div></div>
-    <div class="kpi-card" style="animation-delay:.3s"><div class="kpi-icon" style="background:rgba(79,142,247,.15);box-shadow:0 0 20px rgba(79,142,247,.15)"><svg viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div><div class="kpi-body"><h3>Ticket Médio</h3><div class="val">${reportMoneyShort(ticket)}</div><div class="delta delta-neutral">por proposta aprovada</div></div></div>`;
+    <div class="kpi-card kpi-money" style="animation-delay:.3s"><div class="kpi-icon" style="background:rgba(79,142,247,.15);box-shadow:0 0 20px rgba(79,142,247,.15)"><svg viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div><div class="kpi-body"><h3>Ticket Médio</h3><div class="val">${reportMoneyShort(ticket)}</div><div class="delta delta-neutral">por proposta aprovada</div></div></div>`;
     }
 
     function renderPipeline(leads, atends) {
@@ -3438,17 +3752,17 @@ function showView(name) {
       document.getElementById('badgeFunil').textContent = reportAtends.length + ' atendimentos';
       charts.funil = new Chart(document.getElementById('chartFunil'), {
         type: 'bar',
-        data: { labels: FUNIL_STAGES, datasets: [{ label: 'Atendimentos', data: FUNIL_STAGES.map(f => fCnt[f] || 0), backgroundColor: ['rgba(148,163,184,.8)', 'rgba(96,165,250,.9)', 'rgba(167,139,250,.9)', 'rgba(52,211,153,.9)', 'rgba(248,113,113,.9)'], borderRadius: 8, borderSkipped: false }] },
+        data: { labels: FUNIL_STAGES, datasets: [{ label: 'Atendimentos', data: FUNIL_STAGES.map(f => fCnt[f] || 0), backgroundColor: [REPORT_COLORS.slate, REPORT_COLORS.blue, REPORT_COLORS.purple, REPORT_COLORS.green, REPORT_COLORS.red], borderRadius: 8, borderSkipped: false }] },
         options: { ...reportBaseOpts({ indexAxis: 'y', x: { grid: { display: false } } }), plugins: { legend: { display: false }, datalabels: { display: ctx => ctx.dataset.data[ctx.dataIndex] > 0, color: 'rgba(255,255,255,.8)', font: { size: 12, weight: '700', family: "'DM Sans',sans-serif" }, anchor: 'end', align: 'end', offset: 4 } } }
       });
       reportDestroyChart('temp');
       const tCnt = {};
-      atends.forEach(a => { if (a.temperatura) tCnt[a.temperatura] = (tCnt[a.temperatura] || 0) + 1; });
+      atends.forEach(a => { const t = reportTempLabel(a.temperatura); if (t) tCnt[t] = (tCnt[t] || 0) + 1; });
       const tTotal = Object.values(tCnt).reduce((a, b) => a + b, 0) || 1;
       document.getElementById('badgeTemp').textContent = atends.length + ' leads';
       charts.temp = new Chart(document.getElementById('chartTemp'), {
         type: 'doughnut',
-        data: { labels: Object.keys(tCnt), datasets: [{ data: Object.values(tCnt), backgroundColor: ['rgba(248,113,113,.85)', 'rgba(251,191,36,.85)', 'rgba(96,165,250,.85)'], borderWidth: 0, hoverOffset: 8 }] },
+        data: { labels: Object.keys(tCnt), datasets: [{ data: Object.values(tCnt), backgroundColor: Object.keys(tCnt).map(reportTempColor), borderWidth: 0, hoverOffset: 8 }] },
         options: { ...reportDonutOpts(), plugins: { legend: { position: 'bottom', labels: { color: reportTC(), boxWidth: 12, padding: 14, font: { family: "'DM Sans',sans-serif" } } }, datalabels: { display: ctx => ctx.dataset.data[ctx.dataIndex] > 0, color: '#fff', font: { size: 12, weight: '700', family: "'DM Sans',sans-serif" }, formatter: v => `${v}\n${((v / tTotal) * 100).toFixed(0)}%` } } }
       });
       reportDestroyChart('leadsWeek');
@@ -3466,17 +3780,17 @@ function showView(name) {
       document.getElementById('badgeLeadsWeek').textContent = leads.length + ' leads';
       charts.leadsWeek = new Chart(document.getElementById('chartLeadsWeek'), {
         type: 'line',
-        data: { labels: wKeys.map(k => { const [, m, d] = k.split('-'); return `${parseInt(d)}/${parseInt(m)}`; }), datasets: [{ label: 'Leads/semana', data: wKeys.map(k => wMap[k]), borderColor: 'rgba(167,139,250,1)', backgroundColor: 'rgba(167,139,250,.12)', borderWidth: 2.5, fill: true, tension: .4, pointBackgroundColor: 'rgba(167,139,250,1)', pointRadius: 4, pointHoverRadius: 6 }] },
+        data: { labels: wKeys.map(k => { const [, m, d] = k.split('-'); return `${parseInt(d)}/${parseInt(m)}`; }), datasets: [{ label: 'Leads/semana', data: wKeys.map(k => wMap[k]), borderColor: REPORT_COLORS.purple, backgroundColor: REPORT_COLORS.purpleSoft, borderWidth: 2.5, fill: true, tension: .4, pointBackgroundColor: REPORT_COLORS.purple, pointRadius: 4, pointHoverRadius: 6 }] },
         options: { ...reportBaseOpts(), plugins: { legend: { display: false }, datalabels: { display: false } } }
       });
     }
 
     function renderFinanceiro(props) {
-      const aprov = props.filter(p => reportStatusIncludes(p, 'aprov'));
-      const neg = props.filter(p => reportStatusIncludes(p, 'negocia'));
-      const recusad = props.filter(p => reportStatusIncludes(p, 'recus'));
-      const receita = aprov.reduce((s, p) => s + (parseFloat(p.valor) || 0), 0);
-      const negVal = neg.reduce((s, p) => s + (parseFloat(p.valor) || 0), 0);
+      const aprov = props.filter(reportIsApproved);
+      const neg = props.filter(p => reportIsNegotiation(p) && !reportIsApproved(p) && !reportIsRejected(p));
+      const recusad = props.filter(reportIsRejected);
+      const receita = aprov.reduce((s, p) => s + reportNumber(p.valor), 0);
+      const negVal = neg.reduce((s, p) => s + reportNumber(p.valor), 0);
       const ticket = aprov.length ? receita / aprov.length : 0;
       const taxa = props.length ? ((aprov.length / props.length) * 100).toFixed(1) : 0;
       document.getElementById('spReceita').textContent = reportMoneyShort(receita);
@@ -3486,23 +3800,22 @@ function showView(name) {
       document.getElementById('spRecus').textContent = recusad.length;
       reportDestroyChart('mes');
       const mesMap = {}, mesAprovMap = {};
-      props.forEach(p => { const m = (p.criado || p.data_envio || '').substring(0, 7); if (m) mesMap[m] = (mesMap[m] || 0) + (parseFloat(p.valor) || 0); });
-      aprov.forEach(p => { const m = (p.criado || p.data_envio || '').substring(0, 7); if (m) mesAprovMap[m] = (mesAprovMap[m] || 0) + (parseFloat(p.valor) || 0); });
+      props.forEach(p => { const m = (p.criado || p.data_envio || '').substring(0, 7); if (m) mesMap[m] = (mesMap[m] || 0) + reportNumber(p.valor); });
+      aprov.forEach(p => { const m = (p.criado || p.data_envio || '').substring(0, 7); if (m) mesAprovMap[m] = (mesAprovMap[m] || 0) + reportNumber(p.valor); });
       const mesKeys = Object.keys({ ...mesMap, ...mesAprovMap }).sort().slice(-12);
       document.getElementById('badgeMes').textContent = reportMoneyShort(receita) + ' aprovado';
       charts.mes = new Chart(document.getElementById('chartMes'), {
         type: 'bar',
-        data: { labels: mesKeys.map(k => { const [y, m] = k.split('-'); return ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'][parseInt(m) - 1] + '/' + y.slice(2); }), datasets: [{ label: 'Total em Propostas', data: mesKeys.map(k => mesMap[k] || 0), backgroundColor: 'rgba(96,165,250,.25)', borderRadius: 6, stack: 'a' }, { label: 'Aprovado', data: mesKeys.map(k => mesAprovMap[k] || 0), backgroundColor: 'rgba(52,211,153,.75)', borderRadius: 6, stack: 'b' }] },
+        data: { labels: mesKeys.map(k => { const [y, m] = k.split('-'); return ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'][parseInt(m) - 1] + '/' + y.slice(2); }), datasets: [{ label: 'Total em Propostas', data: mesKeys.map(k => mesMap[k] || 0), backgroundColor: REPORT_COLORS.blueSoft, borderRadius: 6, stack: 'a' }, { label: 'Aprovado', data: mesKeys.map(k => mesAprovMap[k] || 0), backgroundColor: REPORT_COLORS.green, borderRadius: 6, stack: 'b' }] },
         options: { ...reportBaseOpts({ y: { ticks: { callback: v => reportMoneyShort(v), color: reportTC() } } }), plugins: { legend: { position: 'top', labels: { color: reportTC(), boxWidth: 12, padding: 14, font: { family: "'DM Sans',sans-serif" } } }, datalabels: { display: false } } }
       });
       reportDestroyChart('props');
       const psCnt = {};
-      props.forEach(p => { if (p.status) psCnt[p.status] = (psCnt[p.status] || 0) + 1; });
-      const propColors = status => reportStatusIncludes({ status }, 'aprov') ? 'rgba(52,211,153,.85)' : reportStatusIncludes({ status }, 'negocia') ? 'rgba(251,191,36,.85)' : reportStatusIncludes({ status }, 'recus') ? 'rgba(248,113,113,.85)' : 'rgba(96,165,250,.85)';
+      props.forEach(p => { const status = reportProposalStatusLabel(p.status); psCnt[status] = (psCnt[status] || 0) + 1; });
       document.getElementById('badgeProps').textContent = props.length + ' propostas';
       charts.props = new Chart(document.getElementById('chartProps'), {
         type: 'doughnut',
-        data: { labels: Object.keys(psCnt), datasets: [{ data: Object.values(psCnt), backgroundColor: Object.keys(psCnt).map(propColors), borderWidth: 0, hoverOffset: 8 }] },
+        data: { labels: Object.keys(psCnt), datasets: [{ data: Object.values(psCnt), backgroundColor: Object.keys(psCnt).map(reportProposalStatusColor), borderWidth: 0, hoverOffset: 8 }] },
         options: { ...reportDonutOpts(), plugins: { legend: { position: 'bottom', labels: { color: reportTC(), boxWidth: 12, padding: 14, font: { family: "'DM Sans',sans-serif" } } }, datalabels: { display: ctx => ctx.dataset.data[ctx.dataIndex] > 0, color: '#fff', font: { size: 11, weight: '700', family: "'DM Sans',sans-serif" }, formatter: v => v > 0 ? v : null } } }
       });
       reportDestroyChart('faixas');
@@ -3510,13 +3823,13 @@ function showView(name) {
       const faixaLabels = ['< R$500', 'R$500-1k', 'R$1k-2,5k', 'R$2,5k-5k', 'R$5k-10k', 'R$10k-25k', '> R$25k'];
       const faixaCnt = Array(7).fill(0);
       props.forEach(p => {
-        const v = parseFloat(p.valor) || 0;
+        const v = reportNumber(p.valor);
         for (let i = 0; i < faixas.length - 1; i++) if (v >= faixas[i] && v < faixas[i + 1]) { faixaCnt[i]++; break; }
       });
-      document.getElementById('badgeFaixas').textContent = props.filter(p => parseFloat(p.valor) > 0).length + ' c/ valor';
+      document.getElementById('badgeFaixas').textContent = props.filter(p => reportNumber(p.valor) > 0).length + ' c/ valor';
       charts.faixas = new Chart(document.getElementById('chartFaixas'), {
         type: 'bar',
-        data: { labels: faixaLabels, datasets: [{ label: 'Propostas', data: faixaCnt, backgroundColor: 'rgba(167,139,250,.7)', borderRadius: 6, borderSkipped: false }] },
+        data: { labels: faixaLabels, datasets: [{ label: 'Propostas', data: faixaCnt, backgroundColor: reportPalette(faixaLabels.length, 3), borderRadius: 6, borderSkipped: false }] },
         options: { ...reportBaseOpts({ x: { ticks: { color: reportTC(), font: { size: 10, family: "'DM Sans',sans-serif" } } } }), plugins: { legend: { display: false }, datalabels: { display: ctx => ctx.dataset.data[ctx.dataIndex] > 0, color: 'rgba(255,255,255,.7)', font: { size: 11, weight: '700', family: "'DM Sans',sans-serif" }, anchor: 'end', align: 'end', offset: 4 } } }
       });
     }
@@ -3528,13 +3841,13 @@ function showView(name) {
         if (!k) return;
         if (!prodMap[k]) prodMap[k] = { qty: 0, val: 0 };
         prodMap[k].qty++;
-        prodMap[k].val += parseFloat(p.valor) || 0;
+        prodMap[k].val += reportNumber(p.valor);
       });
       const prodList = Object.entries(prodMap).sort((a, b) => b[1].val - a[1].val).slice(0, 7);
       const maxProdVal = prodList[0]?.[1].val || 1;
       document.getElementById('badgeProdutos').textContent = prodList.length + ' produtos';
       const numCls = ['gold', 'silver', 'bronze', 'other', 'other', 'other', 'other'];
-      document.getElementById('rankProdutos').innerHTML = prodList.map(([k, v], i) => `<div class="rank-item"><div class="rank-num ${numCls[i] || 'other'}">${i + 1}</div><div class="rank-info"><div class="rank-label">${esc(k)}</div><div class="rank-bar-wrap"><div class="rank-bar" style="width:${(v.val / maxProdVal * 100).toFixed(1)}%;background:${i === 0 ? 'linear-gradient(90deg,#fbbf24,#f59e0b)' : i === 1 ? 'linear-gradient(90deg,#a78bfa,#7c3aed)' : 'linear-gradient(90deg,#60a5fa,#3b82f6)'}"></div></div></div><div class="rank-val" style="color:${i === 0 ? '#fbbf24' : i === 1 ? '#a78bfa' : '#60a5fa'}">${reportMoneyShort(v.val)}</div></div>`).join('') || '<div style="color:rgba(255,255,255,.3);text-align:center;padding:20px">Sem dados</div>';
+      document.getElementById('rankProdutos').innerHTML = prodList.map(([k, v], i) => `<div class="rank-item"><div class="rank-num ${numCls[i] || 'other'}">${i + 1}</div><div class="rank-info"><div class="rank-label">${esc(k)}</div><div class="rank-bar-wrap"><div class="rank-bar" style="width:${(v.val / maxProdVal * 100).toFixed(1)}%;background:${i === 0 ? 'linear-gradient(90deg,#fbbf24,#f59e0b)' : i === 1 ? 'linear-gradient(90deg,#a78bfa,#7c3aed)' : 'linear-gradient(90deg,#60a5fa,#3b82f6)'}"></div></div></div><div class="rank-val" style="color:${i === 0 ? '#fbbf24' : i === 1 ? '#a78bfa' : '#60a5fa'}">${reportMoneyShort(v.val)}</div></div>`).join('') || '<div style="color:var(--text2);text-align:center;padding:20px">Sem dados</div>';
       const atndMap = {};
       atends.forEach(a => {
         const k = (a.atendente || 'N/A').trim();
@@ -3546,9 +3859,9 @@ function showView(name) {
         const k = (at?.atendente || 'N/A').trim();
         if (!atndMap[k]) atndMap[k] = { atends: 0, props: 0, aprov: 0, receita: 0 };
         atndMap[k].props++;
-        if (reportStatusIncludes(p, 'aprov')) {
+        if (reportIsApproved(p)) {
           atndMap[k].aprov++;
-          atndMap[k].receita += parseFloat(p.valor) || 0;
+          atndMap[k].receita += reportNumber(p.valor);
         }
       });
       const atndList = Object.entries(atndMap).sort((a, b) => b[1].receita - a[1].receita).slice(0, 8);
@@ -3556,14 +3869,14 @@ function showView(name) {
       document.getElementById('badgeAtendentes').textContent = atndList.length + ' atendentes';
       charts.atendentes = new Chart(document.getElementById('chartAtendentes'), {
         type: 'bar',
-        data: { labels: atndList.map(([k]) => k.length > 14 ? k.slice(0, 12) + '...' : k), datasets: [{ label: 'Receita Aprovada', data: atndList.map(([, v]) => v.receita), backgroundColor: 'rgba(52,211,153,.75)', borderRadius: 6, yAxisID: 'y' }, { label: 'Atendimentos', data: atndList.map(([, v]) => v.atends), backgroundColor: 'rgba(96,165,250,.4)', borderRadius: 6, yAxisID: 'y2', type: 'bar' }] },
-        options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'top', labels: { color: reportTC(), boxWidth: 12, padding: 12, font: { family: "'DM Sans',sans-serif" } } }, datalabels: { display: false } }, scales: { x: { ticks: { color: reportTC(), font: { size: 10, family: "'DM Sans',sans-serif" } }, grid: { color: reportGC() } }, y: { ticks: { color: reportTC(), callback: v => reportMoneyShort(v), font: { family: "'DM Sans',sans-serif", size: 10 } }, grid: { color: reportGC() }, beginAtZero: true, position: 'left' }, y2: { ticks: { color: 'rgba(96,165,250,.7)', font: { family: "'DM Sans',sans-serif", size: 10 } }, grid: { display: false }, beginAtZero: true, position: 'right' } } }
+        data: { labels: atndList.map(([k]) => k.length > 14 ? k.slice(0, 12) + '...' : k), datasets: [{ label: 'Receita Aprovada', data: atndList.map(([, v]) => v.receita), backgroundColor: REPORT_COLORS.green, borderRadius: 6, yAxisID: 'y' }, { label: 'Atendimentos', data: atndList.map(([, v]) => v.atends), backgroundColor: REPORT_COLORS.purple, borderRadius: 6, yAxisID: 'y2', type: 'bar' }] },
+        options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'top', labels: { color: reportTC(), boxWidth: 12, padding: 12, font: { family: "'DM Sans',sans-serif" } } }, datalabels: { display: false } }, scales: { x: { ticks: { color: reportTC(), font: { size: 10, family: "'DM Sans',sans-serif" } }, grid: { color: reportGC() } }, y: { ticks: { color: reportTC(), callback: v => reportMoneyShort(v), font: { family: "'DM Sans',sans-serif", size: 10 } }, grid: { color: reportGC() }, beginAtZero: true, position: 'left' }, y2: { ticks: { color: REPORT_COLORS.purple, font: { family: "'DM Sans',sans-serif", size: 10 } }, grid: { display: false }, beginAtZero: true, position: 'right' } } }
       });
       document.getElementById('tblAtendentes').innerHTML = atndList.map(([k, v], i) => {
         const conv = v.props > 0 ? ((v.aprov / v.props) * 100).toFixed(0) + '%' : '-';
         const badgeColor = v.receita > 10000 ? 'badge-green' : v.receita > 2000 ? 'badge-blue' : 'badge-gray';
-        return `<tr><td style="color:rgba(255,255,255,.3);font-family:'Syne',sans-serif;font-weight:700">${i + 1}</td><td style="font-weight:600;color:rgba(255,255,255,.85)">${esc(k)}</td><td><span class="badge badge-blue">${v.atends}</span></td><td>${v.props}</td><td>${v.aprov}</td><td><span class="badge ${badgeColor}">${reportMoneyShort(v.receita)}</span></td><td style="color:${parseFloat(conv) >= 50 ? '#34d399' : parseFloat(conv) >= 25 ? '#fbbf24' : '#f87171'};font-weight:700">${conv}</td></tr>`;
-      }).join('') || '<tr><td colspan="7" style="text-align:center;color:rgba(255,255,255,.3);padding:20px">Sem dados</td></tr>';
+        return `<tr><td style="color:var(--text2);font-family:'Syne',sans-serif;font-weight:700">${i + 1}</td><td style="font-weight:600;color:var(--text)">${esc(k)}</td><td><span class="badge badge-blue">${v.atends}</span></td><td>${v.props}</td><td>${v.aprov}</td><td><span class="badge ${badgeColor}">${reportMoneyShort(v.receita)}</span></td><td style="color:${parseFloat(conv) >= 50 ? '#34d399' : parseFloat(conv) >= 25 ? '#fbbf24' : '#f87171'};font-weight:700">${conv}</td></tr>`;
+      }).join('') || '<tr><td colspan="7" style="text-align:center;color:var(--text2);padding:20px">Sem dados</td></tr>';
     }
 
     function renderTempo(atends) {
@@ -3574,7 +3887,7 @@ function showView(name) {
       document.getElementById('badgeTempo').textContent = avg + 'd em média';
       charts.tempo = new Chart(document.getElementById('chartTempo'), {
         type: 'doughnut',
-        data: { labels: [`${avg}d média`, 'Restante (30d)'], datasets: [{ data: [avg || 0.01, max30], backgroundColor: ['rgba(167,139,250,.9)', 'rgba(255,255,255,.05)'], borderWidth: 0 }] },
+        data: { labels: [`${avg}d média`, 'Restante (30d)'], datasets: [{ data: [avg || 0.01, max30], backgroundColor: [REPORT_COLORS.purple, reportGC()], borderWidth: 0 }] },
         options: { ...reportDonutOpts(), plugins: { legend: { position: 'bottom', labels: { color: reportTC(), boxWidth: 12, padding: 14, font: { family: "'DM Sans',sans-serif" } } }, datalabels: { display: ctx => ctx.dataIndex === 0, color: '#fff', font: { size: 20, weight: '800', family: "'Syne',sans-serif" }, formatter: () => `${avg}d` } } }
       });
       reportDestroyChart('semana');
@@ -3583,7 +3896,7 @@ function showView(name) {
       document.getElementById('badgeSemana').textContent = atends.length + ' atendimentos';
       charts.semana = new Chart(document.getElementById('chartSemana'), {
         type: 'bar',
-        data: { labels: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab'], datasets: [{ label: 'Atendimentos', data: Object.values(diasMap), backgroundColor: ['rgba(248,113,113,.6)', 'rgba(96,165,250,.8)', 'rgba(96,165,250,.8)', 'rgba(96,165,250,.8)', 'rgba(96,165,250,.8)', 'rgba(96,165,250,.8)', 'rgba(248,113,113,.6)'], borderRadius: 8, borderSkipped: false }] },
+        data: { labels: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab'], datasets: [{ label: 'Atendimentos', data: Object.values(diasMap), backgroundColor: reportPalette(7, 0), borderRadius: 8, borderSkipped: false }] },
         options: { ...reportBaseOpts({ x: { grid: { display: false } } }), plugins: { legend: { display: false }, datalabels: { display: ctx => ctx.dataset.data[ctx.dataIndex] > 0, color: 'rgba(255,255,255,.7)', font: { size: 11, weight: '700', family: "'DM Sans',sans-serif" }, anchor: 'end', align: 'end', offset: 4 } } }
       });
       reportDestroyChart('horario');
@@ -3597,7 +3910,7 @@ function showView(name) {
       document.getElementById('badgeHorario').textContent = `${((comerc / hTotal) * 100).toFixed(0)}% comercial`;
       charts.horario = new Chart(document.getElementById('chartHorario'), {
         type: 'doughnut',
-        data: { labels: ['Horário comercial', 'Fora do horário'], datasets: [{ data: [comerc, fora], backgroundColor: ['rgba(52,211,153,.85)', 'rgba(248,113,113,.75)'], borderWidth: 0, hoverOffset: 8 }] },
+        data: { labels: ['Horário comercial', 'Fora do horário'], datasets: [{ data: [comerc, fora], backgroundColor: [REPORT_COLORS.green, REPORT_COLORS.red], borderWidth: 0, hoverOffset: 8 }] },
         options: { ...reportDonutOpts(), plugins: { legend: { position: 'bottom', labels: { color: reportTC(), boxWidth: 12, padding: 14, font: { family: "'DM Sans',sans-serif" } } }, datalabels: { display: ctx => ctx.dataset.data[ctx.dataIndex] > 0, color: '#fff', font: { size: 11, weight: '700', family: "'DM Sans',sans-serif" }, formatter: v => `${v}\n${((v / hTotal) * 100).toFixed(0)}%` } } }
       });
       reportDestroyChart('leadsMes');
@@ -3607,7 +3920,7 @@ function showView(name) {
       document.getElementById('badgeLeadsMes').textContent = atends.length + ' total';
       charts.leadsMes = new Chart(document.getElementById('chartLeadsMes'), {
         type: 'line',
-        data: { labels: lmKeys.map(k => { const [y, m] = k.split('-'); return ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'][parseInt(m) - 1] + '/' + y.slice(2); }), datasets: [{ label: 'Atendimentos', data: lmKeys.map(k => lmMap[k]), borderColor: 'rgba(96,165,250,1)', backgroundColor: 'rgba(96,165,250,.1)', borderWidth: 2.5, fill: true, tension: .4, pointBackgroundColor: 'rgba(96,165,250,1)', pointRadius: 4, pointHoverRadius: 6 }] },
+        data: { labels: lmKeys.map(k => { const [y, m] = k.split('-'); return ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'][parseInt(m) - 1] + '/' + y.slice(2); }), datasets: [{ label: 'Atendimentos', data: lmKeys.map(k => lmMap[k]), borderColor: REPORT_COLORS.blue, backgroundColor: REPORT_COLORS.blueSoft, borderWidth: 2.5, fill: true, tension: .4, pointBackgroundColor: REPORT_COLORS.blue, pointRadius: 4, pointHoverRadius: 6 }] },
         options: { ...reportBaseOpts(), plugins: { legend: { display: false }, datalabels: { display: false } } }
       });
     }
@@ -3616,17 +3929,27 @@ function showView(name) {
       showLoader();
       try {
         const cf = cfParam();
-        const [clients, atends] = await Promise.all([
+        const [clients, atends, proposals] = await Promise.all([
           sbGet('crm_clientes', `select=*&order=criado.desc${cf}`),
-          sbGet('crm_atendimentos', `select=id_atendimento,id_cliente,temperatura,etapa_funil,status,update&order=update.desc.nullslast,criado.desc`)
+          sbGet('crm_atendimentos', `select=id_atendimento,id_cliente,temperatura,etapa_funil,status,update&order=update.desc.nullslast,criado.desc`),
+          sbGet('crm_proposta', `select=id_atendimento,valor,status,criado&order=criado.desc`)
         ]);
 
         // Map latest atendimento per client
         const atMap = {};
+        const proposalByAt = summarizeProposalsByAtendimento(proposals);
+        const proposalByClient = {};
         (atends || []).forEach(a => { if (!atMap[a.id_cliente]) atMap[a.id_cliente] = a; });
+        (atends || []).forEach(a => {
+          const proposal = proposalByAt[a.id_atendimento];
+          if (!proposal) return;
+          if (!proposalByClient[a.id_cliente]) proposalByClient[a.id_cliente] = { total: 0, count: 0 };
+          proposalByClient[a.id_cliente].total += proposal.total;
+          proposalByClient[a.id_cliente].count += proposal.count;
+        });
         allLeads = (clients || []).map(c => {
           const at = atMap[c.id_cliente] ? { ...atMap[c.id_cliente], etapa_funil: normalizeFunilStage(atMap[c.id_cliente].etapa_funil) } : {};
-          return { ...c, _at: at };
+          return { ...c, _at: at, _proposal: proposalByClient[c.id_cliente] || { total: 0, count: 0 } };
         });
 
         const origins = [...new Set([...LEAD_ORIGINS, ...allLeads.map(c => c.status).filter(Boolean)])];
@@ -3718,6 +4041,7 @@ function showView(name) {
       ${badgeTemp(l._at.temperatura)}
       ${badgeOrigem(l.status)}
     </div>
+    <div class="kanban-card-proposal">${proposalValueHtml(l._proposal)}</div>
     <div class="kanban-card-footer">
       <div class="kanban-card-date">${fmtDate(l.criado)}</div>
       <div class="kanban-card-actions">
@@ -3797,13 +4121,20 @@ function showView(name) {
       showLoader();
       try {
         const cf = cfParam();
-        const [atends, clients] = await Promise.all([
+        const [atends, clients, proposals] = await Promise.all([
           sbGet('crm_atendimentos', `select=*&order=update.desc`),
-          sbGet('crm_clientes', `select=id_cliente,cliente,telefone,empresa&order=criado.desc${cf}`)
+          sbGet('crm_clientes', `select=id_cliente,cliente,telefone,empresa&order=criado.desc${cf}`),
+          sbGet('crm_proposta', `select=id_atendimento,valor,status,criado&order=criado.desc`)
         ]);
         const cMap = {}; (clients || []).forEach(c => cMap[c.id_cliente] = c);
+        const proposalByAt = summarizeProposalsByAtendimento(proposals);
         const rows = (atends || []).filter(a => !currentCompany || cMap[a.id_cliente]);
-        allAtendimentos = rows.map(a => ({ ...a, etapa_funil: normalizeFunilStage(a.etapa_funil), _cliente: cMap[a.id_cliente] || {} }));
+        allAtendimentos = rows.map(a => ({
+          ...a,
+          etapa_funil: normalizeFunilStage(a.etapa_funil),
+          _cliente: cMap[a.id_cliente] || {},
+          _proposal: proposalByAt[a.id_atendimento] || { total: 0, count: 0 }
+        }));
 
         const statuses = [...new Set(allAtendimentos.map(a => a.status).filter(Boolean))];
         const sel = document.getElementById('atFilterStatus');
@@ -3812,8 +4143,7 @@ function showView(name) {
         statuses.forEach(s => { const o = document.createElement('option'); o.value = s; o.textContent = s; sel.appendChild(o); });
         sel.value = prev;
 
-        filteredAt = [...allAtendimentos];
-        atPage = 1; renderAtendimentos();
+        filterAtendimentos();
       } catch (e) { toast('Erro ao carregar atendimentos: ' + e.message, 'error'); console.error(e); } finally { hideLoader(); }
     }
 
@@ -3827,7 +4157,9 @@ function showView(name) {
         const at = (a.atendente || '').toLowerCase();
         if (q && !nome.includes(q) && !at.includes(q)) return false;
         if (st && a.status !== st) return false;
-        if (fn && normalizeFunilStage(a.etapa_funil) !== fn) return false;
+        const etapa = normalizeFunilStage(a.etapa_funil);
+        if (fn === '__sem_outros' && etapa === 'Outros') return false;
+        if (fn && fn !== '__sem_outros' && etapa !== fn) return false;
         if (tmp && a.temperatura !== tmp) return false;
         return true;
       });
@@ -3842,7 +4174,7 @@ function showView(name) {
       tbody.innerHTML = page.map(a => `<tr>
     <td><strong>${esc(a._cliente.cliente || '—')}</strong></td>
     <td style="color:var(--text2)">${esc(a.atendente || '—')}</td>
-    <td>${badgeStatus(a.status)}</td>
+    <td>${proposalValueHtml(a._proposal)}</td>
     <td>${badgeTemp(a.temperatura)}</td>
     <td>${badgeFunil(a.etapa_funil)}</td>
     <td style="color:var(--text2);max-width:130px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${esc(a.interesse || '')}">${esc(a.interesse || '—')}</td>
@@ -3966,8 +4298,8 @@ function showView(name) {
       <td><div class="actions-cell"><button class="btn btn-ghost btn-sm" onclick="openEditProposta('${p.id_proposta}')">✏️ Editar</button></div></td>
     </tr>`).join('');
       }
-      const total = filteredProp.reduce((s, p) => s + (parseFloat(p.valor) || 0), 0);
-      const aprov = filteredProp.filter(p => p.status === 'Aprovada').reduce((s, p) => s + (parseFloat(p.valor) || 0), 0);
+      const total = filteredProp.reduce((s, p) => s + reportNumber(p.valor), 0);
+      const aprov = filteredProp.filter(reportIsApproved).reduce((s, p) => s + reportNumber(p.valor), 0);
       const ticket = filteredProp.length ? total / filteredProp.length : 0;
       document.getElementById('ptTotal').textContent = fmtCurrency(total);
       document.getElementById('ptAprovadas').textContent = fmtCurrency(aprov);
@@ -4043,7 +4375,10 @@ function showView(name) {
           openPropostasAt(atId);
         }
 
-        filterPropostas();
+        const activeView = document.querySelector('.nav-item.active')?.dataset.view;
+        if (activeView === 'atendimentos') loadAtendimentos();
+        else if (activeView === 'leads') loadLeads();
+        else filterPropostas();
       } catch (e) {
         toast('Erro ao salvar: ' + e.message, 'error');
         console.error(e);
@@ -4336,6 +4671,24 @@ function showView(name) {
     function esc(s) { return (s || '').toString().replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
     function esc2(s) { return (s || '').toString().replace(/'/g, "\\'").replace(/\n/g, ' '); }
     function escRe(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
+
+    function summarizeProposalsByAtendimento(proposals = []) {
+      return (proposals || []).reduce((map, p) => {
+        if (!p.id_atendimento) return map;
+        if (!map[p.id_atendimento]) map[p.id_atendimento] = { total: 0, count: 0 };
+        map[p.id_atendimento].total += reportNumber(p.valor);
+        map[p.id_atendimento].count += 1;
+        return map;
+      }, {});
+    }
+
+    function proposalValueHtml(proposal) {
+      const total = parseFloat(proposal?.total) || 0;
+      const count = proposal?.count || 0;
+      if (!count) return '<span style="color:var(--text2);font-size:12px">Sem proposta</span>';
+      const suffix = count > 1 ? ` <span style="color:var(--text2);font-weight:500">(${count})</span>` : '';
+      return `<span class="proposal-value">${fmtCurrency(total)}${suffix}</span>`;
+    }
 
     function fmtDate(str) {
       if (!str) return '—';
