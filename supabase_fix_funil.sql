@@ -39,8 +39,9 @@ WHERE etapa_funil IS NULL;
 
 -- Permissões usadas pelo app via REST/anon key.
 GRANT SELECT, INSERT, UPDATE ON public.crm_atendimentos TO anon, authenticated;
+GRANT SELECT, INSERT, UPDATE, DELETE ON public.crm_proposta TO anon, authenticated;
 
--- Se RLS estiver ativo, estas policies permitem o kanban atualizar/criar atendimentos.
+-- Se RLS estiver ativo, estas policies permitem o app alterar atendimentos e propostas.
 DO $$
 BEGIN
   IF NOT EXISTS (
@@ -61,5 +62,45 @@ BEGIN
       AND policyname = 'crm_atendimentos_update_anon'
   ) THEN
     EXECUTE 'CREATE POLICY crm_atendimentos_update_anon ON public.crm_atendimentos FOR UPDATE TO anon, authenticated USING (true) WITH CHECK (true)';
+  END IF;
+
+  IF NOT EXISTS (
+    SELECT 1
+    FROM pg_policies
+    WHERE schemaname = 'public'
+      AND tablename = 'crm_proposta'
+      AND policyname = 'crm_proposta_select_anon'
+  ) THEN
+    EXECUTE 'CREATE POLICY crm_proposta_select_anon ON public.crm_proposta FOR SELECT TO anon, authenticated USING (true)';
+  END IF;
+
+  IF NOT EXISTS (
+    SELECT 1
+    FROM pg_policies
+    WHERE schemaname = 'public'
+      AND tablename = 'crm_proposta'
+      AND policyname = 'crm_proposta_insert_anon'
+  ) THEN
+    EXECUTE 'CREATE POLICY crm_proposta_insert_anon ON public.crm_proposta FOR INSERT TO anon, authenticated WITH CHECK (true)';
+  END IF;
+
+  IF NOT EXISTS (
+    SELECT 1
+    FROM pg_policies
+    WHERE schemaname = 'public'
+      AND tablename = 'crm_proposta'
+      AND policyname = 'crm_proposta_update_anon'
+  ) THEN
+    EXECUTE 'CREATE POLICY crm_proposta_update_anon ON public.crm_proposta FOR UPDATE TO anon, authenticated USING (true) WITH CHECK (true)';
+  END IF;
+
+  IF NOT EXISTS (
+    SELECT 1
+    FROM pg_policies
+    WHERE schemaname = 'public'
+      AND tablename = 'crm_proposta'
+      AND policyname = 'crm_proposta_delete_anon'
+  ) THEN
+    EXECUTE 'CREATE POLICY crm_proposta_delete_anon ON public.crm_proposta FOR DELETE TO anon, authenticated USING (true)';
   END IF;
 END $$;

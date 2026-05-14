@@ -579,6 +579,60 @@
       background: var(--card)
     }
 
+    .date-field {
+      max-width: 145px
+    }
+
+    .contact-cell {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0
+    }
+
+    .contact-avatar {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      flex: 0 0 34px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .2px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, .18)
+    }
+
+    .contact-avatar.sm {
+      width: 30px;
+      height: 30px;
+      flex-basis: 30px;
+      font-size: 11px
+    }
+
+    .contact-meta {
+      min-width: 0
+    }
+
+    .contact-name {
+      font-weight: 700;
+      color: var(--text);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap
+    }
+
+    .contact-sub {
+      margin-top: 2px;
+      color: var(--text2);
+      font-size: 12px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap
+    }
+
     .btn {
       border: none;
       border-radius: 8px;
@@ -1207,6 +1261,148 @@
       padding: 0 1px
     }
 
+    .chat-file-card {
+      width: min(260px, 100%);
+      margin-top: 8px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      background: rgba(255, 255, 255, .04);
+      cursor: pointer;
+      transition: .15s
+    }
+
+    .chat-file-card:hover,
+    .chat-file-card:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(79, 142, 247, .12);
+      outline: none
+    }
+
+    .chat-file-thumb {
+      height: 150px;
+      background: var(--bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text2);
+      font-size: 12px;
+      overflow: hidden
+    }
+
+    .chat-file-thumb img,
+    .chat-file-thumb video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block
+    }
+
+    .chat-file-icon {
+      height: 98px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, rgba(79, 142, 247, .14), rgba(16, 185, 129, .09));
+      color: var(--accent);
+      font-family: 'Syne', sans-serif;
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: .8px
+    }
+
+    .chat-file-info {
+      padding: 10px 11px;
+      display: flex;
+      flex-direction: column;
+      gap: 7px
+    }
+
+    .chat-file-name {
+      color: var(--text);
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1.35;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap
+    }
+
+    .chat-file-meta {
+      color: var(--text2);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: .5px
+    }
+
+    .chat-file-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap
+    }
+
+    .chat-file-download {
+      color: var(--accent);
+      font-size: 11px;
+      font-weight: 700;
+      text-decoration: none
+    }
+
+    .chat-file-download:hover {
+      text-decoration: underline
+    }
+
+    .chat-caption {
+      margin-top: 7px;
+      color: var(--text2);
+      font-size: 12px;
+      line-height: 1.45
+    }
+
+    .modal-file-preview {
+      max-width: min(1100px, calc(100vw - 32px))
+    }
+
+    .file-preview-body {
+      min-height: 55vh;
+      padding: 0;
+      background: var(--bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden
+    }
+
+    .file-preview-body img,
+    .file-preview-body video {
+      max-width: 100%;
+      max-height: 76vh;
+      display: block
+    }
+
+    .file-preview-frame {
+      width: 100%;
+      height: 76vh;
+      border: 0;
+      background: #fff
+    }
+
+    .file-preview-audio {
+      width: min(520px, calc(100vw - 64px))
+    }
+
+    .file-preview-empty {
+      padding: 26px;
+      color: var(--text2);
+      text-align: center;
+      font-size: 13px
+    }
+
+    .file-preview-empty a {
+      margin-top: 12px
+    }
+
     /* ── FORM ────────────────────────────────────────────────────────────────────── */
     .form-group {
       margin-bottom: 16px
@@ -1643,10 +1839,13 @@
       transform: scale(.97)
     }
 
+    .kanban-card .contact-cell {
+      margin-bottom: 8px
+    }
+
     .kanban-card-name {
       font-weight: 600;
       font-size: 13px;
-      margin-bottom: 6px;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis
@@ -2943,6 +3142,8 @@
               <option>Morno</option>
               <option>Frio</option>
             </select>
+            <input class="filter-input date-field" type="date" id="leadsDateFrom" onchange="filterLeads()" title="Data inicial">
+            <input class="filter-input date-field" type="date" id="leadsDateTo" onchange="filterLeads()" title="Data final">
           </div>
           <div class="kanban-board" id="kanbanBoard"></div>
         </div>
@@ -2974,6 +3175,8 @@
               <option>Morno</option>
               <option>Frio</option>
             </select>
+            <input class="filter-input date-field" type="date" id="atDateFrom" onchange="filterAtendimentos()" title="Data inicial">
+            <input class="filter-input date-field" type="date" id="atDateTo" onchange="filterAtendimentos()" title="Data final">
           </div>
           <div class="table-wrap">
             <div class="table-scroll">
@@ -3014,6 +3217,8 @@
             </select>
             <input class="filter-input" type="month" id="propFilterMes" onchange="filterPropostas()"
               style="max-width:160px">
+            <input class="filter-input date-field" type="date" id="propDateFrom" onchange="filterPropostas()" title="Data inicial">
+            <input class="filter-input date-field" type="date" id="propDateTo" onchange="filterPropostas()" title="Data final">
           </div>
           <div class="table-wrap">
             <div class="table-scroll">
@@ -3058,6 +3263,10 @@
               Adicionar Usuário
             </button>
           </div>
+          <div class="filters-bar">
+            <input class="filter-input date-field" type="date" id="usersDateFrom" onchange="renderUsers()" title="Data inicial">
+            <input class="filter-input date-field" type="date" id="usersDateTo" onchange="renderUsers()" title="Data final">
+          </div>
           <div class="table-wrap">
             <div class="table-scroll">
               <table>
@@ -3099,6 +3308,28 @@
           <div class="chat-messages" id="chatMessages"></div>
         </div>
       </div>
+    </div>
+  </div>
+
+  <!-- ── MODAL PREVIEW ARQUIVO ──────────────────────────────────────────────────── -->
+  <div class="modal-overlay" id="modalFilePreview">
+    <div class="modal modal-file-preview">
+      <div class="modal-header">
+        <div style="min-width:0">
+          <h2 id="filePreviewTitle">Arquivo</h2>
+          <div style="font-size:12px;color:var(--text2);margin-top:2px" id="filePreviewMeta"></div>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px">
+          <a class="btn btn-primary btn-sm" id="filePreviewDownload" href="#" target="_blank" rel="noopener"
+            download>Baixar</a>
+          <button class="btn-close" onclick="closeModal('modalFilePreview')"><svg viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" width="18" height="18">
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg></button>
+        </div>
+      </div>
+      <div class="modal-body file-preview-body" id="filePreviewBody"></div>
     </div>
   </div>
 
@@ -3254,6 +3485,7 @@
         </div>
       </div>
       <div class="modal-footer">
+        <button class="btn btn-danger" id="btnDeletePropostaEdit" style="margin-right:auto;display:none">Excluir</button>
         <button class="btn btn-ghost" onclick="closeModal('modalEditProposta')">Cancelar</button>
         <button class="btn btn-primary" onclick="saveProposta()">💾 Salvar</button>
       </div>
@@ -3325,6 +3557,8 @@
     let dateFilter = { type: '7d' };
     let charts = {};
     let chatRaw = [];
+    let chatPreviewObjectUrls = [];
+    let activeFilePreviewObjectUrl = '';
 
     // ── REGISTER CHART PLUGINS ───────────────────────────────────────────────────
     Chart.register(ChartDataLabels);
@@ -3374,7 +3608,7 @@
     const sbGet = (t, p = '') => sbFetch(`${t}?${p}`);
     const sbPost = (t, d) => sbFetch(t, { method: 'POST', body: JSON.stringify(d) });
     const sbPatch = (t, f, d) => sbFetch(`${t}?${f}`, { method: 'PATCH', body: JSON.stringify(d) });
-    const sbDelete = (t, f) => sbFetch(`${t}?${f}`, { method: 'DELETE', prefer: 'return=minimal' });
+    const sbDelete = (t, f) => sbFetch(`${t}?${f}`, { method: 'DELETE', prefer: 'return=representation' });
     function requireChangedRow(rows, action = 'alterar') {
       if (Array.isArray(rows) && rows.length) return rows[0];
       throw new Error(`O Supabase não retornou nenhuma linha ao ${action}. Verifique as policies/RLS da tabela.`);
@@ -3969,10 +4203,12 @@
       const q = document.getElementById('leadsSearch').value.toLowerCase();
       const st = document.getElementById('leadsFilterStatus').value;
       const tmp = document.getElementById('leadsFilterTemp').value;
+      const range = getFilterDateRange('leads');
       filteredLeads = allLeads.filter(l => {
         if (q && !(l.cliente || '').toLowerCase().includes(q) && !(l.telefone || '').includes(q)) return false;
         if (st && l.status !== st) return false;
         if (tmp && l._at.temperatura !== tmp) return false;
+        if (!isInFilterDateRange(l.criado, range)) return false;
         return true;
       });
       renderKanban();
@@ -4035,8 +4271,7 @@
     draggable="true"
     data-cid="${l.id_cliente}"
     data-atid="${atId}">
-    <div class="kanban-card-name" title="${esc(l.cliente || '')}">${esc(l.cliente || '—')}</div>
-    <div class="kanban-card-phone">${esc(l.telefone || '—')}</div>
+    ${contactCellHtml(l.cliente || '—', l.telefone || 'sem telefone', 'sm')}
     <div class="kanban-card-badges">
       ${badgeTemp(l._at.temperatura)}
       ${badgeOrigem(l.status)}
@@ -4152,6 +4387,7 @@
       const st = document.getElementById('atFilterStatus').value;
       const fn = document.getElementById('atFilterFunil').value;
       const tmp = document.getElementById('atFilterTemp').value;
+      const range = getFilterDateRange('at');
       filteredAt = allAtendimentos.filter(a => {
         const nome = (a._cliente.cliente || '').toLowerCase();
         const at = (a.atendente || '').toLowerCase();
@@ -4161,6 +4397,7 @@
         if (fn === '__sem_outros' && etapa === 'Outros') return false;
         if (fn && fn !== '__sem_outros' && etapa !== fn) return false;
         if (tmp && a.temperatura !== tmp) return false;
+        if (!isInFilterDateRange(a.update || a.criado, range)) return false;
         return true;
       });
       atPage = 1; renderAtendimentos();
@@ -4172,7 +4409,7 @@
       const tbody = document.getElementById('atBody');
       if (!page.length) { tbody.innerHTML = emptyRow(8); renderPagination('at', filteredAt.length); return; }
       tbody.innerHTML = page.map(a => `<tr>
-    <td><strong>${esc(a._cliente.cliente || '—')}</strong></td>
+    <td>${contactCellHtml(a._cliente.cliente || '—', a._cliente.telefone || 'sem telefone')}</td>
     <td style="color:var(--text2)">${esc(a.atendente || '—')}</td>
     <td>${proposalValueHtml(a._proposal)}</td>
     <td>${badgeTemp(a.temperatura)}</td>
@@ -4271,10 +4508,12 @@
       const q = document.getElementById('propSearch').value.toLowerCase();
       const st = document.getElementById('propFilterStatus').value;
       const mes = document.getElementById('propFilterMes').value;
+      const range = getFilterDateRange('prop');
       filteredProp = allPropostas.filter(p => {
         if (q && !(p._cliente || '').toLowerCase().includes(q) && !(p.produto || '').toLowerCase().includes(q)) return false;
         if (st && p.status !== st) return false;
         if (mes && !(p.criado || '').startsWith(mes)) return false;
+        if (!isInFilterDateRange(p.data_envio || p.criado, range)) return false;
         return true;
       });
       propPage = 1; renderPropostas();
@@ -4287,7 +4526,7 @@
       if (!page.length) { tbody.innerHTML = emptyRow(9); }
       else {
         tbody.innerHTML = page.map(p => `<tr>
-      <td><strong>${esc(p._cliente)}</strong></td>
+      <td>${contactCellHtml(p._cliente)}</td>
       <td>${esc(p.produto || '—')}</td>
       <td style="color:var(--text2);max-width:150px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${esc(p.descricao || '')}">${esc(p.descricao || '—')}</td>
       <td style="color:var(--green);font-weight:600">${fmtCurrency(p.valor)}</td>
@@ -4295,7 +4534,10 @@
       <td style="color:var(--text2);white-space:nowrap">${fmtDate(p.data_envio)}</td>
       <td style="color:var(--text2);white-space:nowrap">${fmtDate(p.data_resposta)}</td>
       <td style="color:var(--text2)">${esc(p._atendente)}</td>
-      <td><div class="actions-cell"><button class="btn btn-ghost btn-sm" onclick="openEditProposta('${p.id_proposta}')">✏️ Editar</button></div></td>
+      <td><div class="actions-cell">
+        <button class="btn btn-ghost btn-sm" onclick="openEditProposta(${jsArg(getPropostaId(p))})">✏️ Editar</button>
+        <button class="btn btn-danger btn-sm" onclick="deleteProposta(${jsArg(getPropostaId(p))},${jsArg(p.produto || 'proposta')},${jsArg(p.id_atendimento || '')})">Excluir</button>
+      </div></td>
     </tr>`).join('');
       }
       const total = filteredProp.reduce((s, p) => s + reportNumber(p.valor), 0);
@@ -4308,19 +4550,75 @@
     }
 
     // ── EDITAR PROPOSTA ──────────────────────────────────────────────────────────
-    function openEditProposta(propId) {
-      const p = allPropostas.find(x => x.id_proposta === propId);
+    function normalizeRecordId(id) {
+      return id === null || id === undefined ? '' : String(id);
+    }
+
+    function getPropostaId(p) {
+      if (!p) return '';
+      const id = [p.id_proposta, p.id, p.proposta_id].find(v => normalizeRecordId(v) !== '');
+      return normalizeRecordId(id);
+    }
+
+    function samePropostaId(p, id) {
+      return getPropostaId(p) === normalizeRecordId(id);
+    }
+
+    function parseOptionalMoney(value) {
+      if (value === null || value === undefined || value === '') return null;
+      const n = parseFloat(value);
+      return Number.isNaN(n) ? null : n;
+    }
+
+    function setEditPropostaDeleteButton(propId, produto, atId) {
+      const btn = document.getElementById('btnDeletePropostaEdit');
+      if (!btn) return;
+      const id = normalizeRecordId(propId);
+      if (!id) {
+        btn.style.display = 'none';
+        btn.onclick = null;
+        return;
+      }
+      btn.style.display = '';
+      btn.onclick = () => deleteProposta(id, produto || 'proposta', atId || '');
+    }
+
+    async function openEditProposta(propId) {
+      const id = normalizeRecordId(propId);
+      let p = allPropostas.find(x => samePropostaId(x, id));
+      if (!p && id) {
+        showLoader();
+        try {
+          const rows = await sbGet('crm_proposta', `id_proposta=eq.${encodeURIComponent(id)}&select=*`);
+          p = rows && rows[0];
+          if (p) {
+            const at = allAtendimentos.find(a => a.id_atendimento === p.id_atendimento);
+            p = {
+              ...p,
+              _cliente: at?._cliente?.cliente || '',
+              _atendente: at?.atendente || ''
+            };
+            allPropostas.unshift(p);
+          }
+        } catch (e) {
+          toast('Erro ao carregar proposta: ' + e.message, 'error');
+          console.error(e);
+          return;
+        } finally { hideLoader(); }
+      }
       if (!p) { toast('Proposta não encontrada', 'error'); return; }
+      const editId = getPropostaId(p) || id;
       document.getElementById('editPropostaTitle').textContent = 'Editar Proposta';
-      document.getElementById('editPropostaId').value = propId;
+      document.getElementById('editPropostaId').value = editId;
       document.getElementById('editPropostaAtId').value = p.id_atendimento || '';
       document.getElementById('editPropostaCliente').textContent = p._cliente || '';
       document.getElementById('editPropostaProduto').value = p.produto || '';
-      document.getElementById('editPropostaValor').value = p.valor || '';
+      document.getElementById('editPropostaValor').value = p.valor ?? '';
       document.getElementById('editPropostaStatus').value = p.status || 'Enviada';
       document.getElementById('editPropostaDescricao').value = p.descricao || '';
       document.getElementById('editPropostaDataEnvio').value = (p.data_envio || '').split('T')[0] || '';
       document.getElementById('editPropostaDataResposta').value = (p.data_resposta || '').split('T')[0] || '';
+      setEditPropostaDeleteButton(editId, p.produto, p.id_atendimento);
       openModal('modalEditProposta');
     }
 
@@ -4335,16 +4633,17 @@
       document.getElementById('editPropostaDescricao').value = '';
       document.getElementById('editPropostaDataEnvio').value = new Date().toISOString().split('T')[0];
       document.getElementById('editPropostaDataResposta').value = '';
+      setEditPropostaDeleteButton('', '', '');
       openModal('modalEditProposta');
     }
 
     async function saveProposta() {
-      const propId = document.getElementById('editPropostaId').value;
+      const propId = normalizeRecordId(document.getElementById('editPropostaId').value);
       const atId = document.getElementById('editPropostaAtId').value;
 
       const payload = {
         produto: document.getElementById('editPropostaProduto').value.trim() || null,
-        valor: parseFloat(document.getElementById('editPropostaValor').value) || null,
+        valor: parseOptionalMoney(document.getElementById('editPropostaValor').value),
         status: document.getElementById('editPropostaStatus').value || null,
         descricao: document.getElementById('editPropostaDescricao').value.trim() || null,
         data_envio: document.getElementById('editPropostaDataEnvio').value || null,
@@ -4355,8 +4654,8 @@
       try {
         if (propId) {
           // Editar
-          requireChangedRow(await sbPatch('crm_proposta', `id_proposta=eq.${propId}`, payload), 'salvar a proposta');
-          const p = allPropostas.find(x => x.id_proposta === propId);
+          requireChangedRow(await sbPatch('crm_proposta', `id_proposta=eq.${encodeURIComponent(propId)}`, payload), 'salvar a proposta');
+          const p = allPropostas.find(x => samePropostaId(x, propId));
           if (p) Object.assign(p, payload);
         } else {
           // Incluir
@@ -4385,6 +4684,42 @@
       } finally { hideLoader(); }
     }
 
+    async function deleteProposta(propId, produto = 'proposta', atId = '') {
+      const id = normalizeRecordId(propId);
+      if (!id) return;
+      const label = produto || 'proposta';
+      if (!confirm(`Excluir a proposta "${label}"?`)) return;
+
+      showLoader();
+      try {
+        const deleted = await sbDelete('crm_proposta', `id_proposta=eq.${encodeURIComponent(id)}`);
+        if (!Array.isArray(deleted) || !deleted.length) {
+          throw new Error('DELETE bloqueado no Supabase. Rode o arquivo supabase_fix_funil.sql no SQL Editor para liberar a policy da tabela crm_proposta.');
+        }
+        allPropostas = allPropostas.filter(p => !samePropostaId(p, id));
+        filteredProp = filteredProp.filter(p => !samePropostaId(p, id));
+        if (propPage > 1 && (propPage - 1) * PAGE_SIZE >= filteredProp.length) propPage--;
+
+        if (document.getElementById('modalEditProposta').classList.contains('open')) {
+          closeModal('modalEditProposta');
+        }
+
+        toast('Proposta excluída com sucesso', 'success');
+
+        if (document.getElementById('modalPropAt').classList.contains('open') && atId) {
+          await openPropostasAt(atId);
+        }
+
+        const activeView = document.querySelector('.nav-item.active')?.dataset.view;
+        if (activeView === 'atendimentos') await loadAtendimentos();
+        else if (activeView === 'leads') await loadLeads();
+        else if (activeView === 'propostas') renderPropostas();
+      } catch (e) {
+        toast('Erro ao excluir: ' + e.message, 'error');
+        console.error(e);
+      } finally { hideLoader(); }
+    }
+
     // ── USUÁRIOS ──────────────────────────────────────────────────────────────────
     async function loadUsers() {
       if (!isAdmin()) return;
@@ -4396,9 +4731,11 @@
     }
     function renderUsers() {
       const tbody = document.getElementById('usersBody');
-      if (!allUsers.length) { tbody.innerHTML = emptyRow(4); return; }
-      tbody.innerHTML = allUsers.map(u => `<tr>
-    <td><strong>${esc(u.nome || '—')}</strong></td>
+      const range = getFilterDateRange('users');
+      const users = allUsers.filter(u => isInFilterDateRange(u.criado || u.created_at || u.data_criacao, range, true));
+      if (!users.length) { tbody.innerHTML = emptyRow(4); return; }
+      tbody.innerHTML = users.map(u => `<tr>
+    <td>${contactCellHtml(u.nome || '—', u.email || 'sem e-mail')}</td>
     <td style="color:var(--text2)">${esc(u.email || '—')}</td>
     <td><span style="color:var(--accent)">${esc(u.empresa || '—')}</span></td>
     <td><div class="actions-cell">
@@ -4498,8 +4835,204 @@
       document.getElementById('chatSearch').value = '';
     }
 
+    function normalizeMessageType(tipo) {
+      return (tipo || '').toString().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim();
+    }
+
+    function fileExtension(name) {
+      const clean = (name || '').toString().split('?')[0].split('#')[0];
+      const dot = clean.lastIndexOf('.');
+      return dot > -1 ? clean.slice(dot + 1, dot + 6).toUpperCase() : '';
+    }
+
+    function attachmentName(url, fallback = 'arquivo') {
+      if (!url) return fallback;
+      try {
+        const path = new URL(url, window.location.href).pathname;
+        const tail = path.split('/').filter(Boolean).pop();
+        if (tail) return decodeURIComponent(tail);
+      } catch (e) {
+        const clean = url.split('?')[0].split('#')[0];
+        const tail = clean.split('/').filter(Boolean).pop();
+        if (tail) return tail;
+      }
+      return fallback;
+    }
+
+    function attachmentKind(tipo, url = '') {
+      const t = normalizeMessageType(tipo);
+      const u = (url || '').toLowerCase().split('?')[0].split('#')[0];
+      if (t.includes('image') || t.includes('imagem') || /\.(png|jpe?g|gif|webp|bmp|svg)$/i.test(u)) return 'image';
+      if (t.includes('audio') || /\.(mp3|ogg|oga|wav|m4a|aac|opus)$/i.test(u)) return 'audio';
+      if (t.includes('video') || /\.(mp4|mov|webm|m4v|avi|mkv)$/i.test(u)) return 'video';
+      if (t.includes('document') || t.includes('arquivo') || /\.(pdf|docx?|xlsx?|pptx?|csv|txt)$/i.test(u)) return 'document';
+      if (t.includes('file')) return 'file';
+      return url ? 'file' : 'text';
+    }
+
+    function attachmentLabel(kind) {
+      return ({ image: 'Imagem', audio: 'Audio', video: 'Video', document: 'Documento', file: 'Arquivo' })[kind] || 'Arquivo';
+    }
+
+    function attachmentBadge(kind, name) {
+      if (kind === 'image') return 'IMG';
+      if (kind === 'audio') return 'AUD';
+      if (kind === 'video') return 'VID';
+      return fileExtension(name) || 'FILE';
+    }
+
+    function inferAttachmentMime(kind, name = '', url = '') {
+      const ext = fileExtension(name || url).toLowerCase();
+      const byExt = {
+        jpg: 'image/jpeg',
+        jpeg: 'image/jpeg',
+        png: 'image/png',
+        gif: 'image/gif',
+        webp: 'image/webp',
+        svg: 'image/svg+xml',
+        pdf: 'application/pdf',
+        mp4: 'video/mp4',
+        mov: 'video/quicktime',
+        webm: 'video/webm',
+        mp3: 'audio/mpeg',
+        wav: 'audio/wav',
+        ogg: 'audio/ogg'
+      };
+      if (byExt[ext]) return byExt[ext];
+      if (kind === 'image') return 'image/jpeg';
+      if (kind === 'video') return 'video/mp4';
+      if (kind === 'audio') return 'audio/mpeg';
+      if (kind === 'document') return 'application/pdf';
+      return 'application/octet-stream';
+    }
+
+    async function attachmentObjectUrl(url, kind, name = '') {
+      const res = await fetch(url);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const blob = await res.blob();
+      const inferredType = inferAttachmentMime(kind, name, url);
+      const type = (!blob.type || blob.type === 'application/octet-stream') ? inferredType : blob.type;
+      const typedBlob = type === blob.type ? blob : new Blob([blob], { type });
+      return URL.createObjectURL(typedBlob);
+    }
+
+    function revokeChatPreviewUrls() {
+      chatPreviewObjectUrls.forEach(u => URL.revokeObjectURL(u));
+      chatPreviewObjectUrls = [];
+    }
+
+    function chatAttachmentHtml(m, tipo) {
+      const url = m.url_anexo || '';
+      if (!url) return '';
+
+      const kind = attachmentKind(tipo, url);
+      const fallback = m.nome_arquivo || m.file_name || m.filename || m.nome_anexo || 'arquivo';
+      const name = attachmentName(url, fallback);
+      const safeUrl = esc(url);
+      const safeName = esc(name);
+      const openArgs = `${jsArg(url)},${jsArg(name)},${jsArg(kind)}`;
+      const thumbAttrs = `data-url="${safeUrl}" data-kind="${esc(kind)}" data-name="${safeName}"`;
+      let preview = `<div class="chat-file-icon">${esc(attachmentBadge(kind, name))}</div>`;
+
+      if (kind === 'image') {
+        preview = `<div class="chat-file-thumb" data-attachment-thumb ${thumbAttrs}><span>Carregando imagem...</span></div>`;
+      } else if (kind === 'video') {
+        preview = `<div class="chat-file-thumb" data-attachment-thumb ${thumbAttrs}><span>Carregando video...</span></div>`;
+      }
+
+      return `<div class="chat-file-card" role="button" tabindex="0" onclick="openFilePreview(${openArgs})" onkeydown="chatFileCardKey(event,${openArgs})">
+        ${preview}
+        <div class="chat-file-info">
+          <div class="chat-file-meta">${esc(attachmentLabel(kind))}</div>
+          <div class="chat-file-name" title="${safeName}">${safeName}</div>
+          <div class="chat-file-actions">
+            <span class="chat-file-download">Visualizar</span>
+            <a class="chat-file-download" href="${safeUrl}" target="_blank" rel="noopener" download="${safeName}" onclick="event.stopPropagation()">Baixar</a>
+          </div>
+        </div>
+      </div>`;
+    }
+
+    async function hydrateChatAttachmentPreviews(container) {
+      const thumbs = Array.from(container.querySelectorAll('[data-attachment-thumb]'));
+      await Promise.all(thumbs.map(async thumb => {
+        const url = thumb.dataset.url || '';
+        const kind = thumb.dataset.kind || 'file';
+        const name = thumb.dataset.name || 'arquivo';
+        if (!url) return;
+        try {
+          const objectUrl = await attachmentObjectUrl(url, kind, name);
+          chatPreviewObjectUrls.push(objectUrl);
+          if (!thumb.isConnected) {
+            URL.revokeObjectURL(objectUrl);
+            return;
+          }
+          if (kind === 'video') {
+            thumb.innerHTML = `<video src="${esc(objectUrl)}" muted preload="metadata"></video>`;
+          } else {
+            thumb.innerHTML = `<img src="${esc(objectUrl)}" alt="${esc(name)}" loading="lazy">`;
+          }
+        } catch (e) {
+          thumb.innerHTML = `<span>Previa indisponivel</span>`;
+          console.warn('Falha ao carregar prévia do anexo', e);
+        }
+      }));
+    }
+
+    function chatFileCardKey(event, url, name, kind) {
+      if (event.key !== 'Enter' && event.key !== ' ') return;
+      event.preventDefault();
+      openFilePreview(url, name, kind);
+    }
+
+    async function openFilePreview(url, name = 'arquivo', kind = 'file') {
+      if (!url) return;
+      const resolvedKind = attachmentKind(kind, url);
+      const finalName = name || attachmentName(url, 'arquivo');
+      const safeName = esc(finalName);
+
+      document.getElementById('filePreviewTitle').textContent = finalName;
+      document.getElementById('filePreviewMeta').textContent = attachmentLabel(resolvedKind);
+      const download = document.getElementById('filePreviewDownload');
+      download.href = url;
+      download.setAttribute('download', finalName);
+
+      const body = document.getElementById('filePreviewBody');
+      body.innerHTML = `<div class="file-preview-empty">Carregando arquivo...</div>`;
+      openModal('modalFilePreview');
+
+      if (activeFilePreviewObjectUrl) {
+        URL.revokeObjectURL(activeFilePreviewObjectUrl);
+        activeFilePreviewObjectUrl = '';
+      }
+
+      let objectUrl = '';
+      try {
+        objectUrl = await attachmentObjectUrl(url, resolvedKind, finalName);
+        activeFilePreviewObjectUrl = objectUrl;
+      } catch (e) {
+        console.warn('Falha ao carregar anexo para preview', e);
+        body.innerHTML = `<div class="file-preview-empty">
+          Não foi possível carregar a prévia deste arquivo.
+          <br><a class="btn btn-primary btn-sm" href="${esc(url)}" target="_blank" rel="noopener">Abrir em nova aba</a>
+        </div>`;
+        return;
+      }
+
+      if (resolvedKind === 'image') {
+        body.innerHTML = `<img src="${esc(objectUrl)}" alt="${safeName}">`;
+      } else if (resolvedKind === 'video') {
+        body.innerHTML = `<video src="${esc(objectUrl)}" controls></video>`;
+      } else if (resolvedKind === 'audio') {
+        body.innerHTML = `<audio class="file-preview-audio" src="${esc(objectUrl)}" controls></audio>`;
+      } else {
+        body.innerHTML = `<iframe class="file-preview-frame" src="${esc(objectUrl)}" title="${safeName}"></iframe>`;
+      }
+    }
+
     function renderChat(msgs, highlight = '') {
       const container = document.getElementById('chatMessages');
+      revokeChatPreviewUrls();
       if (!msgs.length) { container.innerHTML = emptyChat('Nenhuma mensagem'); return; }
 
       // tipo_envio: "enviado" → right (sent); anything else → left (received)
@@ -4517,28 +5050,24 @@
         const isSent = SENT_VALUES.includes(tipoEnvio);
         const cls = isSent ? 'sent' : 'received';
         const time = dt ? dt.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' }) : '';
-        const tipo = (m.tipo_mensagem || 'text').toLowerCase().trim();
+        const tipo = normalizeMessageType(m.tipo_mensagem || 'text') || 'text';
         const isText = TEXT_TYPES.includes(tipo);
+        const attachment = chatAttachmentHtml(m, tipo);
+        const kind = attachmentKind(tipo, m.url_anexo || '');
 
         let content = '';
         if (isText) {
           let txt = esc(m.mensagem || '');
-          if (!txt) txt = '<span style="opacity:.5;font-style:italic">mensagem vazia</span>';
           if (highlight) {
             const re = new RegExp(escRe(highlight), 'gi');
             txt = txt.replace(re, match => `<span class="chat-highlight">${match}</span>`);
           }
-          content = `<div class="msg-bubble">${txt}</div>`;
-        } else if (tipo === 'image') {
-          const imgPrev = m.url_anexo ? `<a href="${esc(m.url_anexo)}" target="_blank"><img src="${esc(m.url_anexo)}" style="max-width:200px;max-height:140px;border-radius:6px;margin-top:6px;display:block" onerror="this.style.display='none'"></a>` : '';
-          content = `<div class="msg-bubble"><div class="msg-media"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg> Imagem</div>${imgPrev}${m.url_anexo && !imgPrev ? `<a href="${esc(m.url_anexo)}" target="_blank" style="color:var(--accent);font-size:11px">Abrir ↗</a>` : ''}</div>`;
-        } else if (tipo === 'audio') {
-          const player = m.url_anexo ? `<audio controls src="${esc(m.url_anexo)}" style="max-width:240px;height:34px;margin-top:6px;display:block"></audio>` : '';
-          content = `<div class="msg-bubble"><div class="msg-media"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 18v-6a9 9 0 0118 0v6"/><path d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3z"/></svg> Áudio</div>${player}</div>`;
-        } else if (tipo === 'video') {
-          content = `<div class="msg-bubble"><div class="msg-media">🎥 Vídeo${m.url_anexo ? ` <a href="${esc(m.url_anexo)}" target="_blank" style="color:var(--accent);font-size:11px">Abrir ↗</a>` : ''}</div>${m.mensagem ? `<div style="margin-top:4px;font-size:12px;opacity:.7">${esc(m.mensagem)}</div>` : ''}</div>`;
-        } else if (tipo === 'document') {
-          content = `<div class="msg-bubble"><div class="msg-media">📄 Documento${m.url_anexo ? ` <a href="${esc(m.url_anexo)}" target="_blank" style="color:var(--accent);font-size:11px">Baixar ↗</a>` : ''}</div></div>`;
+          const textHtml = txt ? `<div>${txt}</div>` : (!attachment ? '<span style="opacity:.5;font-style:italic">mensagem vazia</span>' : '');
+          content = `<div class="msg-bubble">${textHtml}${attachment}</div>`;
+        } else if (attachment) {
+          const player = kind === 'audio' ? `<audio controls src="${esc(m.url_anexo)}" style="max-width:240px;height:34px;margin-top:8px;display:block"></audio>` : '';
+          const caption = m.mensagem ? `<div class="chat-caption">${esc(m.mensagem)}</div>` : '';
+          content = `<div class="msg-bubble"><div class="msg-media">${esc(attachmentLabel(kind))}</div>${player}${attachment}${caption}</div>`;
         } else {
           // fallback: show message text if available, otherwise show type label
           const fallbackText = m.mensagem ? esc(m.mensagem) : `<span style="opacity:.6;font-style:italic">[${esc(tipo)}]</span>`;
@@ -4551,11 +5080,17 @@
 
       container.innerHTML = html;
       container.scrollTop = container.scrollHeight;
+      hydrateChatAttachmentPreviews(container);
     }
 
     function searchChat() {
       const q = document.getElementById('chatSearch').value.trim();
-      const src = q ? chatRaw.filter(m => (m.mensagem || '').toLowerCase().includes(q.toLowerCase())) : chatRaw;
+      const qLower = q.toLowerCase();
+      const src = q ? chatRaw.filter(m =>
+        (m.mensagem || '').toLowerCase().includes(qLower) ||
+        attachmentName(m.url_anexo, '').toLowerCase().includes(qLower) ||
+        normalizeMessageType(m.tipo_mensagem).includes(qLower)
+      ) : chatRaw;
       renderChat(src, q);
       if (q) {
         const first = document.querySelector('.chat-highlight');
@@ -4601,6 +5136,17 @@
       try {
         const props = await sbGet('crm_proposta', `id_atendimento=eq.${atId}&order=criado.desc`);
         if (!props || !props.length) { document.getElementById('propAtBody').innerHTML = emptyChat('Nenhuma proposta'); return; }
+        props.forEach(p => {
+          const pid = getPropostaId(p);
+          const existing = pid ? allPropostas.find(x => samePropostaId(x, pid)) : null;
+          const enriched = {
+            ...p,
+            _cliente: existing?._cliente || clienteNome || '',
+            _atendente: existing?._atendente || at?.atendente || ''
+          };
+          if (existing) Object.assign(existing, enriched);
+          else allPropostas.unshift(enriched);
+        });
         document.getElementById('propAtBody').innerHTML = `<div style="display:flex;flex-direction:column;gap:12px">` + props.map(p => `
       <div style="background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:16px">
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;flex-wrap:wrap;gap:8px">
@@ -4614,8 +5160,9 @@
           <span>Resposta: ${fmtDate(p.data_resposta)}</span>
           <span>Criado: ${fmtDate(p.criado)}</span>
         </div>
-        <div style="margin-top:10px">
-          <button class="btn btn-ghost btn-sm" onclick="openEditProposta('${p.id_proposta}')">✏️ Editar</button>
+        <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
+          <button class="btn btn-ghost btn-sm" onclick="openEditProposta(${jsArg(getPropostaId(p))})">✏️ Editar</button>
+          <button class="btn btn-danger btn-sm" onclick="deleteProposta(${jsArg(getPropostaId(p))},${jsArg(p.produto || 'proposta')},${jsArg(p.id_atendimento || atId)})">Excluir</button>
         </div>
       </div>`).join('') + '</div>';
       } catch (e) { document.getElementById('propAtBody').innerHTML = emptyChat('Erro', 'error'); console.error(e); }
@@ -4646,12 +5193,27 @@
 
     // ── MODALS ────────────────────────────────────────────────────────────────────
     function openModal(id) { document.getElementById(id).classList.add('open'); }
-    function closeModal(id) { document.getElementById(id).classList.remove('open'); }
+    function closeModal(id) {
+      const modal = document.getElementById(id);
+      if (!modal) return;
+      modal.classList.remove('open');
+      if (id === 'modalFilePreview') {
+        document.getElementById('filePreviewBody').innerHTML = '';
+        if (activeFilePreviewObjectUrl) {
+          URL.revokeObjectURL(activeFilePreviewObjectUrl);
+          activeFilePreviewObjectUrl = '';
+        }
+      }
+    }
     document.querySelectorAll('.modal-overlay').forEach(el => {
-      el.addEventListener('click', e => { if (e.target === el) el.classList.remove('open'); });
+      el.addEventListener('click', e => { if (e.target === el) closeModal(el.id); });
     });
     document.addEventListener('keydown', e => {
-      if (e.key === 'Escape') document.querySelectorAll('.modal-overlay.open').forEach(el => el.classList.remove('open'));
+      if (e.key === 'Escape') {
+        const openModals = Array.from(document.querySelectorAll('.modal-overlay.open'));
+        const topModal = openModals[openModals.length - 1];
+        if (topModal) closeModal(topModal.id);
+      }
     });
 
     // ── HELPERS ───────────────────────────────────────────────────────────────────
@@ -4669,6 +5231,7 @@
     }
 
     function esc(s) { return (s || '').toString().replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+    function jsArg(s) { return esc(JSON.stringify(s == null ? '' : String(s))); }
     function esc2(s) { return (s || '').toString().replace(/'/g, "\\'").replace(/\n/g, ' '); }
     function escRe(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
 
@@ -4680,6 +5243,54 @@
         map[p.id_atendimento].count += 1;
         return map;
       }, {});
+    }
+
+    function getFilterDateRange(prefix) {
+      const fromVal = document.getElementById(`${prefix}DateFrom`)?.value;
+      const toVal = document.getElementById(`${prefix}DateTo`)?.value;
+      return {
+        from: fromVal ? new Date(`${fromVal}T00:00:00`) : null,
+        to: toVal ? new Date(`${toVal}T23:59:59`) : null
+      };
+    }
+
+    function isInFilterDateRange(value, range, includeMissing = false) {
+      const hasRange = !!(range?.from || range?.to);
+      if (!hasRange) return true;
+      if (!value) return includeMissing;
+      const d = new Date(value);
+      if (isNaN(d)) return includeMissing;
+      if (range.from && d < range.from) return false;
+      if (range.to && d > range.to) return false;
+      return true;
+    }
+
+    function contactInitials(name) {
+      const cleaned = (name || '').replace(/[^\p{L}\p{N}\s]/gu, ' ').trim();
+      if (!cleaned) return '?';
+      const parts = cleaned.split(/\s+/).filter(Boolean);
+      return ((parts[0]?.[0] || '') + (parts.length > 1 ? parts[parts.length - 1][0] : '')).toUpperCase();
+    }
+
+    function contactAvatarColor(name) {
+      const colors = ['#ef4444', '#3b82f6', '#f43f5e', '#8b5cf6', '#10b981', '#f59e0b', '#06b6d4', '#ec4899'];
+      const text = name || '';
+      let hash = 0;
+      for (let i = 0; i < text.length; i++) hash = ((hash << 5) - hash) + text.charCodeAt(i);
+      return colors[Math.abs(hash) % colors.length];
+    }
+
+    function contactCellHtml(name, subtitle = '', size = '') {
+      const safeName = esc(name || '—');
+      const safeSubtitle = subtitle ? esc(subtitle) : '';
+      const sizeClass = size ? ` ${size}` : '';
+      return `<div class="contact-cell">
+        <span class="contact-avatar${sizeClass}" style="background:${contactAvatarColor(name)}">${esc(contactInitials(name))}</span>
+        <div class="contact-meta">
+          <div class="contact-name" title="${safeName}">${safeName}</div>
+          ${safeSubtitle ? `<div class="contact-sub" title="${safeSubtitle}">${safeSubtitle}</div>` : ''}
+        </div>
+      </div>`;
     }
 
     function proposalValueHtml(proposal) {
