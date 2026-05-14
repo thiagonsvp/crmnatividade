@@ -2820,15 +2820,19 @@
       }
 
       .topbar {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 34px;
         position: sticky;
         top: 0;
         padding: 12px 14px;
-        flex-wrap: wrap;
-        align-items: stretch
+        align-items: center;
+        gap: 10px
       }
 
       .topbar-left {
-        width: 100%;
+        grid-column: 1;
+        grid-row: 1;
+        width: auto;
         min-width: 0;
         justify-content: flex-start
       }
@@ -2841,20 +2845,34 @@
       }
 
       .topbar-right {
-        width: 100%;
-        display: grid;
-        grid-template-columns: minmax(0, 1fr) auto minmax(0, auto);
-        gap: 8px
+        display: contents
+      }
+
+      #themeBtn {
+        grid-column: 2;
+        grid-row: 1;
+        width: 32px;
+        height: 32px;
+        padding: 0;
+        justify-self: end;
+        font-size: 13px
       }
 
       .company-select {
+        grid-column: 1 / -1;
+        grid-row: 2;
         width: 100%;
-        min-width: 0
+        min-width: 0;
+        text-align: center;
+        text-align-last: center
       }
 
       .user-chip {
+        grid-column: 1 / -1;
+        grid-row: 3;
+        width: 100%;
         min-width: 0;
-        max-width: 42vw;
+        max-width: none;
         justify-content: center
       }
 
@@ -2905,7 +2923,7 @@
 
       .kpi-card {
         min-height: 112px;
-        padding: 14px;
+        padding: 12px;
         grid-template-columns: 38px minmax(0, 1fr);
         column-gap: 10px;
         border-radius: 14px
@@ -2918,7 +2936,7 @@
       }
 
       .kpi-body .val {
-        font-size: 25px;
+        font-size: 24px;
         justify-self: start;
         text-align: left;
         max-width: 100%;
@@ -3150,16 +3168,6 @@
         right: 12px
       }
 
-      .topbar-right {
-        grid-template-columns: minmax(0, 1fr) auto
-      }
-
-      .user-chip {
-        grid-column: 1 / -1;
-        max-width: none;
-        justify-content: flex-start
-      }
-
       .content,
       .main.leads-mode .content {
         padding: 14px 10px 24px
@@ -3173,13 +3181,51 @@
       }
 
       .filters-bar,
-      .stat-pills,
-      .kpi-grid {
+      .stat-pills {
         grid-template-columns: 1fr
       }
 
+      .kpi-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px
+      }
+
       .kpi-card {
-        min-height: 104px
+        min-height: 112px;
+        grid-template-columns: 32px minmax(0, 1fr);
+        padding: 12px 10px;
+        column-gap: 8px
+      }
+
+      .kpi-icon {
+        width: 32px;
+        height: 32px;
+        border-radius: 10px
+      }
+
+      .kpi-icon svg {
+        width: 18px;
+        height: 18px
+      }
+
+      .kpi-body h3 {
+        font-size: 8px;
+        letter-spacing: .4px
+      }
+
+      .kpi-body .val {
+        font-size: 22px;
+        justify-self: center;
+        text-align: center
+      }
+
+      .kpi-card.kpi-money .kpi-body .val {
+        justify-self: center;
+        text-align: center
+      }
+
+      .kpi-body .delta {
+        font-size: 11px
       }
 
       .chart-card {
