@@ -576,7 +576,8 @@
     }
 
     select.filter-input option {
-      background: var(--card)
+      background: #ffffff;
+      color: #111827
     }
 
     .date-field {
@@ -1441,7 +1442,8 @@
     }
 
     select.form-control option {
-      background: var(--card)
+      background: #ffffff;
+      color: #111827
     }
 
     /* ── TOAST ───────────────────────────────────────────────────────────────────── */
@@ -1556,6 +1558,119 @@
 
     .date-range-inputs input:focus {
       border-color: var(--accent)
+    }
+
+    /* ── DASHBOARD ORIGIN FILTER ─────────────────────────────────────────────────── */
+    .dashboard-filter-row {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: -10px 0 24px
+    }
+
+    .multi-filter {
+      position: relative;
+      min-width: 230px
+    }
+
+    .multi-filter-btn {
+      width: 100%;
+      min-height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 7px 12px;
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      cursor: pointer;
+      transition: .15s
+    }
+
+    .multi-filter-btn svg {
+      flex: 0 0 auto;
+      color: var(--text2);
+      transition: .15s
+    }
+
+    .multi-filter.open .multi-filter-btn,
+    .multi-filter-btn:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: rgba(79, 142, 247, .08)
+    }
+
+    .multi-filter.open .multi-filter-btn svg {
+      transform: rotate(180deg);
+      color: var(--accent)
+    }
+
+    .multi-filter-menu {
+      position: absolute;
+      z-index: 120;
+      top: calc(100% + 8px);
+      left: 0;
+      width: min(320px, calc(100vw - 48px));
+      max-height: 290px;
+      overflow-y: auto;
+      display: none;
+      padding: 8px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      box-shadow: 0 18px 48px var(--shadow)
+    }
+
+    .multi-filter.open .multi-filter-menu {
+      display: block
+    }
+
+    .multi-filter-all,
+    .multi-filter-option {
+      width: 100%;
+      min-height: 34px;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      padding: 7px 8px;
+      border: none;
+      border-radius: 8px;
+      background: transparent;
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      text-align: left;
+      cursor: pointer
+    }
+
+    .multi-filter-all {
+      color: var(--text2);
+      border-bottom: 1px solid var(--border);
+      border-radius: 8px 8px 0 0;
+      margin-bottom: 4px
+    }
+
+    .multi-filter-all:hover,
+    .multi-filter-option:hover {
+      background: var(--hover-row)
+    }
+
+    .multi-filter-option input {
+      width: 14px;
+      height: 14px;
+      accent-color: var(--accent);
+      flex: 0 0 auto
+    }
+
+    .multi-filter-option span {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap
     }
 
     /* ── PROPOSALS TOTAL ──────────────────────────────────────────────────────────── */
@@ -2198,6 +2313,17 @@
       color: #e2e8f0
     }
 
+    .multi-filter-btn,
+    .multi-filter-menu {
+      background: rgba(255, 255, 255, .06);
+      border-color: rgba(255, 255, 255, .12)
+    }
+
+    .multi-filter-menu {
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px)
+    }
+
     .kpi-grid {
       gap: 16px;
       margin-bottom: 32px
@@ -2646,10 +2772,18 @@
     [data-theme="light"] .filter-input,
     [data-theme="light"] .form-control,
     [data-theme="light"] .company-select,
-    [data-theme="light"] .date-range-inputs input {
+    [data-theme="light"] .date-range-inputs input,
+    [data-theme="light"] .multi-filter-btn,
+    [data-theme="light"] .multi-filter-menu {
       background: rgba(255, 255, 255, .9);
       border-color: rgba(148, 163, 184, .34);
       color: var(--text)
+    }
+
+    [data-theme="light"] select.filter-input option,
+    [data-theme="light"] select.form-control option {
+      background: #ffffff;
+      color: #111827
     }
 
     [data-theme="light"] .btn-toggle,
@@ -2913,6 +3047,20 @@
 
       .date-range-inputs {
         flex: 0 0 auto
+      }
+
+      .dashboard-filter-row {
+        margin: -8px 0 18px
+      }
+
+      .multi-filter {
+        width: 100%;
+        min-width: 0
+      }
+
+      .multi-filter-menu {
+        width: 100%;
+        max-width: calc(100vw - 28px)
       }
 
       .kpi-grid {
@@ -3464,6 +3612,19 @@
               <input type="date" id="dateTo" onchange="loadDashboard()">
             </div>
           </div>
+          <div class="dashboard-filter-row">
+            <div class="multi-filter" id="dashOrigemFilter">
+              <button type="button" class="multi-filter-btn" id="dashOrigemBtn" aria-haspopup="true"
+                aria-expanded="false"
+                onclick="toggleDashboardOrigemMenu(event)">
+                <span id="dashOrigemLabel">Todas as origens</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+              <div class="multi-filter-menu" id="dashOrigemMenu" onclick="event.stopPropagation()"></div>
+            </div>
+          </div>
 
           <div class="section-title">Visão Geral</div>
           <div class="section-sub">Principais métricas do período selecionado</div>
@@ -3686,8 +3847,8 @@
           <div class="filters-bar">
             <input class="filter-input" type="text" id="atSearch" placeholder="🔍 Cliente ou atendente..."
               oninput="filterAtendimentos()" style="flex:1;min-width:180px">
-            <select class="filter-input" id="atFilterStatus" onchange="filterAtendimentos()">
-              <option value="">Todos os Status</option>
+            <select class="filter-input" id="atFilterOrigem" onchange="filterAtendimentos()">
+              <option value="">Origem</option>
             </select>
             <select class="filter-input" id="atFilterFunil" onchange="filterAtendimentos()">
               <option value="__sem_outros" selected>Etapa do Funil</option>
@@ -4092,6 +4253,7 @@
     let allPropostas = [], filteredProp = [], propPage = 1;
     let allUsers = [];
     let dateFilter = { type: '7d' };
+    let dashboardOrigemSelected = [];
     let charts = {};
     let chatRaw = [];
     let chatPreviewObjectUrls = [];
@@ -4320,6 +4482,71 @@
     }
 
     // ── DASHBOARD ─────────────────────────────────────────────────────────────────
+    const DASH_ORIGEM_EMPTY = '__sem_origem__';
+
+    function dashboardOrigemValue(value) {
+      return (value || '').toString().trim() || DASH_ORIGEM_EMPTY;
+    }
+
+    function dashboardOrigemLabel(value) {
+      return value === DASH_ORIGEM_EMPTY ? 'Origem não informada' : value;
+    }
+
+    function updateDashboardOrigemLabel() {
+      const label = document.getElementById('dashOrigemLabel');
+      if (!label) return;
+      if (!dashboardOrigemSelected.length) {
+        label.textContent = 'Todas as origens';
+      } else if (dashboardOrigemSelected.length === 1) {
+        label.textContent = dashboardOrigemLabel(dashboardOrigemSelected[0]);
+      } else {
+        label.textContent = `${dashboardOrigemSelected.length} origens`;
+      }
+    }
+
+    function renderDashboardOrigemFilter(leads = []) {
+      const menu = document.getElementById('dashOrigemMenu');
+      if (!menu) return;
+      const available = [...new Set((leads || []).map(l => dashboardOrigemValue(l.status)))];
+      const options = [...new Set([...LEAD_ORIGINS, ...available, ...dashboardOrigemSelected])];
+      menu.innerHTML = `
+        <button type="button" class="multi-filter-all" onclick="clearDashboardOrigem(event)">Todas as origens</button>
+        ${options.map(origin => {
+          const checked = dashboardOrigemSelected.includes(origin) ? 'checked' : '';
+          return `<label class="multi-filter-option">
+            <input type="checkbox" value="${esc(origin)}" ${checked} onchange="toggleDashboardOrigem(${jsArg(origin)}, this.checked)">
+            <span title="${esc(dashboardOrigemLabel(origin))}">${esc(dashboardOrigemLabel(origin))}</span>
+          </label>`;
+        }).join('')}`;
+      updateDashboardOrigemLabel();
+    }
+
+    function toggleDashboardOrigem(origin, checked) {
+      if (checked && !dashboardOrigemSelected.includes(origin)) {
+        dashboardOrigemSelected.push(origin);
+      } else if (!checked) {
+        dashboardOrigemSelected = dashboardOrigemSelected.filter(o => o !== origin);
+      }
+      updateDashboardOrigemLabel();
+      loadDashboard();
+    }
+
+    function clearDashboardOrigem(event) {
+      event?.stopPropagation();
+      if (!dashboardOrigemSelected.length) return;
+      dashboardOrigemSelected = [];
+      updateDashboardOrigemLabel();
+      loadDashboard();
+    }
+
+    function toggleDashboardOrigemMenu(event) {
+      event?.stopPropagation();
+      const wrap = document.getElementById('dashOrigemFilter');
+      if (!wrap) return;
+      const isOpen = wrap.classList.toggle('open');
+      document.getElementById('dashOrigemBtn')?.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    }
+
     async function loadDashboard() {
       showLoader();
       try {
@@ -4328,7 +4555,12 @@
         const dateQ = `&criado=gte.${from.toISOString()}&criado=lte.${to.toISOString()}`;
 
         // Load leads in date range (filtered by company if needed)
-        const leads = await sbGet('crm_clientes', `select=*${cf}${dateQ}&order=criado.desc`);
+        const leadsInRange = await sbGet('crm_clientes', `select=*${cf}${dateQ}&order=criado.desc`);
+        renderDashboardOrigemFilter(leadsInRange);
+        const selectedOrigins = new Set(dashboardOrigemSelected);
+        const leads = selectedOrigins.size
+          ? leadsInRange.filter(l => selectedOrigins.has(dashboardOrigemValue(l.status)))
+          : leadsInRange;
 
         // Load all atendimentos, then filter by client IDs
         const leadIds = leads.map(l => l.id_cliente);
@@ -4909,12 +5141,12 @@
           _proposal: proposalByAt[a.id_atendimento] || { total: 0, count: 0 }
         }));
 
-        const statuses = [...new Set(allAtendimentos.map(a => a.status).filter(Boolean))];
-        const sel = document.getElementById('atFilterStatus');
+        const origins = [...new Set([...LEAD_ORIGINS, ...allAtendimentos.map(a => dashboardOrigemValue(a._cliente.status))])];
+        const sel = document.getElementById('atFilterOrigem');
         const prev = sel.value;
-        sel.innerHTML = '<option value="">Todos os Status</option>';
-        statuses.forEach(s => { const o = document.createElement('option'); o.value = s; o.textContent = s; sel.appendChild(o); });
-        sel.value = prev;
+        sel.innerHTML = '<option value="">Origem</option>';
+        origins.forEach(s => { const o = document.createElement('option'); o.value = s; o.textContent = dashboardOrigemLabel(s); sel.appendChild(o); });
+        sel.value = origins.includes(prev) ? prev : '';
 
         filterAtendimentos();
       } catch (e) { toast('Erro ao carregar atendimentos: ' + e.message, 'error'); console.error(e); } finally { hideLoader(); }
@@ -4922,7 +5154,7 @@
 
     function filterAtendimentos() {
       const q = document.getElementById('atSearch').value.toLowerCase();
-      const st = document.getElementById('atFilterStatus').value;
+      const origem = document.getElementById('atFilterOrigem').value;
       const fn = document.getElementById('atFilterFunil').value;
       const tmp = document.getElementById('atFilterTemp').value;
       const range = getFilterDateRange('at');
@@ -4930,7 +5162,7 @@
         const nome = (a._cliente.cliente || '').toLowerCase();
         const at = (a.atendente || '').toLowerCase();
         if (q && !nome.includes(q) && !at.includes(q)) return false;
-        if (st && a.status !== st) return false;
+        if (origem && dashboardOrigemValue(a._cliente.status) !== origem) return false;
         const etapa = normalizeFunilStage(a.etapa_funil);
         if (fn === '__sem_outros' && etapa === 'Outros') return false;
         if (fn && fn !== '__sem_outros' && etapa !== fn) return false;
@@ -5788,8 +6020,17 @@
     document.querySelectorAll('.modal-overlay').forEach(el => {
       el.addEventListener('click', e => { if (e.target === el) closeModal(el.id); });
     });
+    document.addEventListener('click', e => {
+      const wrap = document.getElementById('dashOrigemFilter');
+      if (wrap && !wrap.contains(e.target)) {
+        wrap.classList.remove('open');
+        document.getElementById('dashOrigemBtn')?.setAttribute('aria-expanded', 'false');
+      }
+    });
     document.addEventListener('keydown', e => {
       if (e.key === 'Escape') {
+        document.getElementById('dashOrigemFilter')?.classList.remove('open');
+        document.getElementById('dashOrigemBtn')?.setAttribute('aria-expanded', 'false');
         const openModals = Array.from(document.querySelectorAll('.modal-overlay.open'));
         const topModal = openModals[openModals.length - 1];
         if (topModal) closeModal(topModal.id);
