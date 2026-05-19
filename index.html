@@ -3714,6 +3714,7 @@
                 <thead>
                   <tr>
                     <th>Cliente</th>
+                    <th>Origem</th>
                     <th>Atendente</th>
                     <th>Proposta</th>
                     <th>Temperatura</th>
@@ -3756,6 +3757,7 @@
                 <thead>
                   <tr>
                     <th>Cliente</th>
+                    <th>Origem</th>
                     <th>Produto</th>
                     <th>Descrição</th>
                     <th>Valor</th>
@@ -3913,6 +3915,7 @@
       </div>
       <div class="modal-body">
         <input type="hidden" id="editAtId">
+        <input type="hidden" id="editAtClienteId">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
           <div class="form-group" style="margin-bottom:0">
             <label>Etapa do Funil</label>
@@ -3944,6 +3947,10 @@
             <label>Atendente</label>
             <input class="form-control" type="text" id="editAtAtendente" placeholder="Nome do atendente">
           </div>
+        </div>
+        <div class="form-group" style="margin-top:12px">
+          <label>Origem</label>
+          <select class="form-control" id="editAtOrigem"></select>
         </div>
         <div class="form-group" style="margin-top:12px">
           <label>Interesse</label>
@@ -4070,7 +4077,7 @@
     const DEFAULT_FUNIL_STAGE = 'Lead';
     const FUNIL_STAGES = ['Lead', 'Atendimento', 'Proposta', 'Ganho', 'Perdido'];
     const KANBAN_FUNIL_STAGES = [...FUNIL_STAGES, 'Outros'];
-    const LEAD_ORIGINS = ['Google', 'Meta', 'Orgânico', 'Indicação', 'Outros'];
+    const LEAD_ORIGINS = ['Google', 'Meta', 'Orgânico', 'Indicação', 'Cliente de Carteira', 'Outros'];
     const LEGACY_FUNIL_STAGE_MAP = {
       Prospecto: 'Lead',
       Qualificado: 'Atendimento',
@@ -4138,6 +4145,7 @@
     const sbGet = (t, p = '') => sbFetch(`${t}?${p}`);
     const sbPost = (t, d) => sbFetch(t, { method: 'POST', body: JSON.stringify(d) });
     const sbPatch = (t, f, d) => sbFetch(`${t}?${f}`, { method: 'PATCH', body: JSON.stringify(d) });
+    const sbPatchMinimal = (t, f, d) => sbFetch(`${t}?${f}`, { method: 'PATCH', prefer: 'return=minimal', body: JSON.stringify(d) });
     const sbDelete = (t, f) => sbFetch(`${t}?${f}`, { method: 'DELETE', prefer: 'return=representation' });
     function requireChangedRow(rows, action = 'alterar') {
       if (Array.isArray(rows) && rows.length) return rows[0];
@@ -4695,7 +4703,7 @@
         const cf = cfParam();
         const [clients, atends, proposals] = await Promise.all([
           sbGet('crm_clientes', `select=*&order=criado.desc${cf}`),
-          sbGet('crm_atendimentos', `select=id_atendimento,id_cliente,temperatura,etapa_funil,status,update&order=update.desc.nullslast,criado.desc`),
+          sbGet('crm_atendimentos', `select=id_atendimento,id_cliente,temperatura,etapa_funil,status,atendente,interesse,resumo,criado,update&order=update.desc.nullslast,criado.desc`),
           sbGet('crm_proposta', `select=id_atendimento,valor,status,criado&order=criado.desc`)
         ]);
 
@@ -4888,7 +4896,7 @@
         const cf = cfParam();
         const [atends, clients, proposals] = await Promise.all([
           sbGet('crm_atendimentos', `select=*&order=update.desc`),
-          sbGet('crm_clientes', `select=id_cliente,cliente,telefone,empresa&order=criado.desc${cf}`),
+          sbGet('crm_clientes', `select=id_cliente,cliente,telefone,empresa,status&order=criado.desc${cf}`),
           sbGet('crm_proposta', `select=id_atendimento,valor,status,criado&order=criado.desc`)
         ]);
         const cMap = {}; (clients || []).forEach(c => cMap[c.id_cliente] = c);
@@ -4937,9 +4945,10 @@
       const start = (atPage - 1) * PAGE_SIZE;
       const page = filteredAt.slice(start, start + PAGE_SIZE);
       const tbody = document.getElementById('atBody');
-      if (!page.length) { tbody.innerHTML = emptyRow(8); renderPagination('at', filteredAt.length); return; }
+      if (!page.length) { tbody.innerHTML = emptyRow(9); renderPagination('at', filteredAt.length); return; }
       tbody.innerHTML = page.map(a => `<tr>
     <td>${contactCellHtml(a._cliente.cliente || '—', a._cliente.telefone || 'sem telefone')}</td>
+    <td>${badgeOrigem(a._cliente.status)}</td>
     <td style="color:var(--text2)">${esc(a.atendente || '—')}</td>
     <td>${proposalValueHtml(a._proposal)}</td>
     <td>${badgeTemp(a.temperatura)}</td>
@@ -4956,15 +4965,40 @@
     }
 
     // ── EDITAR ATENDIMENTO ────────────────────────────────────────────────────────
-    function openEditAt(atId, clienteNome) {
+    function populateOrigemSelect(selected = '') {
+      const sel = document.getElementById('editAtOrigem');
+      const origins = [...LEAD_ORIGINS];
+      if (selected && !origins.includes(selected)) origins.push(selected);
+      sel.innerHTML = '<option value="">—</option>';
+      origins.forEach(s => {
+        const o = document.createElement('option');
+        o.value = s;
+        o.textContent = s;
+        sel.appendChild(o);
+      });
+      sel.value = selected || '';
+    }
+
+    function findAtendimentoForEdit(atId) {
       const at = allAtendimentos.find(a => a.id_atendimento === atId);
+      if (at) return at;
+      const lead = allLeads.find(l => l._at?.id_atendimento === atId);
+      if (!lead) return null;
+      return { ...lead._at, id_cliente: lead.id_cliente, _cliente: lead, _proposal: lead._proposal };
+    }
+
+    function openEditAt(atId, clienteNome) {
+      const at = findAtendimentoForEdit(atId);
       if (!at) { toast('Atendimento não encontrado', 'error'); return; }
+      const cliente = at._cliente || {};
       document.getElementById('editAtId').value = atId;
-      document.getElementById('editAtClienteNome').textContent = clienteNome || at._cliente.cliente || '';
+      document.getElementById('editAtClienteId').value = at.id_cliente || cliente.id_cliente || '';
+      document.getElementById('editAtClienteNome').textContent = clienteNome || cliente.cliente || '';
       document.getElementById('editAtFunil').value = normalizeFunilStage(at.etapa_funil);
       document.getElementById('editAtTemp').value = at.temperatura || '';
       document.getElementById('editAtStatus').value = at.status || '';
       document.getElementById('editAtAtendente').value = at.atendente || '';
+      populateOrigemSelect(cliente.status || '');
       document.getElementById('editAtInteresse').value = at.interesse || '';
       document.getElementById('editAtResumo').value = at.resumo || '';
       openModal('modalEditAt');
@@ -4973,6 +5007,8 @@
     async function saveAtendimento() {
       const atId = document.getElementById('editAtId').value;
       if (!atId) return;
+      const clienteId = document.getElementById('editAtClienteId').value;
+      const origem = document.getElementById('editAtOrigem').value || null;
       const payload = {
         etapa_funil: document.getElementById('editAtFunil').value,
         temperatura: document.getElementById('editAtTemp').value || null,
@@ -4985,14 +5021,27 @@
       showLoader();
       try {
         requireChangedRow(await sbPatch('crm_atendimentos', `id_atendimento=eq.${atId}`, payload), 'salvar o atendimento');
+        if (clienteId) {
+          const clienteFilter = `id_cliente=eq.${encodeURIComponent(clienteId)}`;
+          await sbPatchMinimal('crm_clientes', clienteFilter, { status: origem });
+          const clienteRows = await sbGet('crm_clientes', `${clienteFilter}&select=id_cliente,status`);
+          const origemSalva = clienteRows?.[0]?.status || null;
+          if (!clienteRows?.length || origemSalva !== origem) {
+            throw new Error('A origem do cliente não foi atualizada. Rode o ajuste de permissões/RLS da tabela crm_clientes no Supabase.');
+          }
+        }
 
         // Update local state immediately (both atendimentos list and leads kanban)
         const at = allAtendimentos.find(a => a.id_atendimento === atId);
-        if (at) Object.assign(at, payload);
+        if (at) {
+          Object.assign(at, payload);
+          if (at._cliente) at._cliente.status = origem;
+        }
 
         // Also sync _at on any lead that has this atendimento
         allLeads.forEach(l => {
-          if (l._at.id_atendimento === atId) Object.assign(l._at, payload);
+          if (l.id_cliente === clienteId) l.status = origem;
+          if (l._at?.id_atendimento === atId) Object.assign(l._at, payload);
         });
 
         closeModal('modalEditAt');
@@ -5016,7 +5065,7 @@
         const [props, atends, clients] = await Promise.all([
           sbGet('crm_proposta', `select=*&order=criado.desc`),
           sbGet('crm_atendimentos', `select=id_atendimento,id_cliente,atendente`),
-          sbGet('crm_clientes', `select=id_cliente,cliente,empresa&order=criado.desc${cf}`)
+          sbGet('crm_clientes', `select=id_cliente,cliente,empresa,status&order=criado.desc${cf}`)
         ]);
         const cMap = {}; (clients || []).forEach(c => cMap[c.id_cliente] = c);
         const aMap = {}; (atends || []).forEach(a => aMap[a.id_atendimento] = a);
@@ -5026,7 +5075,7 @@
           .map(p => {
             const at = aMap[p.id_atendimento] || {};
             const cl = cMap[at.id_cliente] || {};
-            return { ...p, _cliente: cl.cliente || '—', _atendente: at.atendente || '—' };
+            return { ...p, _cliente: cl.cliente || '—', _origem: cl.status || '', _atendente: at.atendente || '—' };
           });
 
         filteredProp = [...allPropostas];
@@ -5053,10 +5102,11 @@
       const start = (propPage - 1) * PAGE_SIZE;
       const page = filteredProp.slice(start, start + PAGE_SIZE);
       const tbody = document.getElementById('propBody');
-      if (!page.length) { tbody.innerHTML = emptyRow(9); }
+      if (!page.length) { tbody.innerHTML = emptyRow(10); }
       else {
         tbody.innerHTML = page.map(p => `<tr>
       <td>${contactCellHtml(p._cliente)}</td>
+      <td>${badgeOrigem(p._origem)}</td>
       <td>${esc(p.produto || '—')}</td>
       <td style="color:var(--text2);max-width:150px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${esc(p.descricao || '')}">${esc(p.descricao || '—')}</td>
       <td style="color:var(--green);font-weight:600">${fmtCurrency(p.valor)}</td>
@@ -5879,7 +5929,7 @@
     }
     function badgeOrigem(o) {
       if (!o) return '<span class="badge badge-gray">Origem não informada</span>';
-      const m = { Google: 'badge-blue', Meta: 'badge-purple', 'Orgânico': 'badge-green', 'Indicação': 'badge-yellow', Outros: 'badge-gray' };
+      const m = { Google: 'badge-blue', Meta: 'badge-purple', 'Orgânico': 'badge-green', 'Indicação': 'badge-yellow', 'Cliente de Carteira': 'badge-blue', Outros: 'badge-gray' };
       return `<span class="badge ${m[o] || 'badge-gray'}">${esc(o)}</span>`;
     }
     function badgeStatus(s) {

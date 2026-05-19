@@ -38,12 +38,33 @@ SET etapa_funil = 'Lead'
 WHERE etapa_funil IS NULL;
 
 -- Permissões usadas pelo app via REST/anon key.
+GRANT SELECT, UPDATE ON public.crm_clientes TO anon, authenticated;
 GRANT SELECT, INSERT, UPDATE ON public.crm_atendimentos TO anon, authenticated;
 GRANT SELECT, INSERT, UPDATE, DELETE ON public.crm_proposta TO anon, authenticated;
 
--- Se RLS estiver ativo, estas policies permitem o app alterar atendimentos e propostas.
+-- Se RLS estiver ativo, estas policies permitem o app alterar clientes, atendimentos e propostas.
 DO $$
 BEGIN
+  IF NOT EXISTS (
+    SELECT 1
+    FROM pg_policies
+    WHERE schemaname = 'public'
+      AND tablename = 'crm_clientes'
+      AND policyname = 'crm_clientes_select_anon'
+  ) THEN
+    EXECUTE 'CREATE POLICY crm_clientes_select_anon ON public.crm_clientes FOR SELECT TO anon, authenticated USING (true)';
+  END IF;
+
+  IF NOT EXISTS (
+    SELECT 1
+    FROM pg_policies
+    WHERE schemaname = 'public'
+      AND tablename = 'crm_clientes'
+      AND policyname = 'crm_clientes_update_anon'
+  ) THEN
+    EXECUTE 'CREATE POLICY crm_clientes_update_anon ON public.crm_clientes FOR UPDATE TO anon, authenticated USING (true) WITH CHECK (true)';
+  END IF;
+
   IF NOT EXISTS (
     SELECT 1
     FROM pg_policies
