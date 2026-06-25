@@ -1354,11 +1354,365 @@
       text-decoration: underline
     }
 
+    .chat-file-download[role="button"] {
+      cursor: pointer
+    }
+
+    .chat-file-expired {
+      cursor: default;
+      opacity: .85
+    }
+
+    .chat-file-expired:hover {
+      border-color: var(--border);
+      box-shadow: none
+    }
+
+    .chat-file-icon-expired {
+      background: rgba(148, 163, 184, .12);
+      color: var(--text2);
+      font-size: 26px;
+      letter-spacing: 0
+    }
+
+    .chat-file-expired-note {
+      color: var(--red, #ef4444);
+      font-size: 11px;
+      font-weight: 700
+    }
+
     .chat-caption {
       margin-top: 7px;
       color: var(--text2);
       font-size: 12px;
       line-height: 1.45
+    }
+
+    /* ── ATENDIMENTOS (estilo WhatsApp Web) ──────────────────────────────────────── */
+    .main.atendimentos-mode .content {
+      padding: 12px 14px;
+      max-width: none
+    }
+
+    .wa-wrap {
+      display: flex;
+      height: calc(100vh - 80px);
+      min-height: 520px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      background: var(--card)
+    }
+
+    .wa-list-pane {
+      width: 340px;
+      flex: 0 0 340px;
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid var(--border);
+      background: var(--sidebar);
+      min-width: 0
+    }
+
+    .wa-list-head {
+      padding: 14px 16px 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      border-bottom: 1px solid var(--border)
+    }
+
+    .wa-list-title {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 17px;
+      color: var(--text)
+    }
+
+    .wa-search {
+      width: 100%;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 9px 12px;
+      color: var(--text);
+      font-size: 13px;
+      font-family: inherit;
+      outline: none;
+      transition: border-color .15s
+    }
+
+    .wa-search:focus {
+      border-color: var(--accent)
+    }
+
+    .wa-list-count {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text2);
+      background: var(--border);
+      border-radius: 9px;
+      padding: 1px 8px;
+      vertical-align: middle
+    }
+
+    .wa-filter-row,
+    .wa-date-row {
+      display: flex;
+      gap: 8px
+    }
+
+    .wa-select {
+      flex: 1;
+      min-width: 0;
+      padding: 8px 10px;
+      font-size: 12px;
+      cursor: pointer
+    }
+
+    .wa-select option {
+      background: #fff;
+      color: #111827
+    }
+
+    .wa-date {
+      flex: 1;
+      min-width: 0;
+      padding: 8px 10px;
+      font-size: 12px;
+      color: var(--text2)
+    }
+
+    .wa-list {
+      flex: 1;
+      overflow-y: auto;
+      padding: 6px
+    }
+
+    .wa-list-empty {
+      text-align: center;
+      color: var(--text2);
+      font-size: 13px;
+      padding: 40px 16px
+    }
+
+    .wa-conv {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      padding: 10px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background .12s
+    }
+
+    .wa-conv:hover {
+      background: var(--bg)
+    }
+
+    .wa-conv.active {
+      background: var(--accent-soft, rgba(79, 142, 247, .14))
+    }
+
+    .wa-conv .contact-avatar {
+      flex: 0 0 42px;
+      width: 42px;
+      height: 42px;
+      font-size: 14px
+    }
+
+    .wa-conv-meta {
+      flex: 1;
+      min-width: 0
+    }
+
+    .wa-conv-top {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 8px
+    }
+
+    .wa-conv-name {
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--text);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap
+    }
+
+    .wa-conv-time {
+      flex: 0 0 auto;
+      font-size: 11px;
+      color: var(--text2)
+    }
+
+    .wa-conv-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-top: 2px
+    }
+
+    .wa-conv-preview {
+      font-size: 12.5px;
+      color: var(--text2);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap
+    }
+
+    .wa-conv-temp {
+      flex: 0 0 auto;
+      font-size: 12px
+    }
+
+    .wa-conv-tags {
+      margin-top: 5px
+    }
+
+    .wa-conv-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      font-size: 10.5px;
+      font-weight: 700;
+      color: #b45309;
+      background: rgba(245, 158, 11, .16);
+      border: 1px solid rgba(245, 158, 11, .35);
+      padding: 1px 8px;
+      border-radius: 20px
+    }
+
+    [data-theme="dark"] .wa-conv-tag {
+      color: #fbbf24
+    }
+
+    .wa-chat-pane {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      background: var(--bg)
+    }
+
+    .wa-chat-head {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 12px 18px;
+      border-bottom: 1px solid var(--border);
+      background: var(--sidebar);
+      flex-wrap: wrap
+    }
+
+    .wa-head-tags,
+    .wa-head-actions {
+      margin-top: 2px
+    }
+
+    .wa-head-contact {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      min-width: 0;
+      flex: 1
+    }
+
+    .wa-head-meta {
+      min-width: 0
+    }
+
+    .wa-head-name {
+      font-weight: 600;
+      font-size: 15px;
+      color: var(--text);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap
+    }
+
+    .wa-head-sub {
+      font-size: 12px;
+      color: var(--text2)
+    }
+
+    .wa-head-resumo {
+      font-size: 12px;
+      color: var(--text2);
+      opacity: .9;
+      margin-top: 3px;
+      line-height: 1.5;
+      white-space: normal;
+      word-break: break-word
+    }
+
+    .wa-head-tags {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap
+    }
+
+    .wa-head-actions {
+      display: flex;
+      align-items: center;
+      gap: 6px
+    }
+
+    .wa-chat-empty {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text2);
+      text-align: center;
+      padding: 24px
+    }
+
+    .wa-chat-empty-icon {
+      font-size: 40px;
+      margin-bottom: 12px;
+      opacity: .6
+    }
+
+    .wa-chat-inner {
+      flex: 1;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 14px 18px 18px
+    }
+
+    .wa-chat-inner .chat-messages {
+      flex: 1
+    }
+
+    @media(max-width:760px) {
+      .wa-wrap {
+        flex-direction: column;
+        height: auto;
+        min-height: 0
+      }
+
+      .wa-list-pane {
+        width: 100%;
+        flex: none;
+        border-right: none;
+        border-bottom: 1px solid var(--border)
+      }
+
+      .wa-list {
+        max-height: 320px
+      }
+
+      .wa-chat-inner .chat-messages {
+        height: 50vh
+      }
     }
 
     .modal-file-preview {
@@ -1391,6 +1745,31 @@
 
     .file-preview-audio {
       width: min(520px, calc(100vw - 64px))
+    }
+
+    .file-preview-doc {
+      width: 100%;
+      height: 76vh;
+      display: flex;
+      flex-direction: column
+    }
+
+    .file-preview-doc .file-preview-frame {
+      flex: 1;
+      height: auto
+    }
+
+    .file-preview-fallback-link {
+      padding: 8px;
+      text-align: center;
+      font-size: 12px;
+      color: var(--text2);
+      background: var(--card)
+    }
+
+    .file-preview-fallback-link a {
+      color: var(--accent);
+      font-weight: 600
     }
 
     .file-preview-empty {
@@ -3841,54 +4220,54 @@
 
         <!-- ATENDIMENTOS -->
         <div class="view" id="view-atendimentos">
-          <div class="section-header">
-            <h2>Atendimentos</h2>
-          </div>
-          <div class="filters-bar">
-            <input class="filter-input" type="text" id="atSearch" placeholder="🔍 Cliente ou atendente..."
-              oninput="filterAtendimentos()" style="flex:1;min-width:180px">
-            <select class="filter-input" id="atFilterOrigem" onchange="filterAtendimentos()">
-              <option value="">Origem</option>
-            </select>
-            <select class="filter-input" id="atFilterFunil" onchange="filterAtendimentos()">
-              <option value="__sem_outros" selected>Etapa do Funil</option>
-              <option value="">Todas as etapas</option>
-              <option>Lead</option>
-              <option>Atendimento</option>
-              <option>Proposta</option>
-              <option>Ganho</option>
-              <option>Perdido</option>
-              <option>Outros</option>
-            </select>
-            <select class="filter-input" id="atFilterTemp" onchange="filterAtendimentos()">
-              <option value="">Temperatura</option>
-              <option>Quente</option>
-              <option>Morno</option>
-              <option>Frio</option>
-            </select>
-            <input class="filter-input date-field" type="date" id="atDateFrom" onchange="filterAtendimentos()" title="Data inicial">
-            <input class="filter-input date-field" type="date" id="atDateTo" onchange="filterAtendimentos()" title="Data final">
-          </div>
-          <div class="table-wrap">
-            <div class="table-scroll">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Cliente</th>
-                    <th>Origem</th>
-                    <th>Atendente</th>
-                    <th>Proposta</th>
-                    <th>Temperatura</th>
-                    <th>Funil</th>
-                    <th>Interesse</th>
-                    <th>Última Atualização</th>
-                    <th>Ações</th>
-                  </tr>
-                </thead>
-                <tbody id="atBody"></tbody>
-              </table>
-            </div>
-            <div class="pagination" id="atPagination"></div>
+          <div class="wa-wrap">
+            <!-- LISTA DE CONVERSAS -->
+            <aside class="wa-list-pane">
+              <div class="wa-list-head">
+                <div class="wa-list-title">Conversas <span class="wa-list-count" id="waListCount">0</span></div>
+                <input class="wa-search" type="text" id="waSearch" placeholder="🔍 Pesquisar por nome ou número..."
+                  oninput="renderWaList()">
+                <div class="wa-filter-row">
+                  <select class="wa-search wa-select" id="waFilterFunil" onchange="renderWaList()" title="Posição no funil">
+                    <option value="">Funil: todos</option>
+                    <option>Lead</option>
+                    <option>Atendimento</option>
+                    <option>Proposta</option>
+                    <option>Ganho</option>
+                    <option>Perdido</option>
+                    <option>Outros</option>
+                  </select>
+                  <select class="wa-search wa-select" id="waFilterTemp" onchange="renderWaList()" title="Temperatura">
+                    <option value="">Temp.: todas</option>
+                    <option>Quente</option>
+                    <option>Morno</option>
+                    <option>Frio</option>
+                  </select>
+                </div>
+                <div class="wa-date-row">
+                  <input class="wa-search wa-date" type="date" id="waDateFrom" onchange="renderWaList()"
+                    title="Entrada do lead — de" aria-label="Entrada do lead — de">
+                  <input class="wa-search wa-date" type="date" id="waDateTo" onchange="renderWaList()"
+                    title="Entrada do lead — até" aria-label="Entrada do lead — até">
+                </div>
+              </div>
+              <div class="wa-list" id="waList"></div>
+            </aside>
+            <!-- PAINEL DE CONVERSA -->
+            <section class="wa-chat-pane">
+              <div class="wa-chat-head" id="waChatHead" style="display:none"></div>
+              <div class="wa-chat-empty" id="waChatEmpty">
+                <div class="wa-chat-empty-inner">
+                  <div class="wa-chat-empty-icon">💬</div>
+                  <div>Selecione uma conversa para visualizar as mensagens</div>
+                </div>
+              </div>
+              <div class="wa-chat-inner" id="waChatInner" style="display:none">
+                <input class="wa-search" type="text" id="waMsgSearch" placeholder="🔍 Buscar nas mensagens..."
+                  oninput="searchWaChat()">
+                <div class="chat-messages" id="waChatMessages"></div>
+              </div>
+            </section>
           </div>
         </div>
 
@@ -4250,6 +4629,7 @@
     let currentCompany = '';
     let allLeads = [], filteredLeads = [], leadsPage = 1;
     let allAtendimentos = [], filteredAt = [], atPage = 1;
+    let waSelectedAtId = null, waChatRaw = [];
     let allPropostas = [], filteredProp = [], propPage = 1;
     let allUsers = [];
     let dateFilter = { type: '7d' };
@@ -4422,6 +4802,7 @@
       document.querySelector(`[data-view="${name}"]`).classList.add('active');
       document.getElementById('pageTitle').textContent = pageTitles[name] || name;
       document.getElementById('mainContent').classList.toggle('leads-mode', name === 'leads');
+      document.getElementById('mainContent').classList.toggle('atendimentos-mode', name === 'atendimentos');
       closeMobileSidebar();
       loadView(name);
     }
@@ -5141,59 +5522,125 @@
           _proposal: proposalByAt[a.id_atendimento] || { total: 0, count: 0 }
         }));
 
-        const origins = [...new Set([...LEAD_ORIGINS, ...allAtendimentos.map(a => dashboardOrigemValue(a._cliente.status))])];
-        const sel = document.getElementById('atFilterOrigem');
-        const prev = sel.value;
-        sel.innerHTML = '<option value="">Origem</option>';
-        origins.forEach(s => { const o = document.createElement('option'); o.value = s; o.textContent = dashboardOrigemLabel(s); sel.appendChild(o); });
-        sel.value = origins.includes(prev) ? prev : '';
-
-        filterAtendimentos();
+        waSelectedAtId = null;
+        resetWaChat();
+        renderWaList();
       } catch (e) { toast('Erro ao carregar atendimentos: ' + e.message, 'error'); console.error(e); } finally { hideLoader(); }
     }
 
-    function filterAtendimentos() {
-      const q = document.getElementById('atSearch').value.toLowerCase();
-      const origem = document.getElementById('atFilterOrigem').value;
-      const fn = document.getElementById('atFilterFunil').value;
-      const tmp = document.getElementById('atFilterTemp').value;
-      const range = getFilterDateRange('at');
-      filteredAt = allAtendimentos.filter(a => {
-        const nome = (a._cliente.cliente || '').toLowerCase();
-        const at = (a.atendente || '').toLowerCase();
-        if (q && !nome.includes(q) && !at.includes(q)) return false;
-        if (origem && dashboardOrigemValue(a._cliente.status) !== origem) return false;
-        const etapa = normalizeFunilStage(a.etapa_funil);
-        if (fn === '__sem_outros' && etapa === 'Outros') return false;
-        if (fn && fn !== '__sem_outros' && etapa !== fn) return false;
-        if (tmp && a.temperatura !== tmp) return false;
-        if (!isInFilterDateRange(a.update || a.criado, range)) return false;
-        return true;
-      });
-      atPage = 1; renderAtendimentos();
+    function waListTime(str) {
+      if (!str) return '';
+      const d = new Date(str); if (isNaN(d)) return '';
+      const now = new Date();
+      if (d.toDateString() === now.toDateString()) return d.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
+      if (d.getFullYear() === now.getFullYear()) return d.toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit' });
+      return d.toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit', year: '2-digit' });
     }
 
-    function renderAtendimentos() {
-      const start = (atPage - 1) * PAGE_SIZE;
-      const page = filteredAt.slice(start, start + PAGE_SIZE);
-      const tbody = document.getElementById('atBody');
-      if (!page.length) { tbody.innerHTML = emptyRow(9); renderPagination('at', filteredAt.length); return; }
-      tbody.innerHTML = page.map(a => `<tr>
-    <td>${contactCellHtml(a._cliente.cliente || '—', a._cliente.telefone || 'sem telefone')}</td>
-    <td>${badgeOrigem(a._cliente.status)}</td>
-    <td style="color:var(--text2)">${esc(a.atendente || '—')}</td>
-    <td>${proposalValueHtml(a._proposal)}</td>
-    <td>${badgeTemp(a.temperatura)}</td>
-    <td>${badgeFunil(a.etapa_funil)}</td>
-    <td style="color:var(--text2);max-width:130px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${esc(a.interesse || '')}">${esc(a.interesse || '—')}</td>
-    <td style="color:var(--text2);white-space:nowrap">${fmtDateTime(a.update || a.criado)}</td>
-    <td><div class="actions-cell">
-      <button class="btn btn-ghost btn-sm" onclick="openEditAt('${a.id_atendimento}','${esc2(a._cliente.cliente)}')">✏️ Editar</button>
-      <button class="btn btn-ghost btn-sm" onclick="openPropostasAt('${a.id_atendimento}')">💰 Propostas</button>
-      <button class="btn btn-ghost btn-sm" onclick="openConversaAt('${a.id_atendimento}','${esc2(a._cliente.cliente)}','${esc2(a._cliente.telefone)}')">💬 Conversa</button>
-    </div></td>
-  </tr>`).join('');
-      renderPagination('at', filteredAt.length);
+    function renderWaList() {
+      const q = (document.getElementById('waSearch').value || '').toLowerCase().trim();
+      const fn = document.getElementById('waFilterFunil').value;
+      const tmp = document.getElementById('waFilterTemp').value;
+      const range = getFilterDateRange('wa');
+      const list = allAtendimentos.filter(a => {
+        if (!isInFilterDateRange(a.criado, range, true)) return false;
+        if (fn && normalizeFunilStage(a.etapa_funil) !== fn) return false;
+        if (tmp && a.temperatura !== tmp) return false;
+        if (q) {
+          const c = a._cliente || {};
+          if (!`${c.cliente || ''} ${c.telefone || ''} ${a.atendente || ''}`.toLowerCase().includes(q)) return false;
+        }
+        return true;
+      }).sort((x, y) => new Date(y.update || y.criado || 0) - new Date(x.update || x.criado || 0));
+
+      document.getElementById('waListCount').textContent = list.length;
+      const tempEmoji = { Quente: '🔥', Morno: '🌤️', Frio: '❄️' };
+      const el = document.getElementById('waList');
+      if (!list.length) { el.innerHTML = '<div class="wa-list-empty">Nenhuma conversa encontrada</div>'; return; }
+      el.innerHTML = list.map(a => {
+        const c = a._cliente || {};
+        const nome = c.cliente || '—';
+        const preview = a.interesse || a.resumo || (a.atendente ? `Atendente: ${a.atendente}` : 'Sem mensagem');
+        const active = a.id_atendimento === waSelectedAtId ? ' active' : '';
+        const temp = a.temperatura ? `<span class="wa-conv-temp">${tempEmoji[a.temperatura] || ''}</span>` : '';
+        const hasProp = a._proposal && a._proposal.count > 0;
+        const propTag = hasProp ? '<span class="wa-conv-tag">💰 Proposta</span>' : '';
+        return `<div class="wa-conv${active}" data-atid="${a.id_atendimento}" onclick="selectWaConversa('${a.id_atendimento}')">
+          <span class="contact-avatar" style="background:${contactAvatarColor(nome)}">${esc(contactInitials(nome))}</span>
+          <div class="wa-conv-meta">
+            <div class="wa-conv-top">
+              <span class="wa-conv-name" title="${esc(nome)}">${esc(nome)}</span>
+              <span class="wa-conv-time">${waListTime(a.update || a.criado)}</span>
+            </div>
+            <div class="wa-conv-bottom">
+              <span class="wa-conv-preview" title="${esc(preview)}">${esc(preview)}</span>
+              ${temp}
+            </div>
+            ${propTag ? `<div class="wa-conv-tags">${propTag}</div>` : ''}
+          </div>
+        </div>`;
+      }).join('');
+    }
+
+    function resetWaChat() {
+      waChatRaw = [];
+      document.getElementById('waChatHead').style.display = 'none';
+      document.getElementById('waChatInner').style.display = 'none';
+      document.getElementById('waChatEmpty').style.display = 'flex';
+    }
+
+    function renderWaChatHead(a) {
+      const c = a._cliente || {};
+      const nome = c.cliente || '—';
+      const head = document.getElementById('waChatHead');
+      head.style.display = 'flex';
+      head.innerHTML = `
+        <div class="wa-head-contact">
+          <span class="contact-avatar" style="background:${contactAvatarColor(nome)}">${esc(contactInitials(nome))}</span>
+          <div class="wa-head-meta">
+            <div class="wa-head-name" title="${esc(nome)}">${esc(nome)}</div>
+            <div class="wa-head-sub">${esc(c.telefone || 'sem telefone')}</div>
+            ${a.resumo ? `<div class="wa-head-resumo" title="${esc(a.resumo)}">${esc(a.resumo)}</div>` : ''}
+          </div>
+        </div>
+        <div class="wa-head-tags">${badgeFunil(a.etapa_funil)}${badgeTemp(a.temperatura)}</div>
+        <div class="wa-head-actions">
+          <button class="btn btn-ghost btn-sm" onclick="openEditAt('${a.id_atendimento}','${esc2(nome)}')">✏️ Editar</button>
+          <button class="btn btn-ghost btn-sm" onclick="openPropostasAt('${a.id_atendimento}')">💰 Propostas</button>
+        </div>`;
+    }
+
+    async function selectWaConversa(atId) {
+      const a = allAtendimentos.find(x => x.id_atendimento === atId);
+      if (!a) return;
+      waSelectedAtId = atId;
+      document.querySelectorAll('.wa-conv').forEach(el => el.classList.toggle('active', el.dataset.atid === atId));
+      renderWaChatHead(a);
+      document.getElementById('waChatEmpty').style.display = 'none';
+      document.getElementById('waChatInner').style.display = 'flex';
+      document.getElementById('waMsgSearch').value = '';
+      const msgEl = document.getElementById('waChatMessages');
+      waChatRaw = [];
+      msgEl.innerHTML = loadingMsg();
+      try {
+        const msgs = await sbGet('crm_mensagens', `id_atendimento=eq.${atId}&order=data_hora.asc`);
+        if (waSelectedAtId !== atId) return; // usuário trocou de conversa durante o carregamento
+        waChatRaw = msgs || [];
+        renderChat(waChatRaw, '', msgEl);
+      } catch (e) { msgEl.innerHTML = emptyChat('Erro ao carregar mensagens', 'error'); console.error(e); }
+    }
+
+    function searchWaChat() {
+      const q = document.getElementById('waMsgSearch').value.trim();
+      const ql = q.toLowerCase();
+      const src = q ? waChatRaw.filter(m =>
+        (m.mensagem || '').toLowerCase().includes(ql) ||
+        attachmentName(m.url_anexo, '').toLowerCase().includes(ql) ||
+        normalizeMessageType(m.tipo_mensagem).includes(ql)
+      ) : waChatRaw;
+      const el = document.getElementById('waChatMessages');
+      renderChat(src, q, el);
+      if (q) { const f = el.querySelector('.chat-highlight'); if (f) f.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
     }
 
     // ── EDITAR ATENDIMENTO ────────────────────────────────────────────────────────
@@ -5281,7 +5728,7 @@
 
         // Refresh whichever view is active
         const activeView = document.querySelector('.nav-item.active')?.dataset.view;
-        if (activeView === 'atendimentos') { filterAtendimentos(); }
+        if (activeView === 'atendimentos') { renderWaList(); const sa = allAtendimentos.find(a => a.id_atendimento === waSelectedAtId); if (sa) renderWaChatHead(sa); }
         else if (activeView === 'leads') { filterLeads(); }
       } catch (e) {
         toast('Erro ao salvar: ' + e.message, 'error');
@@ -5733,6 +6180,41 @@
       chatPreviewObjectUrls = [];
     }
 
+    // URLs de anexo (Digisac/Oracle) são pré-assinadas e expiram (X-Amz-Expires). Detecta expiração.
+    function attachmentExpiryMs(url) {
+      try {
+        const u = new URL(url, window.location.href);
+        const d = u.searchParams.get('X-Amz-Date');
+        const exp = parseInt(u.searchParams.get('X-Amz-Expires') || '', 10);
+        if (!d || !exp) return null;
+        const mt = d.match(/^(\d{4})(\d{2})(\d{2})T(\d{2})(\d{2})(\d{2})Z$/);
+        if (!mt) return null;
+        return Date.UTC(+mt[1], +mt[2] - 1, +mt[3], +mt[4], +mt[5], +mt[6]) + exp * 1000;
+      } catch (e) { return null; }
+    }
+    function isAttachmentExpired(url) {
+      const e = attachmentExpiryMs(url);
+      return e != null && Date.now() > e;
+    }
+
+    async function downloadAttachment(url, name) {
+      if (!url) return;
+      if (isAttachmentExpired(url)) { toast('Este anexo expirou e não está mais disponível.', 'error'); return; }
+      try {
+        const res = await fetch(url);
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const blob = await res.blob();
+        const objectUrl = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = objectUrl; a.download = name || attachmentName(url, 'arquivo');
+        document.body.appendChild(a); a.click(); a.remove();
+        setTimeout(() => URL.revokeObjectURL(objectUrl), 2000);
+      } catch (e) {
+        console.warn('Falha no download via blob, abrindo em nova aba', e);
+        window.open(url, '_blank', 'noopener');
+      }
+    }
+
     function chatAttachmentHtml(m, tipo) {
       const url = m.url_anexo || '';
       if (!url) return '';
@@ -5740,9 +6222,21 @@
       const kind = attachmentKind(tipo, url);
       const fallback = m.nome_arquivo || m.file_name || m.filename || m.nome_anexo || 'arquivo';
       const name = attachmentName(url, fallback);
+
+      if (isAttachmentExpired(url)) {
+        return `<div class="chat-file-card chat-file-expired" title="O link temporário deste anexo expirou (válido por 24h)">
+          <div class="chat-file-icon chat-file-icon-expired">⌛</div>
+          <div class="chat-file-info">
+            <div class="chat-file-meta">${esc(attachmentLabel(kind))} • indisponível</div>
+            <div class="chat-file-name" title="${esc(name)}">${esc(name)}</div>
+            <div class="chat-file-actions"><span class="chat-file-expired-note">Anexo expirado</span></div>
+          </div>
+        </div>`;
+      }
       const safeUrl = esc(url);
       const safeName = esc(name);
       const openArgs = `${jsArg(url)},${jsArg(name)},${jsArg(kind)}`;
+      const dlArgs = `${jsArg(url)},${jsArg(name)}`;
       const thumbAttrs = `data-url="${safeUrl}" data-kind="${esc(kind)}" data-name="${safeName}"`;
       let preview = `<div class="chat-file-icon">${esc(attachmentBadge(kind, name))}</div>`;
 
@@ -5759,7 +6253,7 @@
           <div class="chat-file-name" title="${safeName}">${safeName}</div>
           <div class="chat-file-actions">
             <span class="chat-file-download">Visualizar</span>
-            <a class="chat-file-download" href="${safeUrl}" target="_blank" rel="noopener" download="${safeName}" onclick="event.stopPropagation()">Baixar</a>
+            <span class="chat-file-download" role="button" tabindex="0" onclick="event.stopPropagation();downloadAttachment(${dlArgs})">Baixar</span>
           </div>
         </div>
       </div>`;
@@ -5785,10 +6279,25 @@
             thumb.innerHTML = `<img src="${esc(objectUrl)}" alt="${esc(name)}" loading="lazy">`;
           }
         } catch (e) {
-          thumb.innerHTML = `<span>Previa indisponivel</span>`;
-          console.warn('Falha ao carregar prévia do anexo', e);
+          // Fallback: carregar direto pela URL (o fetch/blob acima pode falhar por CORS)
+          thumbFallbackToDirect(thumb);
+          console.warn('Falha ao carregar prévia via blob, tentando URL direta', e);
         }
       }));
+    }
+
+    function thumbFallbackToDirect(thumb) {
+      const url = thumb.dataset.url || '';
+      const kind = thumb.dataset.kind || 'file';
+      const name = thumb.dataset.name || 'arquivo';
+      if (!url) { thumb.innerHTML = '<span>Prévia indisponível</span>'; return; }
+      thumb.innerHTML = '';
+      const el = document.createElement(kind === 'video' ? 'video' : 'img');
+      el.onerror = () => { thumb.innerHTML = '<span>Prévia indisponível</span>'; };
+      if (kind === 'video') { el.muted = true; el.preload = 'metadata'; }
+      else { el.alt = name; el.loading = 'lazy'; }
+      el.src = url;
+      thumb.appendChild(el);
     }
 
     function chatFileCardKey(event, url, name, kind) {
@@ -5810,6 +6319,14 @@
       download.setAttribute('download', finalName);
 
       const body = document.getElementById('filePreviewBody');
+
+      if (isAttachmentExpired(url)) {
+        document.getElementById('filePreviewMeta').textContent = 'Anexo expirado';
+        body.innerHTML = `<div class="file-preview-empty">⌛ O link temporário deste anexo expirou e não está mais disponível.<br>Os anexos recebidos pelo WhatsApp/Digisac ficam acessíveis por tempo limitado (24h).</div>`;
+        openModal('modalFilePreview');
+        return;
+      }
+
       body.innerHTML = `<div class="file-preview-empty">Carregando arquivo...</div>`;
       openModal('modalFilePreview');
 
@@ -5823,11 +6340,20 @@
         objectUrl = await attachmentObjectUrl(url, resolvedKind, finalName);
         activeFilePreviewObjectUrl = objectUrl;
       } catch (e) {
-        console.warn('Falha ao carregar anexo para preview', e);
-        body.innerHTML = `<div class="file-preview-empty">
-          Não foi possível carregar a prévia deste arquivo.
-          <br><a class="btn btn-primary btn-sm" href="${esc(url)}" target="_blank" rel="noopener">Abrir em nova aba</a>
-        </div>`;
+        console.warn('Falha ao carregar anexo para preview, tentando URL direta', e);
+        if (resolvedKind === 'image') {
+          body.innerHTML = `<img src="${esc(url)}" alt="${safeName}">`;
+        } else if (resolvedKind === 'video') {
+          body.innerHTML = `<video src="${esc(url)}" controls></video>`;
+        } else if (resolvedKind === 'audio') {
+          body.innerHTML = `<audio class="file-preview-audio" src="${esc(url)}" controls></audio>`;
+        } else {
+          // Documentos/PDF: embutir direto pela URL (iframe não sofre o bloqueio de CORS do fetch)
+          body.innerHTML = `<div class="file-preview-doc">
+            <iframe class="file-preview-frame" src="${esc(url)}" title="${safeName}"></iframe>
+            <div class="file-preview-fallback-link">Não carregou aqui? <a href="${esc(url)}" target="_blank" rel="noopener">Abrir em nova aba</a></div>
+          </div>`;
+        }
         return;
       }
 
@@ -5842,8 +6368,7 @@
       }
     }
 
-    function renderChat(msgs, highlight = '') {
-      const container = document.getElementById('chatMessages');
+    function renderChat(msgs, highlight = '', container = document.getElementById('chatMessages')) {
       revokeChatPreviewUrls();
       if (!msgs.length) { container.innerHTML = emptyChat('Nenhuma mensagem'); return; }
 
@@ -5987,7 +6512,6 @@
       const getPage = () => key === 'leads' ? leadsPage : key === 'at' ? atPage : propPage;
       const setPage = n => {
         if (key === 'leads') { leadsPage = n; renderLeads(); }
-        else if (key === 'at') { atPage = n; renderAtendimentos(); }
         else { propPage = n; renderPropostas(); }
       };
       const cur = getPage(), totalPages = Math.ceil(total / PAGE_SIZE) || 1;
