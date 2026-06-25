@@ -548,8 +548,8 @@
     .filters-bar {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 18px;
+      gap: 6px;
+      margin-bottom: 12px;
       align-items: center
     }
 
@@ -879,7 +879,7 @@
 
     thead th {
       background: var(--card2);
-      padding: 11px 16px;
+      padding: 8px 12px;
       text-align: left;
       font-size: 10px;
       font-weight: 600;
@@ -912,7 +912,7 @@
     }
 
     td {
-      padding: 11px 16px;
+      padding: 7px 12px;
       font-size: 13px;
       vertical-align: middle
     }
@@ -2054,21 +2054,18 @@
 
     /* ── PROPOSALS TOTAL ──────────────────────────────────────────────────────────── */
     .proposals-total {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0;
-      border-top: 1px solid var(--border)
+      display: grid;
+      grid-template-columns: repeat(3, minmax(160px, 1fr));
+      gap: 10px;
+      margin-bottom: 14px
     }
 
     .prop-total-item {
-      flex: 1;
-      min-width: 120px;
-      padding: 14px 20px;
-      border-right: 1px solid var(--border)
-    }
-
-    .prop-total-item:last-child {
-      border-right: none
+      min-width: 0;
+      padding: 14px 16px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: rgba(255, 255, 255, .035)
     }
 
     .prop-total-item label {
@@ -2087,14 +2084,155 @@
       font-weight: 800
     }
 
+    .proposals-page {
+      width: 100%;
+      max-width: none;
+      margin: 0
+    }
+
+    .proposals-page .section-header {
+      margin-bottom: 14px
+    }
+
+    .proposals-page .filters-bar {
+      display: grid;
+      grid-template-columns: minmax(240px, 1fr) minmax(150px, 190px) minmax(130px, 160px) repeat(2, minmax(130px, 150px));
+      gap: 8px;
+      align-items: stretch;
+      margin-bottom: 14px
+    }
+
+    .proposals-page .filter-input {
+      width: 100%;
+      min-width: 0;
+      height: 38px
+    }
+
+    .proposals-table {
+      min-width: 1320px;
+      table-layout: fixed
+    }
+
+    .proposals-table th:nth-child(1),
+    .proposals-table td:nth-child(1) {
+      width: 230px
+    }
+
+    .proposals-table th:nth-child(2),
+    .proposals-table td:nth-child(2) {
+      width: 150px
+    }
+
+    .proposals-table th:nth-child(3),
+    .proposals-table td:nth-child(3) {
+      width: 240px
+    }
+
+    .proposals-table th:nth-child(4),
+    .proposals-table td:nth-child(4) {
+      width: 230px
+    }
+
+    .proposals-table th:nth-child(5),
+    .proposals-table td:nth-child(5) {
+      width: 112px
+    }
+
+    .proposals-table th:nth-child(6),
+    .proposals-table td:nth-child(6) {
+      width: 110px
+    }
+
+    .proposals-table th:nth-child(7),
+    .proposals-table td:nth-child(7),
+    .proposals-table th:nth-child(8),
+    .proposals-table td:nth-child(8) {
+      width: 100px
+    }
+
+    .proposals-table th:nth-child(9),
+    .proposals-table td:nth-child(9) {
+      width: 120px
+    }
+
+    .proposals-table th:nth-child(10),
+    .proposals-table td:nth-child(10) {
+      width: 116px
+    }
+
+    .proposals-table td {
+      padding-top: 12px;
+      padding-bottom: 12px
+    }
+
+    .prop-product,
+    .prop-desc,
+    .prop-attendant {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap
+    }
+
+    .prop-product {
+      font-weight: 700;
+      color: var(--text)
+    }
+
+    .prop-desc,
+    .prop-attendant,
+    .prop-date {
+      color: var(--text2)
+    }
+
+    .prop-value {
+      color: var(--green);
+      font-weight: 800;
+      white-space: nowrap;
+      font-variant-numeric: tabular-nums
+    }
+
+    @media(max-width:1100px) {
+      .proposals-page .filters-bar {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+      }
+    }
+
+    .proposals-page .table-wrap {
+      display: flex;
+      flex-direction: column
+    }
+
+    .proposals-page .table-scroll {
+      order: 2
+    }
+
+    .proposals-page .proposals-total {
+      order: 1;
+      padding: 14px;
+      margin: 0;
+      border-bottom: 1px solid var(--border);
+      background: rgba(255, 255, 255, .025)
+    }
+
+    .proposals-page .pagination {
+      order: 3
+    }
+
+    @media(max-width:640px) {
+      .proposals-page .filters-bar,
+      .proposals-total {
+        grid-template-columns: 1fr
+      }
+    }
+
     /* ── SECTION HEADER ──────────────────────────────────────────────────────────── */
     .section-header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 18px;
+      margin-bottom: 12px;
       flex-wrap: wrap;
-      gap: 10px
+      gap: 8px
     }
 
     .section-header h2 {
@@ -2638,7 +2776,8 @@
       animation: fadeUp .3s ease
     }
 
-    .main.leads-mode .content {
+    .main.leads-mode .content,
+    .main.propostas-mode .content {
       max-width: none;
       width: 100%;
     }
@@ -4272,7 +4411,7 @@
         </div>
 
         <!-- PROPOSTAS -->
-        <div class="view" id="view-propostas">
+        <div class="view proposals-page" id="view-propostas">
           <div class="section-header">
             <h2>Propostas</h2>
           </div>
@@ -4281,10 +4420,10 @@
               oninput="filterPropostas()" style="flex:1;min-width:180px">
             <select class="filter-input" id="propFilterStatus" onchange="filterPropostas()">
               <option value="">Todos os Status</option>
-              <option>Enviada</option>
-              <option>Aprovada</option>
-              <option>Recusada</option>
-              <option>Em negociação</option>
+              <option value="Enviada">Enviada</option>
+              <option value="Aprovada">Aprovada</option>
+              <option value="Recusada">Recusada</option>
+              <option value="Em negociação">Em negociação</option>
             </select>
             <input class="filter-input" type="month" id="propFilterMes" onchange="filterPropostas()"
               style="max-width:160px">
@@ -4293,7 +4432,7 @@
           </div>
           <div class="table-wrap">
             <div class="table-scroll">
-              <table>
+              <table class="proposals-table">
                 <thead>
                   <tr>
                     <th>Cliente</th>
@@ -4539,10 +4678,10 @@
         <div class="form-group" style="margin-top:12px">
           <label>Status</label>
           <select class="form-control" id="editPropostaStatus">
-            <option>Enviada</option>
-            <option>Aprovada</option>
-            <option>Recusada</option>
-            <option>Em negociação</option>
+            <option value="Enviada">Enviada</option>
+            <option value="Aprovada">Aprovada</option>
+            <option value="Recusada">Recusada</option>
+            <option value="Em negociação">Em negociação</option>
           </select>
         </div>
         <div class="form-group">
@@ -4802,6 +4941,7 @@
       document.querySelector(`[data-view="${name}"]`).classList.add('active');
       document.getElementById('pageTitle').textContent = pageTitles[name] || name;
       document.getElementById('mainContent').classList.toggle('leads-mode', name === 'leads');
+      document.getElementById('mainContent').classList.toggle('propostas-mode', name === 'propostas');
       document.getElementById('mainContent').classList.toggle('atendimentos-mode', name === 'atendimentos');
       closeMobileSidebar();
       loadView(name);
@@ -5740,26 +5880,69 @@
     async function loadPropostas() {
       showLoader();
       try {
-        const cf = cfParam();
-        const [props, atends, clients] = await Promise.all([
-          sbGet('crm_proposta', `select=*&order=criado.desc`),
-          sbGet('crm_atendimentos', `select=id_atendimento,id_cliente,atendente`),
-          sbGet('crm_clientes', `select=id_cliente,cliente,empresa,status&order=criado.desc${cf}`)
-        ]);
-        const cMap = {}; (clients || []).forEach(c => cMap[c.id_cliente] = c);
-        const aMap = {}; (atends || []).forEach(a => aMap[a.id_atendimento] = a);
+        // Busca atendimentos e clientes sem filtrar antes do join, para nao perder o nome do cliente da proposta.
+        const props = await sbGet('crm_proposta', `select=*&order=criado.desc`);
+        const idKey = v => (v == null ? '' : String(v).trim());
+        const firstValue = (...values) => values.find(v => idKey(v) !== '');
+        const proposalAtIds = [...new Set((props || []).map(p => firstValue(p.id_atendimento, p.id_atendimentos, p.atendimento_id, p.id_cliente, p.cliente_id, p.id_clientes)).map(idKey).filter(Boolean))];
+        const atends = [];
+        for (let i = 0; i < proposalAtIds.length; i += 50) {
+          const batch = proposalAtIds.slice(i, i + 50).map(encodeURIComponent);
+          atends.push(...await sbGet('crm_atendimentos', `select=id_atendimento,id_cliente,atendente&id_atendimento=in.(${batch.join(',')})`));
+        }
+        const aMap = {};
+        (atends || []).forEach(a => { const key = idKey(a.id_atendimento); if (key) aMap[key] = a; });
+        const resolveAtendimento = p => {
+          const atKey = firstValue(p.id_atendimento, p.id_atendimentos, p.atendimento_id);
+          const propClientKey = firstValue(p.id_cliente, p.cliente_id, p.id_clientes);
+          return aMap[idKey(atKey)] || aMap[idKey(propClientKey)] || {};
+        };
+        const resolveClientId = p => {
+          const at = resolveAtendimento(p);
+          const atKey = firstValue(p.id_atendimento, p.id_atendimentos, p.atendimento_id);
+          const propClientKey = firstValue(p.id_cliente, p.cliente_id, p.id_clientes);
+          return firstValue(at.id_cliente, propClientKey, atKey);
+        };
+        const clientIds = [...new Set((props || []).map(resolveClientId).map(idKey).filter(Boolean))];
+        const clients = [];
+        for (let i = 0; i < clientIds.length; i += 50) {
+          const batch = clientIds.slice(i, i + 50).map(encodeURIComponent);
+          clients.push(...await sbGet('crm_clientes', `select=id_cliente,cliente,telefone,empresa,status&id_cliente=in.(${batch.join(',')})`));
+        }
+        const cMap = {};
+        (clients || []).forEach(c => { const key = idKey(c.id_cliente); if (key) cMap[key] = c; });
 
-        allPropostas = (props || [])
-          .filter(p => !currentCompany || (aMap[p.id_atendimento] && cMap[aMap[p.id_atendimento].id_cliente]))
-          .map(p => {
-            const at = aMap[p.id_atendimento] || {};
-            const cl = cMap[at.id_cliente] || {};
-            return { ...p, _cliente: cl.cliente || '—', _origem: cl.status || '', _atendente: at.atendente || '—' };
-          });
+        allPropostas = (props || []).map(p => {
+          const at = resolveAtendimento(p);
+          const clientId = resolveClientId(p);
+          const cl = cMap[idKey(clientId)] || {};
+          const clientName = cl.cliente || p.cliente || p.nome_cliente || p._cliente || '-';
+          return {
+            ...p,
+            _cliente: clientName,
+            _telefone: cl.telefone || p.telefone || '',
+            _empresa: cl.empresa || p.empresa || '',
+            _origem: cl.status || p.origem || '',
+            _atendente: at.atendente || p._atendente || '—',
+            _id_atendimento_resolvido: at.id_atendimento || p.id_atendimento || '',
+            _id_cliente_resolvido: clientId || '',
+            _empresaMatch: !currentCompany || !clientId || !cl.id_cliente || cl.empresa === currentCompany
+          };
+        }).filter(p => p._empresaMatch);
 
         filteredProp = [...allPropostas];
         propPage = 1; renderPropostas();
       } catch (e) { toast('Erro ao carregar propostas: ' + e.message, 'error'); console.error(e); } finally { hideLoader(); }
+    }
+
+    function normPropStatus(s) {
+      if (!s) return '';
+      const n = (s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+      if (n.includes('aprov') || n.includes('ganh')) return 'Aprovada';
+      if (n.includes('recus') || n.includes('perdid')) return 'Recusada';
+      if (n.includes('negocia')) return 'Em negociação';
+      if (n.includes('envi')) return 'Enviada';
+      return s;
     }
 
     function filterPropostas() {
@@ -5768,8 +5951,9 @@
       const mes = document.getElementById('propFilterMes').value;
       const range = getFilterDateRange('prop');
       filteredProp = allPropostas.filter(p => {
-        if (q && !(p._cliente || '').toLowerCase().includes(q) && !(p.produto || '').toLowerCase().includes(q)) return false;
-        if (st && p.status !== st) return false;
+        const haystack = `${p._cliente || ''} ${p._telefone || ''} ${p._empresa || ''} ${p.produto || ''} ${p.descricao || ''}`.toLowerCase();
+        if (q && !haystack.includes(q)) return false;
+        if (st && normPropStatus(p.status) !== st) return false;
         if (mes && !(p.criado || '').startsWith(mes)) return false;
         if (!isInFilterDateRange(p.data_envio || p.criado, range)) return false;
         return true;
@@ -5784,18 +5968,18 @@
       if (!page.length) { tbody.innerHTML = emptyRow(10); }
       else {
         tbody.innerHTML = page.map(p => `<tr>
-      <td>${contactCellHtml(p._cliente)}</td>
+      <td>${contactCellHtml(p._cliente, p._telefone || p._empresa || '')}</td>
       <td>${badgeOrigem(p._origem)}</td>
-      <td>${esc(p.produto || '—')}</td>
-      <td style="color:var(--text2);max-width:150px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${esc(p.descricao || '')}">${esc(p.descricao || '—')}</td>
-      <td style="color:var(--green);font-weight:600">${fmtCurrency(p.valor)}</td>
-      <td>${badgePropStatus(p.status)}</td>
-      <td style="color:var(--text2);white-space:nowrap">${fmtDate(p.data_envio)}</td>
-      <td style="color:var(--text2);white-space:nowrap">${fmtDate(p.data_resposta)}</td>
-      <td style="color:var(--text2)">${esc(p._atendente)}</td>
+      <td><div class="prop-product" title="${esc(p.produto || '')}">${esc(p.produto || '—')}</div></td>
+      <td><div class="prop-desc" title="${esc(p.descricao || '')}">${esc(p.descricao || '—')}</div></td>
+      <td class="prop-value">${fmtCurrency(p.valor)}</td>
+      <td>${badgePropStatus(normPropStatus(p.status) || p.status)}</td>
+      <td class="prop-date">${fmtDate(p.data_envio)}</td>
+      <td class="prop-date">${fmtDate(p.data_resposta)}</td>
+      <td><div class="prop-attendant" title="${esc(p._atendente || '')}">${esc(p._atendente)}</div></td>
       <td><div class="actions-cell">
         <button class="btn btn-ghost btn-sm" onclick="openEditProposta(${jsArg(getPropostaId(p))})">✏️ Editar</button>
-        <button class="btn btn-danger btn-sm" onclick="deleteProposta(${jsArg(getPropostaId(p))},${jsArg(p.produto || 'proposta')},${jsArg(p.id_atendimento || '')})">Excluir</button>
+        <button class="btn btn-danger btn-sm" onclick="deleteProposta(${jsArg(getPropostaId(p))},${jsArg(p.produto || 'proposta')},${jsArg(p._id_atendimento_resolvido || p.id_atendimento || '')})">Excluir</button>
       </div></td>
     </tr>`).join('');
       }
@@ -5873,7 +6057,7 @@
       document.getElementById('editPropostaCliente').textContent = p._cliente || '';
       document.getElementById('editPropostaProduto').value = p.produto || '';
       document.getElementById('editPropostaValor').value = p.valor ?? '';
-      document.getElementById('editPropostaStatus').value = p.status || 'Enviada';
+      document.getElementById('editPropostaStatus').value = normPropStatus(p.status) || 'Enviada';
       document.getElementById('editPropostaDescricao').value = p.descricao || '';
       document.getElementById('editPropostaDataEnvio').value = (p.data_envio || '').split('T')[0] || '';
       document.getElementById('editPropostaDataResposta').value = (p.data_resposta || '').split('T')[0] || '';
