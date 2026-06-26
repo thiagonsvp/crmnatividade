@@ -1,0 +1,3530 @@
+﻿[
+    {
+        "id_atendimento":  "77e62b25-911a-4274-a127-ca2e57d39147",
+        "id_cliente":  "67348570-0930-4e7a-9aa7-5dce18f93646",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-26T09:45:11.396915-03:00"
+    },
+    {
+        "id_atendimento":  "6f573f50-5c7f-4b83-b78f-348b3b614e56",
+        "id_cliente":  "c6cd3531-c427-4dd1-af42-c546f3f5f794",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-26T06:56:57.986158-03:00"
+    },
+    {
+        "id_atendimento":  "9c33c439-8897-45fc-a53e-b6c004c163c5",
+        "id_cliente":  "39dc27d1-affa-4279-80cb-9ee957d5711f",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-25T21:57:48.466135-03:00"
+    },
+    {
+        "id_atendimento":  "19e2ce62-73d0-47c5-9776-f6184b164c51",
+        "id_cliente":  "2a30b4d2-a800-40d1-8702-b6115a87b056",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-25T20:29:52.357524-03:00"
+    },
+    {
+        "id_atendimento":  "4b4bf6ec-befd-4b97-8c4e-3b0240c46e5a",
+        "id_cliente":  "ecd55ce3-5e84-4588-bbd4-42e387072722",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-25T19:36:52.249018-03:00"
+    },
+    {
+        "id_atendimento":  "38d50443-63df-4626-92d3-cb4135e9ea1d",
+        "id_cliente":  "bbfd745f-c591-4f06-aca3-06510e0f06a8",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-25T19:15:55.952596-03:00"
+    },
+    {
+        "id_atendimento":  "e3e1c9a8-03d0-4d46-90c1-347994237c2a",
+        "id_cliente":  "ba5752f4-2d25-46f1-8f87-13ff94f7328c",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-25T16:47:59.611043-03:00"
+    },
+    {
+        "id_atendimento":  "ddc01fee-1f8f-48ab-9dc0-cacc23129d76",
+        "id_cliente":  "9a0be0c1-6927-47fe-8d39-e9adc3ba8537",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-25T15:58:54.726046-03:00"
+    },
+    {
+        "id_atendimento":  "e6e05ae7-d354-4361-a45d-355fbd57797e",
+        "id_cliente":  "8093b1fd-1a05-492f-8410-5a8ba10c534c",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-25T15:22:29.316956-03:00"
+    },
+    {
+        "id_atendimento":  "389dce9a-210c-4006-be9e-6d1538cb81d7",
+        "id_cliente":  "31f515f3-04a6-4d67-bae0-fd66d965bb45",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-25T15:19:09.965791-03:00"
+    },
+    {
+        "id_atendimento":  "726a3396-a66a-49d8-9475-767e7bd2aaa3",
+        "id_cliente":  "21271ce2-7c33-4aec-881d-f049a6969a2e",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-25T13:00:21.421751-03:00"
+    },
+    {
+        "id_atendimento":  "6dc10a94-362b-402d-9494-964dcc01542e",
+        "id_cliente":  "946d1513-06c8-443a-bc6b-a754a87343d5",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-25T11:31:46.748913-03:00"
+    },
+    {
+        "id_atendimento":  "0ccc96fd-a85e-4745-a226-3f28167eff3d",
+        "id_cliente":  "0d7a89d1-25e7-4248-bcdc-3c42286b2776",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-25T10:58:50.307346-03:00"
+    },
+    {
+        "id_atendimento":  "91ea0b27-cfdf-4b23-9b42-0d6c93c92b2e",
+        "id_cliente":  "0f4f4b12-2d5f-45da-8109-fb730b894430",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-25T10:47:33.671163-03:00"
+    },
+    {
+        "id_atendimento":  "25e961c2-a4e0-4f09-9e57-61cbe46decaf",
+        "id_cliente":  "d2b4bbff-c43e-46d9-aacd-2b5bd0c25178",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-25T10:24:18.879403-03:00"
+    },
+    {
+        "id_atendimento":  "0d00e5d9-d7fb-4c5f-b7c4-c9599e87ab1a",
+        "id_cliente":  "8cb66caa-f3a9-42e4-84a8-e407edc6d027",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-25T08:18:33.759639-03:00"
+    },
+    {
+        "id_atendimento":  "a2b7e2aa-2f18-4abf-97b0-02322908953a",
+        "id_cliente":  "de35f0eb-ad17-4411-a8a2-fa7005ce27fd",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-25T08:08:31.354672-03:00"
+    },
+    {
+        "id_atendimento":  "c4a2aa92-fb53-4be1-ac06-96763340935e",
+        "id_cliente":  "a46ac826-f7af-4279-9228-cf31d8aa8f24",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-24T23:29:14.219606-03:00"
+    },
+    {
+        "id_atendimento":  "3017c8da-43bc-4488-912f-597bcc04e50f",
+        "id_cliente":  "9f5eb880-618f-4a04-8760-9e97d505d8bd",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-24T23:04:09.220696-03:00"
+    },
+    {
+        "id_atendimento":  "b46e933d-fc16-43b0-8b63-4e1e17748e18",
+        "id_cliente":  "1f64618a-7d5c-4e2b-91ca-48d74e51eb4d",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-24T22:25:51.600725-03:00"
+    },
+    {
+        "id_atendimento":  "8c316e36-233f-4b25-a882-f549674197eb",
+        "id_cliente":  "eb6f55cd-43d0-41af-ba7c-11744e75ad1d",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-24T22:18:53.713236-03:00"
+    },
+    {
+        "id_atendimento":  "a015caf2-07a1-4d71-a460-96da874842d4",
+        "id_cliente":  "55567eb0-f265-44a9-b254-6768e99fec92",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-24T20:47:55.841068-03:00"
+    },
+    {
+        "id_atendimento":  "ae10e365-640e-4475-8333-68a17e905b2f",
+        "id_cliente":  "a8c0874d-0a68-4da5-9434-f2c9735fd211",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-24T19:38:14.688132-03:00"
+    },
+    {
+        "id_atendimento":  "df74ae53-9aa5-4d3c-94a7-4cc57d31cc47",
+        "id_cliente":  "7b7f3f3a-a414-461e-9a07-5ca6d5102efb",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-24T16:45:56.832124-03:00"
+    },
+    {
+        "id_atendimento":  "b0ac7a95-4d6f-4e7a-b7cb-be0b4760480d",
+        "id_cliente":  "7dbc7e67-c9ed-4547-9ae6-d8806a1a833c",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-24T15:13:11.861489-03:00"
+    },
+    {
+        "id_atendimento":  "9a6f7830-d84d-46f0-ab62-e41fcb11ed18",
+        "id_cliente":  "8ac790e7-db46-4fd2-b3ee-02674f100ec4",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-24T10:50:49.449481-03:00"
+    },
+    {
+        "id_atendimento":  "88aa1484-6603-4db3-a736-3d05005f6bc8",
+        "id_cliente":  "709e734b-23c0-4bf7-847f-95732703d94a",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-24T10:16:51.676939-03:00"
+    },
+    {
+        "id_atendimento":  "cca3c90d-6f30-4d53-83a5-8f1366419ad5",
+        "id_cliente":  "eaa968f5-53f1-472e-9f20-d269868732b0",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-24T09:50:26.297436-03:00"
+    },
+    {
+        "id_atendimento":  "92776655-fa8e-4462-b10f-3b37df50e0ed",
+        "id_cliente":  "b048f8c0-7864-4e28-b647-0c0d07af09cd",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-24T08:59:05.496104-03:00"
+    },
+    {
+        "id_atendimento":  "1e8c0fc0-aad1-4f2e-96fe-a228a02ea228",
+        "id_cliente":  "49b40866-de32-4bef-8235-91cc1692ad47",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-23T21:01:37.587826-03:00"
+    },
+    {
+        "id_atendimento":  "a32bbcaf-4e08-4aa4-8cff-081cb95b7e38",
+        "id_cliente":  "ee296ad8-03c4-4d48-9386-440eea3a373a",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-23T17:57:25.112348-03:00"
+    },
+    {
+        "id_atendimento":  "7557e9c6-ec51-4a83-a45b-21c5bbb83894",
+        "id_cliente":  "1f1671fe-ee68-41fc-a117-7986b9695a00",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-23T17:55:43.422072-03:00"
+    },
+    {
+        "id_atendimento":  "a56ef6b8-b0f6-4ea7-a34a-4a30b0ae88d6",
+        "id_cliente":  "aa5e2231-2315-4365-a705-cfac8e0814e1",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-23T14:12:23.207235-03:00"
+    },
+    {
+        "id_atendimento":  "6cdb1040-141a-4d0c-ab76-4964c4807c6b",
+        "id_cliente":  "c378b9d1-273d-40c3-945a-a786e3a093aa",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-23T12:13:37.250487-03:00"
+    },
+    {
+        "id_atendimento":  "ab3088d1-256b-4a93-ba25-518ee0984cb3",
+        "id_cliente":  "f3557e38-9b16-464e-a1ab-0ec7d65a3769",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-23T09:01:15.854961-03:00"
+    },
+    {
+        "id_atendimento":  "8281e9f9-0348-45ff-85e9-676852d341cf",
+        "id_cliente":  "aa69f54f-cdd6-4f31-b200-0fb0c95d65ce",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-23T07:59:37.576704-03:00"
+    },
+    {
+        "id_atendimento":  "b558f185-88e7-4e45-abd6-e407722deda5",
+        "id_cliente":  "863ce114-98a5-4f29-a4fe-c8292e59f0f4",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-23T02:51:15.879915-03:00"
+    },
+    {
+        "id_atendimento":  "20ea9254-40da-4e2f-b650-2b0369926aaa",
+        "id_cliente":  "2e85f2d7-81d8-43b5-8c04-755b690cccf6",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-22T23:53:41.39832-03:00"
+    },
+    {
+        "id_atendimento":  "b7cb39fa-e26d-4f8f-a926-78e332100c9e",
+        "id_cliente":  "25bdc075-cf72-43b3-8e1e-8a52323e7102",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-22T23:49:00.741705-03:00"
+    },
+    {
+        "id_atendimento":  "8837062e-ccc8-421b-a1bf-0f5c315b3fd0",
+        "id_cliente":  "b8d6396a-48e4-4ad0-b10b-fdbedba6c3fe",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-22T23:34:23.99778-03:00"
+    },
+    {
+        "id_atendimento":  "fca4e5ef-59c4-4ac8-95fd-f3994af695d2",
+        "id_cliente":  "4ae5d571-b0ee-4d64-b6b6-aa15c23a314d",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-22T19:45:56.357784-03:00"
+    },
+    {
+        "id_atendimento":  "eff951b0-56d8-4846-84ac-ee2d96faf87a",
+        "id_cliente":  "2cb08495-8380-486f-9ea2-eba7300c0e57",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-22T18:11:44.727017-03:00"
+    },
+    {
+        "id_atendimento":  "1cf8ef1c-0ad3-4246-9bc2-4c0051694c2a",
+        "id_cliente":  "3e1c5405-1fe3-40ca-a2d1-99e86428e1e7",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-22T17:27:52.493308-03:00"
+    },
+    {
+        "id_atendimento":  "60e081ce-42c2-431f-9888-a502534b227a",
+        "id_cliente":  "4e411dfe-656c-4a49-bb87-8967cde4f5ea",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-22T15:04:19.135906-03:00"
+    },
+    {
+        "id_atendimento":  "0b32603a-59d7-4211-a15e-53ac42d62093",
+        "id_cliente":  "c4ebaf1a-9856-4b7c-a1c8-1f22fdeb3d39",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-22T14:46:06.898182-03:00"
+    },
+    {
+        "id_atendimento":  "9e26315a-6558-42ec-bf87-8bb27a7ebc38",
+        "id_cliente":  "13bfe407-6d99-4ddb-8157-a76535bfd7d1",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-22T14:40:29.123824-03:00"
+    },
+    {
+        "id_atendimento":  "6aba2214-8b39-4378-9255-1d141cd56d38",
+        "id_cliente":  "1d9f42d5-ba08-478e-9ea3-ac193d940909",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-22T14:34:21.012184-03:00"
+    },
+    {
+        "id_atendimento":  "5a9dc9cc-835e-4535-a601-9d8ad4f5ac3d",
+        "id_cliente":  "0fe23dab-b755-4d46-ad0b-0f423f9a140c",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-22T14:18:27.127282-03:00"
+    },
+    {
+        "id_atendimento":  "a8242acf-be35-4012-ae58-6f7da204d7d6",
+        "id_cliente":  "5b85bdf2-d322-46c5-921f-8bc2aa8cf18e",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-22T14:09:09.203452-03:00"
+    },
+    {
+        "id_atendimento":  "536f5e46-dd24-497d-93c4-e27e02e7eab7",
+        "id_cliente":  "8ab9ac93-564d-4003-b813-4e9f57aee320",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-22T13:49:28.757054-03:00"
+    },
+    {
+        "id_atendimento":  "e4bf1b41-3cf8-4991-9e2c-aa0405973f69",
+        "id_cliente":  "250a4ce2-1b25-4639-884d-e90f372a3ed0",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-22T12:55:08.147653-03:00"
+    },
+    {
+        "id_atendimento":  "9e80124c-5cac-4a45-abd2-f42fbbcb3ab2",
+        "id_cliente":  "727ead82-69cd-4bbe-80d6-51a15143bf4c",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-22T11:41:05.561985-03:00"
+    },
+    {
+        "id_atendimento":  "e6bb39d0-b98e-4910-afd4-7c6f0e2d6b4b",
+        "id_cliente":  "18165ca4-c861-4105-b855-62b9bd9ace24",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-22T09:51:36.05835-03:00"
+    },
+    {
+        "id_atendimento":  "2e4cc45c-98e1-45e4-8278-6aa7fb91c052",
+        "id_cliente":  "d9b3b194-e153-40c4-8a15-5e8115fa6a9e",
+        "temperatura":  "Morno",
+        "etapa_funil":  "Proposta",
+        "status":  null,
+        "atendente":  "Gabrielle Pinto",
+        "criado":  "2026-06-22T08:22:06.966963-03:00"
+    },
+    {
+        "id_atendimento":  "37530447-264b-4577-a856-c9dfd2663523",
+        "id_cliente":  "1fd4584c-e832-4373-be71-79693fb7c86d",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-22T05:39:59.128313-03:00"
+    },
+    {
+        "id_atendimento":  "753da5a7-453f-47c0-8b35-f014fa190521",
+        "id_cliente":  "5f6246fe-2c09-473f-90ff-23333a8ede95",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-21T18:40:32.913371-03:00"
+    },
+    {
+        "id_atendimento":  "3b72455c-5980-498f-8cf7-68cec16735de",
+        "id_cliente":  "8f26d0af-2f45-446d-aa68-48d6a8837b8d",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-21T17:56:47.14952-03:00"
+    },
+    {
+        "id_atendimento":  "ad1d9ff8-0711-4fe0-9ae0-3a3bf66fd511",
+        "id_cliente":  "93cd2ac1-42c4-4020-b071-29c82d77ea4c",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-21T14:57:41.865511-03:00"
+    },
+    {
+        "id_atendimento":  "81475d37-e321-4d15-813e-ab19a01d6936",
+        "id_cliente":  "9a7e11ec-522c-44d6-8946-31d4ff1fec5e",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-21T10:46:54.178197-03:00"
+    },
+    {
+        "id_atendimento":  "6e51f7a0-80f8-435a-b669-c9c064acfbc2",
+        "id_cliente":  "ad94060b-a4ac-4bc0-8863-024a1c6caf43",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-21T10:45:59.980286-03:00"
+    },
+    {
+        "id_atendimento":  "0a3ea3f3-8cc7-4415-92c5-ad2268b20de8",
+        "id_cliente":  "a22ff691-36ea-4c39-b4db-94f968725797",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-21T05:07:16.524732-03:00"
+    },
+    {
+        "id_atendimento":  "eb054be9-b28f-469a-9b3e-d7a9085927bc",
+        "id_cliente":  "eaeb1cac-5dab-427a-bd6d-462688181567",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-20T22:48:45.87572-03:00"
+    },
+    {
+        "id_atendimento":  "2c231230-820d-43eb-9249-8e2339a581ed",
+        "id_cliente":  "ae54fc63-f3b9-43ae-9f78-062d94f2b7ed",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-20T12:48:52.823684-03:00"
+    },
+    {
+        "id_atendimento":  "66a0e099-6858-4147-84b6-c5931a2c1fb7",
+        "id_cliente":  "93640dc8-e21d-4f27-97bf-625ad4178704",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-20T10:26:33.796783-03:00"
+    },
+    {
+        "id_atendimento":  "0a786c6a-afce-4fa5-a362-7ce1c6761bb4",
+        "id_cliente":  "b52a4872-3572-4e07-9ee6-ca51a55acadd",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-19T22:49:36.978313-03:00"
+    },
+    {
+        "id_atendimento":  "c198f6b9-efdf-4e00-8b0b-3e1ab593adcd",
+        "id_cliente":  "31402e01-8d4b-4f6b-ae3c-d09720e9afe0",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-19T15:11:56.548306-03:00"
+    },
+    {
+        "id_atendimento":  "4aef2cc6-ca66-4dd0-b625-aa6a7e59b7e6",
+        "id_cliente":  "482472d4-fdeb-4b88-be51-ce654d4c8421",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-19T14:34:43.607689-03:00"
+    },
+    {
+        "id_atendimento":  "e58700a2-2586-43ab-9fcb-9ea2cb9e1aba",
+        "id_cliente":  "4da3f45b-7759-4f33-8f79-776af7e61724",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-19T13:50:10.431424-03:00"
+    },
+    {
+        "id_atendimento":  "ee333c2a-279e-4966-992e-e59ebe949f03",
+        "id_cliente":  "fafeb8bf-55c7-42a0-90eb-04800160c9d7",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-19T11:19:23.026153-03:00"
+    },
+    {
+        "id_atendimento":  "5d611bbb-dfb0-4f01-88b0-34dcb0abf0c9",
+        "id_cliente":  "9b0c7881-126d-44f6-9d27-debc7f2068f8",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-19T09:02:12.739987-03:00"
+    },
+    {
+        "id_atendimento":  "4b05fc3d-e04b-4f4c-8529-373f2fd03d30",
+        "id_cliente":  "b6effec5-753e-40ca-815c-1aaf8d6f0662",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-19T08:25:47.192185-03:00"
+    },
+    {
+        "id_atendimento":  "2e86a6d9-8211-4c40-a38a-98dde93a186c",
+        "id_cliente":  "30ba326f-b544-4c36-ba49-dfde4a2d9764",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-19T01:14:12.487633-03:00"
+    },
+    {
+        "id_atendimento":  "10454c6f-bf30-4e52-a3a0-c58f4b147a3f",
+        "id_cliente":  "91a4fd12-a080-4c84-983f-ba67e8100fe6",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-18T18:59:33.896793-03:00"
+    },
+    {
+        "id_atendimento":  "b2be8698-0336-4b73-82fc-56667a8a3796",
+        "id_cliente":  "124e5e5d-934e-4565-ac0c-6fd72ee13b8c",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-18T18:55:50.583956-03:00"
+    },
+    {
+        "id_atendimento":  "26217e1c-3f67-4035-a65e-53ee61e44ee3",
+        "id_cliente":  "6dad6af8-03f5-43be-8870-a9d82154d90e",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-18T18:18:32.423254-03:00"
+    },
+    {
+        "id_atendimento":  "cbf51ea0-288b-4209-9075-e36e7d94b3e8",
+        "id_cliente":  "d5dfb368-b779-481e-82f5-7d583bbc222c",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-18T17:47:43.418834-03:00"
+    },
+    {
+        "id_atendimento":  "eaffa05f-f46f-4588-a303-bd0a0736b0bf",
+        "id_cliente":  "9d26147b-771e-4947-87a3-93b2d50349e8",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-18T16:32:29.600612-03:00"
+    },
+    {
+        "id_atendimento":  "f3d24058-935d-49c5-a68a-949cd92b7fab",
+        "id_cliente":  "1c9ec58d-508a-4278-a1b6-66491b2a8a61",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-18T16:16:24.755424-03:00"
+    },
+    {
+        "id_atendimento":  "5eff18fa-da0b-4d08-8cf0-db7823617fe9",
+        "id_cliente":  "b52a4ee0-4938-4e8f-9b23-6170f3a3cd8c",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-18T15:48:09.052084-03:00"
+    },
+    {
+        "id_atendimento":  "f65ad9b0-afce-47c5-8f3e-4c79bdca3c0e",
+        "id_cliente":  "55203896-ba44-4400-b717-61bd0a17ad37",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-18T15:17:40.462447-03:00"
+    },
+    {
+        "id_atendimento":  "667d052d-9412-4a5c-bc15-86f08b4e368f",
+        "id_cliente":  "bd3fa1b6-3351-460f-926f-8436e44885c4",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-18T13:29:25.780798-03:00"
+    },
+    {
+        "id_atendimento":  "3937b36f-3412-4895-b0f5-aca6d3af839b",
+        "id_cliente":  "a57358e9-74c0-4334-929b-8e97e6040a96",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-18T12:25:08.418396-03:00"
+    },
+    {
+        "id_atendimento":  "f10054dd-fac5-4ff8-8de6-977c9b3ab780",
+        "id_cliente":  "23482827-5a32-45c9-bd14-b02a1ec7ba7f",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-17T19:31:27.896054-03:00"
+    },
+    {
+        "id_atendimento":  "16168285-8ced-4355-8072-7bc8f9cea560",
+        "id_cliente":  "5c616c6f-986d-4aae-a76d-7545a16ba117",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-17T18:47:16.411908-03:00"
+    },
+    {
+        "id_atendimento":  "3d7364d6-0001-4c18-b4df-ace5c5ea4cdd",
+        "id_cliente":  "a2d97695-d720-4615-b417-846019e8a19b",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-17T18:40:20.028391-03:00"
+    },
+    {
+        "id_atendimento":  "4728648b-7fa8-4fe7-8d20-9770708cdb01",
+        "id_cliente":  "d8c1fb65-0258-45dd-9c93-2c62dd4db77a",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-17T17:47:41.115119-03:00"
+    },
+    {
+        "id_atendimento":  "9c127371-e698-47e6-a646-e85649cf4958",
+        "id_cliente":  "a1ec63b0-90c0-4d91-aeb1-41772e96502b",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-17T17:16:27.21567-03:00"
+    },
+    {
+        "id_atendimento":  "f4dda80e-6f8d-4c76-ae0b-9a2e7bd860bf",
+        "id_cliente":  "ee2c67bf-ed6e-446f-9d56-d33311f633fe",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-17T16:22:18.196991-03:00"
+    },
+    {
+        "id_atendimento":  "96594bac-bc60-4a05-8e5f-c571e7655191",
+        "id_cliente":  "621cc4fa-a040-4cec-b0c8-2cf86bd32c3f",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-17T16:14:55.226337-03:00"
+    },
+    {
+        "id_atendimento":  "6190b273-b57a-4468-b6ef-f75d024edd65",
+        "id_cliente":  "6b85e66c-7e2c-4db9-a2f5-62b16d83208f",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-17T13:38:43.832655-03:00"
+    },
+    {
+        "id_atendimento":  "6a5d3a31-e45f-4345-b180-589d57300736",
+        "id_cliente":  "83e3d820-bec6-406b-a63f-311f5f50f705",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-17T13:17:18.782807-03:00"
+    },
+    {
+        "id_atendimento":  "72868655-5781-4029-bd3a-7660d96efd04",
+        "id_cliente":  "914734ba-f831-4f2e-abf2-a491c7d6fd97",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-17T10:12:43.501517-03:00"
+    },
+    {
+        "id_atendimento":  "1ce963d5-de52-4ef8-bf3f-87c70aa61998",
+        "id_cliente":  "313940e9-e9cd-45d9-8105-8ec07ae74077",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-17T08:08:41.296382-03:00"
+    },
+    {
+        "id_atendimento":  "2b08e42b-eb1a-497e-9a3b-06e384a73386",
+        "id_cliente":  "563c11c7-1253-42f8-aae0-9c694eb12dcc",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-16T17:53:36.391448-03:00"
+    },
+    {
+        "id_atendimento":  "9414cfe2-f433-409b-8ea9-c3cf870e799e",
+        "id_cliente":  "f091e202-db4c-4efd-8b60-e9273043a115",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-16T16:21:30.587717-03:00"
+    },
+    {
+        "id_atendimento":  "8b212936-a12e-4cb7-8eee-cfe631f7b33e",
+        "id_cliente":  "fa68458b-1395-4c8b-932f-01ffaa02ee43",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-16T14:51:01.271276-03:00"
+    },
+    {
+        "id_atendimento":  "cfb5e087-1bcd-4400-b53c-19b68d003e91",
+        "id_cliente":  "35618189-aefc-40c2-b2cf-0e9d24e4597d",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-16T14:22:17.883809-03:00"
+    },
+    {
+        "id_atendimento":  "4f38a348-e53d-4cf5-9ec0-3893f1ffb9a9",
+        "id_cliente":  "69ffce59-267a-48f6-a895-f6aba9d790e2",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-16T14:16:57.062352-03:00"
+    },
+    {
+        "id_atendimento":  "e8a86dc3-1290-47cd-b063-f3845d48bf7b",
+        "id_cliente":  "1af9f47b-1358-4687-a8fa-67ffba538cb6",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-16T13:33:21.003139-03:00"
+    },
+    {
+        "id_atendimento":  "f7179736-b5c7-420b-9568-16a428c49f6d",
+        "id_cliente":  "f41064ed-a578-428e-b677-096b718435e0",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-16T13:18:58.605434-03:00"
+    },
+    {
+        "id_atendimento":  "eb6af471-e200-4b6c-b7b0-0e40fbf309fa",
+        "id_cliente":  "bcccb376-be2a-4a46-b412-64cf1b06029a",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-16T11:40:54.131335-03:00"
+    },
+    {
+        "id_atendimento":  "a94be28c-6234-4f99-8312-45b06c195ad0",
+        "id_cliente":  "79094818-9d05-4f20-b83a-3ec0c775e13a",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-16T11:36:43.383391-03:00"
+    },
+    {
+        "id_atendimento":  "97f292c9-5b1f-4a7f-8dc8-17adfc1d666d",
+        "id_cliente":  "45348dd1-d9e0-4c56-8da8-ff1355d9f915",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-16T11:21:43.868306-03:00"
+    },
+    {
+        "id_atendimento":  "66e3a3cb-3e17-4496-b318-f64c1fa44e05",
+        "id_cliente":  "d8b2d7aa-c392-44f4-8fa4-463695d414d3",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-16T10:47:49.036356-03:00"
+    },
+    {
+        "id_atendimento":  "27074ad6-2348-419c-8504-44504acf9a9a",
+        "id_cliente":  "e9690faf-d2e1-4b86-a3e7-561d13c90ab3",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-16T10:37:31.568627-03:00"
+    },
+    {
+        "id_atendimento":  "811f166d-971d-45ef-911e-f61b582d63c1",
+        "id_cliente":  "92313eec-efb8-4584-bf3b-9559c52f55a6",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-16T09:22:52.193872-03:00"
+    },
+    {
+        "id_atendimento":  "2aacfe71-6497-47a1-8aea-3d803f7ef13d",
+        "id_cliente":  "19eee8c7-226d-4bc8-891c-726e05e46859",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-16T07:48:13.596566-03:00"
+    },
+    {
+        "id_atendimento":  "5c6fdd6e-d05f-4e63-83fd-9f336816f48a",
+        "id_cliente":  "44738415-28cd-444d-8309-fbd4e749bb2c",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-16T05:27:38.970225-03:00"
+    },
+    {
+        "id_atendimento":  "6cb0a67c-2df7-4c17-acb9-beb30ec83df7",
+        "id_cliente":  "b6f520c3-1b1c-4944-a2c2-2c2a3da62cbb",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-15T18:25:13.109187-03:00"
+    },
+    {
+        "id_atendimento":  "db80eb58-067f-4857-8c1b-1513b13eca5b",
+        "id_cliente":  "76ce661f-0254-4625-82b6-1d58803f1248",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-15T13:48:29.32181-03:00"
+    },
+    {
+        "id_atendimento":  "14e71f08-daf4-4844-8af4-60b0cea3209a",
+        "id_cliente":  "e63c61fc-2a33-4060-8f72-3cc2994aca7a",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-15T13:46:08.58689-03:00"
+    },
+    {
+        "id_atendimento":  "1dfc7f7d-d785-42b9-844e-03c9edaa5e01",
+        "id_cliente":  "b4322ff0-2e3d-441f-a2a9-53cbe0c8142e",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-15T13:27:05.983112-03:00"
+    },
+    {
+        "id_atendimento":  "3f8e9396-58be-47bd-bcc3-a632abc762df",
+        "id_cliente":  "c954e474-4dce-429a-8fdc-954559687bc0",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-15T12:32:11.871315-03:00"
+    },
+    {
+        "id_atendimento":  "ad6f2a4d-0d51-4ea7-85bc-7d7d03ca27b7",
+        "id_cliente":  "9441daa2-0fc9-4d5d-8dc5-d070b254c7d3",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-15T12:31:27.645108-03:00"
+    },
+    {
+        "id_atendimento":  "e02c0091-8cb0-4839-8aff-2542eb221aeb",
+        "id_cliente":  "b327b957-3a9e-46bb-b3d6-112c07e45dde",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-15T12:11:16.750469-03:00"
+    },
+    {
+        "id_atendimento":  "a4f878ac-ba91-47fa-b5a6-a7452cae8fd2",
+        "id_cliente":  "76c62aca-e8fb-4520-bece-75769037207d",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-15T09:26:26.228608-03:00"
+    },
+    {
+        "id_atendimento":  "fe3ca1d6-ccdb-4890-8a3a-52f2405313a7",
+        "id_cliente":  "fd68de91-7760-411e-80b7-6baa1e38d2e6",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-15T08:54:36.030175-03:00"
+    },
+    {
+        "id_atendimento":  "d6fedea5-acfe-4ec6-bd1d-93c6013a4ab4",
+        "id_cliente":  "12a5eb0e-8b22-4192-b3fe-3d4d4604dcf9",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-15T08:04:23.67242-03:00"
+    },
+    {
+        "id_atendimento":  "8dc30371-c1e2-4ea5-91af-1a159b209d1b",
+        "id_cliente":  "9a016d37-5ea8-4b69-ab32-156e0a477661",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-14T22:01:39.985086-03:00"
+    },
+    {
+        "id_atendimento":  "a04ca887-c170-47bb-9da3-65eb94397460",
+        "id_cliente":  "93895c45-43ef-491b-93f9-a3d7637b66ff",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-14T21:32:28.587044-03:00"
+    },
+    {
+        "id_atendimento":  "ce045fee-f1b6-4019-abce-7464c18bf1a3",
+        "id_cliente":  "1aeaeb54-1aeb-436b-9873-1f68875b4c33",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-14T19:58:23.159895-03:00"
+    },
+    {
+        "id_atendimento":  "81126f5e-0ac8-4697-a985-86c4b5845885",
+        "id_cliente":  "1eb6dc56-c51c-428a-b205-e6fe460dbe73",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-14T17:57:46.9666-03:00"
+    },
+    {
+        "id_atendimento":  "c61f3093-e90b-43e8-9b11-77632cde84d7",
+        "id_cliente":  "9f23433c-5e7d-48ad-8514-37f59388a895",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-14T17:10:30.16729-03:00"
+    },
+    {
+        "id_atendimento":  "8bde8966-b256-4b8a-b0f5-b2976f350dc9",
+        "id_cliente":  "cff938fe-040d-4d81-8037-799b75071182",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-14T14:40:58.462821-03:00"
+    },
+    {
+        "id_atendimento":  "557fe986-edc7-44e9-be43-e5519ece6f44",
+        "id_cliente":  "81149141-f1fd-4b9e-a58b-9849c372151d",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-14T14:15:46.940838-03:00"
+    },
+    {
+        "id_atendimento":  "dc42eb46-3e64-4daf-a698-6eae13ec9695",
+        "id_cliente":  "d49da0b0-25f0-4b15-bd02-e3bea744a8db",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-14T12:35:17.36734-03:00"
+    },
+    {
+        "id_atendimento":  "cf03ce59-5a7f-4fe4-9163-1e2fd4aa9606",
+        "id_cliente":  "7768dcd5-c9b0-403d-8863-78ec61f0880a",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-14T08:41:05.402198-03:00"
+    },
+    {
+        "id_atendimento":  "16e272ec-19ad-4f29-b304-b2fc44ff6b24",
+        "id_cliente":  "a85b7941-ea66-4030-aec6-b9b0b569b36a",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-13T22:40:38.438441-03:00"
+    },
+    {
+        "id_atendimento":  "a7d37fb0-ecdc-49f7-9b8a-d6dc1dc71f18",
+        "id_cliente":  "055ad350-1c12-4aff-be5b-a7dedd35f43b",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-13T18:37:23.307954-03:00"
+    },
+    {
+        "id_atendimento":  "2c63a404-3120-4832-87b6-e5d81f0d4369",
+        "id_cliente":  "8779cfc4-11cb-44da-ac09-9e771282c218",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-13T17:10:44.771061-03:00"
+    },
+    {
+        "id_atendimento":  "a80df4e3-0ece-466f-9901-820d2578c480",
+        "id_cliente":  "4d0dbba5-b9cc-428c-9a9d-8c3875775880",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-13T16:49:39.018943-03:00"
+    },
+    {
+        "id_atendimento":  "ba382bf2-3cd4-4ef1-aec2-2083319b74b0",
+        "id_cliente":  "4e90722d-b867-40fb-bfd2-a9475eba3eed",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-13T14:29:41.755786-03:00"
+    },
+    {
+        "id_atendimento":  "861e05f5-f058-4c0a-ad95-0a5122ae57eb",
+        "id_cliente":  "90b5596a-199c-4d3c-922f-87efe730c7e4",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-13T12:03:08.897339-03:00"
+    },
+    {
+        "id_atendimento":  "3d8254eb-f559-438f-bc4d-1cc92fba4887",
+        "id_cliente":  "21a8d745-11a6-4f0a-97e8-284a583c8ba0",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-13T06:59:07.631311-03:00"
+    },
+    {
+        "id_atendimento":  "b7c086c6-3e44-4b93-ab12-df583302af95",
+        "id_cliente":  "c9b335e1-ecec-4960-addd-9b929f3fceea",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-12T17:12:40.764055-03:00"
+    },
+    {
+        "id_atendimento":  "04438110-f853-45d9-8a60-e9d10a605be7",
+        "id_cliente":  "4468b27a-509b-4d71-8d37-612884d80dfb",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-12T15:35:05.031437-03:00"
+    },
+    {
+        "id_atendimento":  "ab56b892-161f-4638-8f61-3c5bfa086569",
+        "id_cliente":  "e85f204e-8f8a-492e-b0c5-53f171fe633d",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-12T15:11:31.905572-03:00"
+    },
+    {
+        "id_atendimento":  "fcb371d8-e740-4ef6-87ea-52c76fa8288d",
+        "id_cliente":  "de50a6ac-93b3-401b-b5d8-32424163c9c6",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  "Gabrielle Pinto",
+        "criado":  "2026-06-12T15:09:56.50673-03:00"
+    },
+    {
+        "id_atendimento":  "6027f805-45c7-402c-9eae-af836817634e",
+        "id_cliente":  "78d32d3f-f2ee-4fcf-b0d2-3aae09adb38d",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-12T13:40:49.137888-03:00"
+    },
+    {
+        "id_atendimento":  "17cc6ba0-dc80-4a54-8b7c-9b0ab74ba8ef",
+        "id_cliente":  "24748a17-6c21-4a5d-8121-78ddb90376e6",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-12T12:53:30.204052-03:00"
+    },
+    {
+        "id_atendimento":  "5b97cee2-5509-4a32-8dcf-fcfca320a75a",
+        "id_cliente":  "b2921670-fcf7-4b21-b558-01df0e0f0501",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-12T12:25:00.393109-03:00"
+    },
+    {
+        "id_atendimento":  "6f9c1597-2853-4802-8bcc-17045ac8131d",
+        "id_cliente":  "77252bb0-ca73-4582-b16a-ff7fd42c33ef",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-12T11:33:02.905663-03:00"
+    },
+    {
+        "id_atendimento":  "17b193ee-af56-4f45-931a-693eafc32827",
+        "id_cliente":  "15df7055-5e26-48d8-a388-b9ba43c6305b",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-12T08:48:42.222614-03:00"
+    },
+    {
+        "id_atendimento":  "e621ffd3-1885-4c4a-8ca7-18fc7604860e",
+        "id_cliente":  "9d7181ea-3750-4cc5-b0cb-617db14e5dc4",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-12T08:38:54.557197-03:00"
+    },
+    {
+        "id_atendimento":  "2b2400d9-8496-4aec-8a10-985a370bd8ed",
+        "id_cliente":  "823d209f-0e57-4aae-8178-6f0701a9669b",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-12T08:25:08.698848-03:00"
+    },
+    {
+        "id_atendimento":  "23b68717-0db5-4d3c-91bd-5765a9467e9a",
+        "id_cliente":  "6e7ce52d-9157-4b5f-8201-ce2e94fd08ce",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-11T18:01:44.936512-03:00"
+    },
+    {
+        "id_atendimento":  "6a965d86-9b76-4fc8-a65f-658b7c43f516",
+        "id_cliente":  "c47940d9-a33f-486b-9ebe-60c449f10357",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-11T17:51:10.39159-03:00"
+    },
+    {
+        "id_atendimento":  "d5e5c7e9-94ef-473e-b3e4-16ec3426f986",
+        "id_cliente":  "8207763f-69c1-4126-acae-0ec4338bd1ce",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-11T16:47:30.119647-03:00"
+    },
+    {
+        "id_atendimento":  "ee419b1a-040d-485b-9343-cdf0b3921a48",
+        "id_cliente":  "a6e90a67-42e9-465c-9b4f-9641d97e75ff",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-11T16:44:42.030974-03:00"
+    },
+    {
+        "id_atendimento":  "d9ab02c1-b896-4089-bfae-5b284b22b4a6",
+        "id_cliente":  "ce40eff2-6700-444f-bc81-feffdbea18c1",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-11T14:54:18.308565-03:00"
+    },
+    {
+        "id_atendimento":  "1c574a4c-8476-4988-98e2-151f104d63d2",
+        "id_cliente":  "0e958d8a-ecbe-45d4-8fdf-4da2df4e5d37",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-11T11:49:32.90922-03:00"
+    },
+    {
+        "id_atendimento":  "522e1143-bd5d-4a25-b7a9-d08d8f83f031",
+        "id_cliente":  "313ac90b-fedb-4c49-9c9b-c14efd212c0e",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-11T10:49:41.007144-03:00"
+    },
+    {
+        "id_atendimento":  "89140970-6008-44b0-8c79-2e0aef705b5b",
+        "id_cliente":  "8d1c5fdd-5938-4141-a9ba-7b711427b5cf",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-11T10:30:06.068545-03:00"
+    },
+    {
+        "id_atendimento":  "8bb423f2-db72-4f55-87bc-4316432a29e8",
+        "id_cliente":  "7f2e044d-1eae-44d0-8e75-8954d47f0881",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-11T08:34:28.134179-03:00"
+    },
+    {
+        "id_atendimento":  "6799eec1-4e33-4dfe-82dc-00565fe85d76",
+        "id_cliente":  "fb728560-3510-4847-bb86-8ee5a8b93484",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-11T08:02:41.144778-03:00"
+    },
+    {
+        "id_atendimento":  "ced44407-b9d7-4f82-8192-f51034c60d56",
+        "id_cliente":  "b78fd3e0-283d-4576-a8a2-581d2161f458",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-11T05:38:42.983246-03:00"
+    },
+    {
+        "id_atendimento":  "e30cef9c-d249-45e4-87d3-908e8506ed7c",
+        "id_cliente":  "026f685a-2573-4c78-995a-024345d2bf94",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-11T05:21:00.186218-03:00"
+    },
+    {
+        "id_atendimento":  "376e82a8-76a5-49ad-ace7-4d37aefd9a02",
+        "id_cliente":  "686d0261-7d97-4af6-8ede-21c9dbf175e2",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-10T16:13:54.25242-03:00"
+    },
+    {
+        "id_atendimento":  "ef4df117-ce16-43fd-898f-31dc71de3027",
+        "id_cliente":  "3c6e5671-22ae-47c2-afbb-1d2c13f50fc4",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-10T13:40:49.914065-03:00"
+    },
+    {
+        "id_atendimento":  "1e30c0c7-4bfe-4018-be23-fad8202fb02a",
+        "id_cliente":  "205a76f8-9630-46c1-8de0-8e0e94d20d3d",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-10T12:26:18.710395-03:00"
+    },
+    {
+        "id_atendimento":  "e64c05d9-d34c-4564-8c99-56e3a0685fec",
+        "id_cliente":  "06a313fb-7b8f-46ab-87a9-5a67d8b025c3",
+        "temperatura":  "Morno",
+        "etapa_funil":  "Ganho",
+        "status":  null,
+        "atendente":  "Gabrielle Pinto",
+        "criado":  "2026-06-10T12:11:42.471604-03:00"
+    },
+    {
+        "id_atendimento":  "17da9765-3e09-49bd-9d91-f4665395ede6",
+        "id_cliente":  "ac3727b0-f2f2-497d-9126-a2dcc7c247cc",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-10T11:34:45.563773-03:00"
+    },
+    {
+        "id_atendimento":  "37fe3652-0b7d-4992-9163-0a751df09568",
+        "id_cliente":  "33a5c2be-80e2-4f69-bfa4-b5f341f48fb5",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-10T11:06:45.11172-03:00"
+    },
+    {
+        "id_atendimento":  "3523d97e-1d53-4703-a0cf-31711ef7dcf1",
+        "id_cliente":  "8f240420-d705-407b-a0c9-751e3b9a4827",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-10T10:34:30.862555-03:00"
+    },
+    {
+        "id_atendimento":  "dc5086f3-9cf0-4f5b-ae63-9ec4320d1c67",
+        "id_cliente":  "2dc0a56b-9016-491c-8a72-178d02e28676",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-10T10:17:25.740731-03:00"
+    },
+    {
+        "id_atendimento":  "1a996052-ccd0-4e6b-b83e-955c3c547e87",
+        "id_cliente":  "89b2dff0-c27d-4193-8423-41c265a8ae5d",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-10T08:07:20.066306-03:00"
+    },
+    {
+        "id_atendimento":  "33e3adea-a10a-4f14-8364-496f9c62cadb",
+        "id_cliente":  "6e39124e-72b5-4471-bdcc-0d44feeac6ae",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-10T07:33:33.449223-03:00"
+    },
+    {
+        "id_atendimento":  "855f035a-3add-477d-9bad-1fef3db730a7",
+        "id_cliente":  "ec79b015-6ac4-4d77-b5a1-5182c2a6499c",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-09T20:09:09.647458-03:00"
+    },
+    {
+        "id_atendimento":  "96feb368-afc7-4d2f-8e4d-9de9cd52d692",
+        "id_cliente":  "9ea6a9a0-72cb-49e3-8718-54e5183f0efc",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-09T19:34:25.504367-03:00"
+    },
+    {
+        "id_atendimento":  "02d9eec0-ee0b-45fe-bb02-590ef8953d4a",
+        "id_cliente":  "a85f6b94-fbcb-467d-8751-bdb1d97d7f85",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-09T18:04:59.711277-03:00"
+    },
+    {
+        "id_atendimento":  "5b493053-5559-47c6-813e-3ec45b658512",
+        "id_cliente":  "320672d3-0c80-4474-8b06-d9a1c1c70602",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-09T17:08:09.324344-03:00"
+    },
+    {
+        "id_atendimento":  "05dcf99d-772c-4fab-981c-deb1bfe0a63a",
+        "id_cliente":  "a39e527a-9830-403c-a3d7-3b2e7d4cda5a",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-09T12:15:37.720055-03:00"
+    },
+    {
+        "id_atendimento":  "f9e4bf15-6209-48f6-889d-92f0cc24a246",
+        "id_cliente":  "98165719-db33-4bb1-ae92-7ca66006349c",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-09T12:00:29.44794-03:00"
+    },
+    {
+        "id_atendimento":  "7b59926a-6e81-4229-b173-654967e0eb3c",
+        "id_cliente":  "51014b0f-a071-4399-81be-aeb42f290b22",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-09T10:54:12.928286-03:00"
+    },
+    {
+        "id_atendimento":  "5c97c770-5b9f-4e4e-b378-9b2836c6d6dc",
+        "id_cliente":  "d51210f5-d6dc-4cf5-9127-f3604ae1bc40",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-09T10:06:43.194169-03:00"
+    },
+    {
+        "id_atendimento":  "dc4104ac-dca9-49c6-99c9-e399cb348b04",
+        "id_cliente":  "1c9db030-f51a-43b4-aed9-1d273edb70d2",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-09T08:05:59.248366-03:00"
+    },
+    {
+        "id_atendimento":  "8c22749f-566f-4362-a1d0-bc32fd97a055",
+        "id_cliente":  "1672af90-5811-464d-b8f8-a147d0d58e47",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-09T07:19:35.050462-03:00"
+    },
+    {
+        "id_atendimento":  "88d93d48-f15d-41c4-bd71-671bb2cd5ea9",
+        "id_cliente":  "1fb325c8-999f-4554-8c29-0a0cd7f2bd9d",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-08T21:07:44.453544-03:00"
+    },
+    {
+        "id_atendimento":  "7c6f0c08-d69f-4a54-b687-a7314786e43d",
+        "id_cliente":  "7dd88bc0-0244-4c73-bf04-64cf0ec67df4",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-08T20:15:45.071286-03:00"
+    },
+    {
+        "id_atendimento":  "81c78383-4e49-40f0-b9b6-8349749a1888",
+        "id_cliente":  "3acb3213-0eac-45ec-baa5-b838f5410829",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-08T18:54:51.624675-03:00"
+    },
+    {
+        "id_atendimento":  "3fe1b904-92cf-451a-bfc6-160832494038",
+        "id_cliente":  "f607114b-8289-45f9-b792-27bc3cd4aaea",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-08T18:38:52.295981-03:00"
+    },
+    {
+        "id_atendimento":  "9c7bdb9b-9e05-4c6e-b902-351ae101bd02",
+        "id_cliente":  "a5675992-4016-44fa-8566-0fb7569b65c5",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-08T17:59:40.843607-03:00"
+    },
+    {
+        "id_atendimento":  "20968a62-8bcd-46dc-8b25-8d4f7e2cd864",
+        "id_cliente":  "e846bf45-e1a0-453e-9cd2-c330e9bb9fb1",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-08T16:48:30.828321-03:00"
+    },
+    {
+        "id_atendimento":  "c6f4e6ae-e76a-4655-b8d8-65261689fd7f",
+        "id_cliente":  "c1394336-0a4b-4b11-9d76-b2765505d02f",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-08T15:21:24.128058-03:00"
+    },
+    {
+        "id_atendimento":  "8957d4f0-205b-43fb-8072-b0b16eed3b9f",
+        "id_cliente":  "5d8c6b08-9dd3-4d09-973d-778d37954798",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-08T14:59:26.91628-03:00"
+    },
+    {
+        "id_atendimento":  "582a5a15-a958-451b-b9ab-b80508319349",
+        "id_cliente":  "308839ea-5ede-4318-b972-203cae39017e",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-08T14:58:55.946315-03:00"
+    },
+    {
+        "id_atendimento":  "88ce6ddd-62be-4db9-812c-61cb0925ca71",
+        "id_cliente":  "94e94e45-925e-4d80-a261-e71b5536dc59",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-08T14:48:35.626931-03:00"
+    },
+    {
+        "id_atendimento":  "8b0329c0-9a76-40db-b688-306866d471ec",
+        "id_cliente":  "ad47b74e-9a11-4c52-a4ab-c1741bbe75d8",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-08T14:04:48.504216-03:00"
+    },
+    {
+        "id_atendimento":  "496a0829-e642-4fa2-b9ec-e30f9c2e89ef",
+        "id_cliente":  "70d73cc2-6f43-4bc3-b003-4dcc176ebc84",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-08T13:53:01.53393-03:00"
+    },
+    {
+        "id_atendimento":  "22bfcb0a-271e-4df9-82a9-ac5f20d84d2f",
+        "id_cliente":  "64ba8eff-1129-45f0-b6d5-c1b5b9dd9a6d",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-08T13:35:27.686286-03:00"
+    },
+    {
+        "id_atendimento":  "30c38489-570b-4ce0-825e-9a63431492e5",
+        "id_cliente":  "5a17f8bb-d047-477c-839d-4d5ba1b9324b",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-08T11:32:12.535221-03:00"
+    },
+    {
+        "id_atendimento":  "66ba876b-c36f-44b5-9e96-bc3f43229348",
+        "id_cliente":  "a812f822-474b-4c9c-b6cb-01dbe6aaa705",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-08T09:20:14.092084-03:00"
+    },
+    {
+        "id_atendimento":  "9e6c1231-9625-44c8-8a29-047782b2d079",
+        "id_cliente":  "485f3e8f-6deb-4ffd-b7c2-5fe37d4b6807",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-08T08:53:32.073367-03:00"
+    },
+    {
+        "id_atendimento":  "1152030a-a886-4f74-ac56-aca4d75526b7",
+        "id_cliente":  "0fba5cee-1b78-470a-bbe5-0cd933122b2c",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-08T08:31:32.350158-03:00"
+    },
+    {
+        "id_atendimento":  "a95b87fa-b323-4d70-ab30-9bc5a604b882",
+        "id_cliente":  "b2f99072-998f-4d9c-b5da-8ab6c594b867",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-07T18:18:46.408208-03:00"
+    },
+    {
+        "id_atendimento":  "667a3c48-d8c1-4df1-be6e-4a829fc39b88",
+        "id_cliente":  "d065c077-f510-4d4f-a3ce-9c99c0593d0e",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-07T18:00:53.039649-03:00"
+    },
+    {
+        "id_atendimento":  "93fdfe6f-ca6e-4ced-aad2-d2863853ce73",
+        "id_cliente":  "e49e17c0-93a9-4f93-8be1-746c1271ae10",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-07T17:39:11.348048-03:00"
+    },
+    {
+        "id_atendimento":  "34320b2c-a1e9-4dea-8d38-04e89ac53804",
+        "id_cliente":  "e4c60f06-f0cd-4437-b753-d9ea23c2a2d4",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-07T16:11:12.772682-03:00"
+    },
+    {
+        "id_atendimento":  "96755ba6-03ee-40f0-8df7-60e4986185f1",
+        "id_cliente":  "1902ae38-fe16-449a-831d-9137cdfa4fe5",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-07T15:13:52.596338-03:00"
+    },
+    {
+        "id_atendimento":  "40c4f766-c091-4683-b4b7-6e87e15accdb",
+        "id_cliente":  "3286c316-e1f4-429e-a00d-952ce7ce0038",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-07T14:23:19.87329-03:00"
+    },
+    {
+        "id_atendimento":  "776568bd-fd38-4b47-8b13-b8e5eabd4161",
+        "id_cliente":  "0e20f4be-4d3c-4447-b214-3c64922684cd",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-07T14:19:31.532402-03:00"
+    },
+    {
+        "id_atendimento":  "c4dabbe1-80a0-4d1a-91e5-75c77ff53cc4",
+        "id_cliente":  "a292efdb-0edf-42c2-ae22-96d322e6ab6b",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-07T12:51:50.511526-03:00"
+    },
+    {
+        "id_atendimento":  "a46ce184-5297-467c-916b-1f020963fae4",
+        "id_cliente":  "528c354e-da5c-45ea-96fd-c74822f3231d",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-07T10:43:46.984243-03:00"
+    },
+    {
+        "id_atendimento":  "3a1cd602-1820-4f24-bf59-bb3a60c6ed46",
+        "id_cliente":  "fc789f87-aa82-41a4-94fa-e5b0198829b2",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-06T13:11:35.72571-03:00"
+    },
+    {
+        "id_atendimento":  "a890a7cd-b527-4973-9ae5-c3323c8e7ec5",
+        "id_cliente":  "61bae707-198c-4d48-a608-6a3cbbf7afc3",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-06T12:36:33.417988-03:00"
+    },
+    {
+        "id_atendimento":  "eecd7721-beed-4e11-a082-a1696b9cb890",
+        "id_cliente":  "53041507-799a-4b8e-8e62-8a7b8d20fad3",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-06T10:22:27.335807-03:00"
+    },
+    {
+        "id_atendimento":  "8934ffe2-f87b-49ec-a547-24fc0951b015",
+        "id_cliente":  "5a4bb92c-f360-41da-9148-08072ef871bc",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-06T10:03:44.051707-03:00"
+    },
+    {
+        "id_atendimento":  "4fbdf195-c8b3-4734-b115-595c7e807785",
+        "id_cliente":  "25fb35b1-2d22-4207-a53c-aa6283dbfe6b",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-06T09:45:29.716715-03:00"
+    },
+    {
+        "id_atendimento":  "fc74f539-cc94-448b-9800-d6f06e7984a8",
+        "id_cliente":  "fb1b214f-0b7e-48d3-b093-390a4a952e09",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-06T00:12:16.762869-03:00"
+    },
+    {
+        "id_atendimento":  "6aa392cd-82fd-4db9-86f1-a85a28053cb7",
+        "id_cliente":  "f65a7463-5292-4c8e-b0d0-0549a65317e9",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-05T13:37:12.375959-03:00"
+    },
+    {
+        "id_atendimento":  "ea0f7d99-5c58-4c43-b1dd-34c56fb75fb0",
+        "id_cliente":  "8666d384-d5de-4d94-9850-417854391e8d",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-05T10:54:51.508006-03:00"
+    },
+    {
+        "id_atendimento":  "7bb6996f-9bc9-47a7-b53f-212cf3c18555",
+        "id_cliente":  "03fdab55-b86e-4b6c-a755-44313c30380d",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-05T08:54:34.387467-03:00"
+    },
+    {
+        "id_atendimento":  "6fb08505-1cd6-40f3-864b-626021c34fa3",
+        "id_cliente":  "992ef130-d14f-4a8f-a6f6-7f7ad3ccfcf0",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-05T07:21:59.464339-03:00"
+    },
+    {
+        "id_atendimento":  "a3d0985c-398d-48af-b806-3d30b0c4827c",
+        "id_cliente":  "5a2a74a0-45f8-4be9-81da-f19c1a6a2e68",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-05T00:42:58.268962-03:00"
+    },
+    {
+        "id_atendimento":  "2cb50bec-fdbb-4d93-93bf-2e0c4f143a3a",
+        "id_cliente":  "2e835acd-b9dd-41f6-8d9a-79a58d2417b4",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-04T10:43:12.645014-03:00"
+    },
+    {
+        "id_atendimento":  "af3f63c3-d503-43f0-bb23-48a3692ce9dc",
+        "id_cliente":  "8731da86-4209-4dba-b86e-42ead7a170be",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-04T10:29:52.718363-03:00"
+    },
+    {
+        "id_atendimento":  "80c809da-4a39-4fd2-8503-ec05a3d57f97",
+        "id_cliente":  "2ccee6fb-e058-4ee2-80c6-3b3cc114a70f",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-04T07:52:19.944878-03:00"
+    },
+    {
+        "id_atendimento":  "aca31553-bb45-4b4e-befa-da9f1df66c6f",
+        "id_cliente":  "95fb9683-d024-44c1-adcc-203d3de3412c",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-04T06:34:25.748382-03:00"
+    },
+    {
+        "id_atendimento":  "9db428ee-8e40-4e24-86e2-687711860187",
+        "id_cliente":  "0482dfcd-fe0b-48e1-8eb4-b40b9897854d",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-04T00:43:53.440639-03:00"
+    },
+    {
+        "id_atendimento":  "980f3aa4-fc35-437e-b6af-8aa10c9e546a",
+        "id_cliente":  "764f8ba8-6512-4729-b60f-480985f1e12f",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-03T18:57:49.411359-03:00"
+    },
+    {
+        "id_atendimento":  "2820ee38-fa97-4db8-9811-7bca3eb3738e",
+        "id_cliente":  "1d4dc5f7-dc8c-4b49-9929-f3bb975e1d25",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-03T16:26:25.060069-03:00"
+    },
+    {
+        "id_atendimento":  "3b04d867-da2b-42ec-86c2-f5af230093d8",
+        "id_cliente":  "6d803da6-51d0-469e-82c7-8ef76af66bac",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-03T14:19:06.657511-03:00"
+    },
+    {
+        "id_atendimento":  "095763ad-4418-4003-a14b-f61a6f5e3572",
+        "id_cliente":  "cdd5dac3-a81a-457e-97b4-8ef14625fa6e",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-03T12:22:22.09253-03:00"
+    },
+    {
+        "id_atendimento":  "0b530e9b-da1f-4d07-8ac8-0966360fb4ba",
+        "id_cliente":  "e324654e-1659-43df-be37-b83549ba0129",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-03T11:18:17.657961-03:00"
+    },
+    {
+        "id_atendimento":  "339ee192-1396-4065-90ed-b12bea80ab06",
+        "id_cliente":  "a74e4b90-b7ef-4edc-a1f5-818efd58bb89",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-03T09:25:49.405866-03:00"
+    },
+    {
+        "id_atendimento":  "a86aeaa9-fbc1-4bf2-bb37-c79372d604a3",
+        "id_cliente":  "7df4e2e7-2872-420a-825e-6d910b3e5177",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-03T01:08:02.192553-03:00"
+    },
+    {
+        "id_atendimento":  "e97bb7d7-ff53-43de-ac45-f4c3eb86c770",
+        "id_cliente":  "61729204-fad4-409e-9e5a-8a34ea5f1037",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-02T16:59:06.147802-03:00"
+    },
+    {
+        "id_atendimento":  "a83876f0-8fbf-40e0-bfcd-38fc2ae19305",
+        "id_cliente":  "5cd15c84-5ee9-440e-a36b-b5b452e3ca49",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-02T14:57:26.384726-03:00"
+    },
+    {
+        "id_atendimento":  "d6378d55-d607-4060-8596-8bc3235da439",
+        "id_cliente":  "38d2222f-0a70-42e4-802f-78e30824e13f",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-02T14:36:00.287643-03:00"
+    },
+    {
+        "id_atendimento":  "91c20cc0-3bb5-4097-9fca-3f8b1245d7aa",
+        "id_cliente":  "2be880c3-0967-463c-b700-433ae04b3d6e",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-02T12:07:23.948001-03:00"
+    },
+    {
+        "id_atendimento":  "f4e4adfa-b66e-4996-bde4-d97f7a739972",
+        "id_cliente":  "8602ea6b-0c87-497d-ba1b-f13af851b0c0",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-02T11:13:48.607608-03:00"
+    },
+    {
+        "id_atendimento":  "2ac14853-9bc3-48bc-be81-84f8dbb99ebd",
+        "id_cliente":  "b81da05b-0235-4a65-9fbd-ec59ff7616bf",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-02T10:53:36.327484-03:00"
+    },
+    {
+        "id_atendimento":  "024f20ab-e72d-4060-a2f4-70ab25a58dd1",
+        "id_cliente":  "eaae7322-bd93-4a1d-8f1d-69a709231139",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-02T10:22:50.59922-03:00"
+    },
+    {
+        "id_atendimento":  "dcff9a2d-5ed9-455d-8b65-f09279b191dc",
+        "id_cliente":  "5c132dc9-5d45-4f3d-b3a8-3dfc5ee1e947",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-02T06:14:06.699807-03:00"
+    },
+    {
+        "id_atendimento":  "44786a5c-dcc0-4b8e-894a-573466a4ad12",
+        "id_cliente":  "90b39968-effb-4d5d-8aa8-f4999cee009e",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-02T01:07:50.428516-03:00"
+    },
+    {
+        "id_atendimento":  "b5b5d934-29e5-4eae-b80a-08843fee79d9",
+        "id_cliente":  "658bebbd-95db-4e17-bb09-d5cb27af90d6",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-01T21:32:29.015548-03:00"
+    },
+    {
+        "id_atendimento":  "55c1527a-d657-4cb4-a6cb-daf9783ccb14",
+        "id_cliente":  "1c1d6f36-8867-45e3-b1d2-d5963d2d15a5",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-01T19:25:28.473803-03:00"
+    },
+    {
+        "id_atendimento":  "6ae07f20-39c5-47f5-9a23-01794de0786a",
+        "id_cliente":  "c9940806-2577-41ba-9ba3-002c9e29b9af",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-01T18:12:29.003639-03:00"
+    },
+    {
+        "id_atendimento":  "364d55f1-0a0a-4c77-9cc9-d0e58245687e",
+        "id_cliente":  "d2040690-c06c-4c69-a6d3-bba38a990a64",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-01T17:38:42.064473-03:00"
+    },
+    {
+        "id_atendimento":  "2e1062e8-418d-4505-a23a-0e3f99033668",
+        "id_cliente":  "cc458215-f901-4dc1-8d8e-340f2c1b1f6a",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-01T16:07:42.413903-03:00"
+    },
+    {
+        "id_atendimento":  "394a89d7-a9c0-46d7-a9d1-f1242ec23b98",
+        "id_cliente":  "4d3f273b-a1bc-4571-ba2c-8286999640f8",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-01T10:25:13.708761-03:00"
+    },
+    {
+        "id_atendimento":  "7772aeea-e059-48d1-b26a-008355f5c48e",
+        "id_cliente":  "536a4fb1-b531-457d-a132-bb2ccc8305e1",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-06-01T09:45:54.618144-03:00"
+    },
+    {
+        "id_atendimento":  "490010c1-6f6a-4002-8aac-d59b2a5c7e3a",
+        "id_cliente":  "ec24693a-e39f-469a-9d92-42d4e52c8b7b",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-31T17:56:33.88692-03:00"
+    },
+    {
+        "id_atendimento":  "7ecc3c56-0ee3-4ae5-9ec1-4d58739404f9",
+        "id_cliente":  "f8684fb2-f93c-4482-b93a-4a9c95c506c3",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-31T11:58:17.69474-03:00"
+    },
+    {
+        "id_atendimento":  "7ab6dfe6-8135-4b8f-af04-654e807ef303",
+        "id_cliente":  "72d77a44-4430-4b1e-a675-90282d67505e",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-31T09:25:53.259733-03:00"
+    },
+    {
+        "id_atendimento":  "226d02ea-c2b3-473b-b489-53795aec1952",
+        "id_cliente":  "b5cbd179-0037-41a0-9af5-93640e25376b",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-30T16:01:44.396719-03:00"
+    },
+    {
+        "id_atendimento":  "92a26fdf-dc7b-4748-ad61-1385f09a203e",
+        "id_cliente":  "6819dc08-101c-46ed-8fc0-aa31aa00ec6a",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-30T12:13:25.376831-03:00"
+    },
+    {
+        "id_atendimento":  "1f92dce2-5ae6-49a0-8bba-bce4659b8975",
+        "id_cliente":  "0a90bb5b-176d-4c33-a844-982327850015",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-30T11:14:00.679516-03:00"
+    },
+    {
+        "id_atendimento":  "6e136298-5d74-49fc-8a6f-a3cf4865486b",
+        "id_cliente":  "e1a697d4-6c80-4be5-a0e0-20a450c469c6",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-30T08:28:22.267399-03:00"
+    },
+    {
+        "id_atendimento":  "679153a4-b7d5-4a83-b8d3-797b78674a71",
+        "id_cliente":  "13bbe7af-c0ad-4f43-9db7-4d1feb06cf46",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-29T14:39:06.54581-03:00"
+    },
+    {
+        "id_atendimento":  "72a03c04-7c09-4bc8-a0ec-707bdbdd5052",
+        "id_cliente":  "3b56ce5f-8cfe-4f6b-8591-00f51aa5b5c1",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-29T11:25:36.819446-03:00"
+    },
+    {
+        "id_atendimento":  "37347b9f-4a65-487e-a960-84d7a0aff47d",
+        "id_cliente":  "85a1f0c0-149d-419f-b5a9-eeec9ad46da7",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-29T05:15:04.120824-03:00"
+    },
+    {
+        "id_atendimento":  "48b72035-b943-4706-a15a-ff53e529083e",
+        "id_cliente":  "7bde392c-4eb6-47f6-8aed-ca593106bca0",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-28T18:49:09.18236-03:00"
+    },
+    {
+        "id_atendimento":  "91eb2284-4c23-4716-9697-cc2f51f28db5",
+        "id_cliente":  "497e8860-5743-4d27-ba45-e67c016c357d",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-28T15:29:31.686776-03:00"
+    },
+    {
+        "id_atendimento":  "d8bb2236-676a-43b4-995c-b228d18646f1",
+        "id_cliente":  "99d0472f-fcd7-435b-80ad-ca939cadd54f",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-28T13:38:14.829078-03:00"
+    },
+    {
+        "id_atendimento":  "05024333-82b3-4376-a7fe-134fcfc5d5e5",
+        "id_cliente":  "4bc5eb23-b97f-4b5d-a9d7-2c74936fc3b0",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-28T08:56:23.284349-03:00"
+    },
+    {
+        "id_atendimento":  "2013b8f7-d432-4f2a-8c67-7ad0175715bd",
+        "id_cliente":  "56464003-d858-4e59-918e-48954ba3939b",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-28T00:29:11.677378-03:00"
+    },
+    {
+        "id_atendimento":  "d313356d-8ef6-44e5-b503-295dc1acf0a1",
+        "id_cliente":  "c98a1021-2085-4767-ae31-95c25b37ed31",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-27T15:29:45.856849-03:00"
+    },
+    {
+        "id_atendimento":  "b0ff3356-8c2c-4242-a5b0-27356744529a",
+        "id_cliente":  "aa8247a2-2e3a-457c-804b-da6a46932857",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-27T12:04:48.232536-03:00"
+    },
+    {
+        "id_atendimento":  "64d9a7f5-12c0-4752-9d13-fe2df19a893e",
+        "id_cliente":  "0ac4cd01-106c-447b-a1d6-7cc9e2abd670",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-27T11:51:41.574071-03:00"
+    },
+    {
+        "id_atendimento":  "d17c28b2-d128-4ad3-85f3-0571848020ed",
+        "id_cliente":  "4ce46de6-04c4-4d3d-8678-416ddd123030",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-27T11:18:14.0208-03:00"
+    },
+    {
+        "id_atendimento":  "c4a8eab4-c3b2-4ee9-b68f-da8cd1f9ad1d",
+        "id_cliente":  "994a1180-ca5f-44b1-8e42-393163dbf484",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-27T09:09:01.335133-03:00"
+    },
+    {
+        "id_atendimento":  "f9e01518-f5e1-4f7f-81e2-a7e526ad8cb0",
+        "id_cliente":  "3ff4bfcc-c335-4150-b528-ff06ca24a10d",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-27T08:28:04.132083-03:00"
+    },
+    {
+        "id_atendimento":  "de634b1b-53b1-41de-b4a7-56757aaae233",
+        "id_cliente":  "6fa7883d-3db2-426b-b774-fbe8773b0aea",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-27T06:36:21.25913-03:00"
+    },
+    {
+        "id_atendimento":  "49dfbc10-fcee-46c4-b656-cec2688b3d2b",
+        "id_cliente":  "4de9f064-988e-415e-9bbd-53efe8fb5a1d",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-26T13:15:52.593932-03:00"
+    },
+    {
+        "id_atendimento":  "6f37e2b1-690d-4310-8cbc-60e943af5187",
+        "id_cliente":  "69faed4b-6a14-4a61-9854-73df154bccef",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-26T13:00:45.53283-03:00"
+    },
+    {
+        "id_atendimento":  "ba45c8ae-16c2-4396-8fe8-74667f7dbae8",
+        "id_cliente":  "d5c0b281-b692-4241-88af-74a7182b7d97",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-26T12:27:35.890781-03:00"
+    },
+    {
+        "id_atendimento":  "587f1d3c-f4be-4dd8-bf54-c4197e27e384",
+        "id_cliente":  "ace85934-abe0-4694-ab13-e3db34374fb8",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-26T12:04:08.575642-03:00"
+    },
+    {
+        "id_atendimento":  "3aac928c-5331-41cc-ab70-d53b75c99b10",
+        "id_cliente":  "3335bd80-9802-47b8-a751-5226452f721d",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-26T11:12:32.887099-03:00"
+    },
+    {
+        "id_atendimento":  "c7fca0b6-9029-4575-a2d9-4710b495f43b",
+        "id_cliente":  "dbd2d577-832a-4016-80f9-6c2b90b28bdc",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-26T08:41:56.737233-03:00"
+    },
+    {
+        "id_atendimento":  "ac48a6ce-218a-4936-8fbd-4e7331aa996c",
+        "id_cliente":  "19159c9c-a4d4-455b-8487-971a64e6a99d",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-26T08:23:10.87969-03:00"
+    },
+    {
+        "id_atendimento":  "0ef5e6fb-c8b0-46f5-aed7-d3c497327598",
+        "id_cliente":  "94c6d64d-c753-4112-9d12-9b64341fa70d",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-25T15:59:42.420436-03:00"
+    },
+    {
+        "id_atendimento":  "594fe603-fbe5-4564-900f-c80b4dea71c1",
+        "id_cliente":  "a496c708-f201-4ae7-b910-a63e03620b53",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-25T14:47:10.083138-03:00"
+    },
+    {
+        "id_atendimento":  "f1a05ba8-3118-485b-9c6e-5d2a380e3e65",
+        "id_cliente":  "2cb0efb1-6539-4376-993f-6b9e4e08a16c",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-25T14:18:20.509837-03:00"
+    },
+    {
+        "id_atendimento":  "ba530847-f0af-4d1d-9698-6d0072a9e445",
+        "id_cliente":  "4677a544-2c59-4526-90bc-c07068580f4b",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-25T13:27:51.07031-03:00"
+    },
+    {
+        "id_atendimento":  "2a061176-fe91-4c16-970a-62ea67ce094f",
+        "id_cliente":  "0bcfaaec-7e61-4f01-8c9d-192d50eb4ba3",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-25T12:55:55.248888-03:00"
+    },
+    {
+        "id_atendimento":  "17862880-f088-413b-8651-98c024186c54",
+        "id_cliente":  "339f5b6c-13ff-4a5d-b1a7-f62d13a06072",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-25T12:06:46.78107-03:00"
+    },
+    {
+        "id_atendimento":  "ca3190a7-71bf-424e-8df6-3c8e3bb7c972",
+        "id_cliente":  "c7cbf35c-0955-45f3-b8ba-26a77bdb03cc",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-25T11:40:08.622996-03:00"
+    },
+    {
+        "id_atendimento":  "6bc8f61c-672c-4d12-bb64-ec78135885b5",
+        "id_cliente":  "1dc97814-e2f3-4fc8-9c98-46d6c55b8074",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-25T11:02:35.465477-03:00"
+    },
+    {
+        "id_atendimento":  "fd585ce0-10a7-484b-abaf-f8ea6d6f904c",
+        "id_cliente":  "3dbb1f4f-2b22-432c-9dd9-bc18668b3980",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-25T10:46:43.83604-03:00"
+    },
+    {
+        "id_atendimento":  "aacb0e31-ca80-46f8-903f-da9d7647f64a",
+        "id_cliente":  "d1bede71-1c04-456e-b94b-27bc622960b9",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-25T10:37:26.018726-03:00"
+    },
+    {
+        "id_atendimento":  "e23a8006-3139-400b-876d-e084546777c2",
+        "id_cliente":  "825d4bf3-0d98-48de-bee5-233cf2eb069e",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-25T10:00:01.964135-03:00"
+    },
+    {
+        "id_atendimento":  "30453157-8b18-4fe4-a6f2-1b3a3e2eee07",
+        "id_cliente":  "fddcddac-14fb-4058-9688-ce2989ac2a43",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-25T09:54:51.164758-03:00"
+    },
+    {
+        "id_atendimento":  "7bd1a307-fd6b-447d-9d03-33032226f3fe",
+        "id_cliente":  "8240e262-4547-4dc5-aa56-8dbd1b697910",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-25T08:47:22.882382-03:00"
+    },
+    {
+        "id_atendimento":  "e82aa886-b4e6-41a7-834d-fd51338990e4",
+        "id_cliente":  "038582c4-e633-4edb-bc4b-e626e9d6252e",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-25T08:29:49.739407-03:00"
+    },
+    {
+        "id_atendimento":  "b054301a-9114-431d-9ba3-414a035799fc",
+        "id_cliente":  "2341fb38-ece3-42bb-adef-3c48155c9d98",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-25T07:06:43.017658-03:00"
+    },
+    {
+        "id_atendimento":  "ef8f7b57-ca36-429d-b07f-711d2a3dea0a",
+        "id_cliente":  "155d77e8-fcee-4594-9b24-3e61173b86c9",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-25T03:51:04.75085-03:00"
+    },
+    {
+        "id_atendimento":  "1c934ff7-8984-47cb-b740-2144a903da05",
+        "id_cliente":  "c6f15b18-d91f-46c8-af1f-4e1ae03677a0",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-25T02:29:36.77799-03:00"
+    },
+    {
+        "id_atendimento":  "639d972b-7b74-407c-802b-a990c6fbe356",
+        "id_cliente":  "221e9f39-9daa-4d46-a633-fecee00941db",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-25T00:02:01.051785-03:00"
+    },
+    {
+        "id_atendimento":  "c86ddd07-df0a-4c36-b3cb-0401c2d0cf0e",
+        "id_cliente":  "b2c16795-8c96-4bd9-ba82-c2ea1b400f42",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-24T12:51:02.690692-03:00"
+    },
+    {
+        "id_atendimento":  "8281588d-d1e1-4020-9a7c-43025abc01e3",
+        "id_cliente":  "c39a1672-ab78-411d-9db7-84c41d6fdaaf",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-24T12:20:43.208462-03:00"
+    },
+    {
+        "id_atendimento":  "6a154b3b-992b-4952-a9da-460335ca08e7",
+        "id_cliente":  "b53f0828-17d6-4848-b394-7d24f62a120a",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-24T12:08:01.358284-03:00"
+    },
+    {
+        "id_atendimento":  "6b910cf8-5135-49e0-bbd1-f3f7aa1ea517",
+        "id_cliente":  "97508c6a-e2b6-4600-84ed-018ceb82420c",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-24T08:48:39.744398-03:00"
+    },
+    {
+        "id_atendimento":  "baeb7817-c9c1-49d5-ac8f-da478c344f4a",
+        "id_cliente":  "650e8fb9-d539-4b0e-83c1-5efb0be6dc23",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-24T03:41:34.281557-03:00"
+    },
+    {
+        "id_atendimento":  "72851f0f-79a7-43a2-b49d-8106f46957c6",
+        "id_cliente":  "8f950f0a-3635-468b-9237-cae1eae06a61",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-24T02:26:07.084485-03:00"
+    },
+    {
+        "id_atendimento":  "b182098a-d84b-47eb-9d22-de93d1439dbc",
+        "id_cliente":  "28cbb0c0-c56f-47aa-9e70-0f4ffecda8de",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-24T00:35:01.285909-03:00"
+    },
+    {
+        "id_atendimento":  "a8327173-7ba2-4a2b-8ddd-908e23a0630d",
+        "id_cliente":  "8706d664-43f7-4641-adad-d9e3cb487c14",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-23T15:18:46.274221-03:00"
+    },
+    {
+        "id_atendimento":  "bfc0bea0-9c53-4896-bb89-e9ced45b6968",
+        "id_cliente":  "f8c35da2-3a68-4fdf-94ea-8eabc0124983",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-23T11:17:29.47165-03:00"
+    },
+    {
+        "id_atendimento":  "51dc45c3-42b1-4b40-ad1a-029960436f8b",
+        "id_cliente":  "11f94109-147d-45eb-ae0d-89c7fc81deb6",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-23T10:28:02.58782-03:00"
+    },
+    {
+        "id_atendimento":  "30cc5180-39f6-4fef-a0b6-13076e44b486",
+        "id_cliente":  "12c44bbe-fc23-48a3-bf7e-66a8009e1665",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-23T09:52:12.688485-03:00"
+    },
+    {
+        "id_atendimento":  "50677c60-6f80-49d5-9306-6b69408f7650",
+        "id_cliente":  "09847557-e961-4090-bd73-93d71aac13a8",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-23T09:46:37.555387-03:00"
+    },
+    {
+        "id_atendimento":  "15c3a4e1-ff85-491f-874d-96bfacea7b21",
+        "id_cliente":  "03a01141-beb1-4722-824f-f7788709c8de",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-23T09:24:27.163412-03:00"
+    },
+    {
+        "id_atendimento":  "ab9b00a3-0088-432d-a725-725c16889a4b",
+        "id_cliente":  "1bc76aba-9d28-4575-9e66-d9a638aec6af",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-23T08:48:52.08598-03:00"
+    },
+    {
+        "id_atendimento":  "750f4848-009e-4dfd-9c71-84f6ff0ae223",
+        "id_cliente":  "9b128a18-db46-4346-a65a-0152397c5432",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-23T08:42:58.174995-03:00"
+    },
+    {
+        "id_atendimento":  "05a2ca25-e65a-412d-9990-2a1cd54ccfe7",
+        "id_cliente":  "96453ea4-033a-4afd-a830-a8f3022d6300",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-23T08:09:50.893218-03:00"
+    },
+    {
+        "id_atendimento":  "6fa48efd-cbd0-4fc5-aa13-6064ab611cf9",
+        "id_cliente":  "a883e3ae-6c96-4af4-b17f-24ee71d32a0d",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-23T05:05:16.015295-03:00"
+    },
+    {
+        "id_atendimento":  "282d33bf-e000-4d6d-a15d-6c1c794581f3",
+        "id_cliente":  "46a05a39-7c6f-477d-92c9-b9a67e350f7a",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-22T16:35:32.183919-03:00"
+    },
+    {
+        "id_atendimento":  "690d39b7-78f8-429c-a090-882279ee7ed7",
+        "id_cliente":  "2ab5b0f5-30e3-47fc-914f-73603813cbc4",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-22T16:17:38.150704-03:00"
+    },
+    {
+        "id_atendimento":  "5634ccf9-39a7-42e8-9aae-a7d576417f40",
+        "id_cliente":  "4cd407d0-6de5-48c3-9bb4-914845b2f506",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-22T14:41:44.396329-03:00"
+    },
+    {
+        "id_atendimento":  "bfaf2cc9-e8a2-4930-aab0-68e8b0de88b2",
+        "id_cliente":  "ed666359-615b-4e2a-8c08-aa90642893a9",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-22T14:40:21.874136-03:00"
+    },
+    {
+        "id_atendimento":  "6aa1ead4-9609-41c0-8887-87631a7a1088",
+        "id_cliente":  "8e11d00c-7233-492a-9c44-c0222630aad2",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-22T14:20:53.546692-03:00"
+    },
+    {
+        "id_atendimento":  "40e498c0-e67a-4524-bfff-0b7c68ca951a",
+        "id_cliente":  "1c3fef98-1ce3-4426-9f01-5314a1d4a9ac",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-22T13:43:05.959936-03:00"
+    },
+    {
+        "id_atendimento":  "cf3f45b6-2bf9-42d9-8714-6b5eda4e474e",
+        "id_cliente":  "c552226b-c821-4097-aad9-7ac415b983b2",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-22T13:18:09.399297-03:00"
+    },
+    {
+        "id_atendimento":  "be2f4494-777c-4edb-891f-93b22a7d1841",
+        "id_cliente":  "f9cafe67-db83-4a84-90cd-efc0b1bcbbc3",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-22T12:43:44.352132-03:00"
+    },
+    {
+        "id_atendimento":  "b08af178-3bd8-4330-ac4f-11e44507f1b2",
+        "id_cliente":  "0c9a9ec0-337f-49a4-a015-5825540b7d26",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-22T11:52:40.582464-03:00"
+    },
+    {
+        "id_atendimento":  "16df2c8a-116c-4df7-8d12-5823c1fa553e",
+        "id_cliente":  "a6ed1962-5aeb-4980-b1c3-e3e8637ee198",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-22T11:39:45.306288-03:00"
+    },
+    {
+        "id_atendimento":  "16b3d97e-9070-4365-bb5f-809a346ee9fb",
+        "id_cliente":  "ba6e7f8e-fbf2-486d-b606-c4983b6125f7",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-22T11:20:09.520522-03:00"
+    },
+    {
+        "id_atendimento":  "f051d44a-8513-4aea-a678-6ee8849790f7",
+        "id_cliente":  "dfb798e0-e4bb-4b3a-9ee6-e414ea5800b5",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-22T10:03:43.556173-03:00"
+    },
+    {
+        "id_atendimento":  "127b00aa-069d-4fc6-b9a5-ab4a2024ec06",
+        "id_cliente":  "3592e40c-5e47-43fa-b7e4-8d91f00ef3fc",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-22T06:43:42.327834-03:00"
+    },
+    {
+        "id_atendimento":  "c21a5849-dc07-46a2-8844-2cd6b777cafd",
+        "id_cliente":  "95b59bef-d563-4c61-91f1-cf335583d983",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-22T02:52:52.188856-03:00"
+    },
+    {
+        "id_atendimento":  "00cee471-e7bc-465c-b7ac-0827a249e008",
+        "id_cliente":  "2b896c3b-db37-4764-a1a6-dc2cb6c5a7b4",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-21T14:36:26.1662-03:00"
+    },
+    {
+        "id_atendimento":  "a03afa4e-3cde-49d6-ad27-f875a2ea333e",
+        "id_cliente":  "fc0c73dc-cbbd-425e-85f8-4a8984db574c",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-21T13:33:18.19903-03:00"
+    },
+    {
+        "id_atendimento":  "45646386-454f-46d4-98e8-ec9e03c4441b",
+        "id_cliente":  "40c50c54-bc7f-420b-88df-568f75c41716",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-21T13:04:25.245554-03:00"
+    },
+    {
+        "id_atendimento":  "7a93f1c7-9220-4da4-a30a-706507589fa4",
+        "id_cliente":  "ab02cf3e-4924-4a1c-a2e1-581263befcfa",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-21T11:32:48.05622-03:00"
+    },
+    {
+        "id_atendimento":  "03984922-f1f2-4f9b-9eee-25b650eb968a",
+        "id_cliente":  "f2b3ac29-285c-49f3-b65a-2a9f2eb024df",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-21T10:56:11.762101-03:00"
+    },
+    {
+        "id_atendimento":  "e842aee1-059d-430f-bef0-cd5a99431719",
+        "id_cliente":  "1752c164-6534-4bc5-8489-65cb98bb56a6",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-21T09:19:11.026636-03:00"
+    },
+    {
+        "id_atendimento":  "5ea23e03-db57-4f0c-a41c-c5d08774adda",
+        "id_cliente":  "57c90357-6de0-4d5a-9bdb-b153c0fdb5a5",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-21T08:50:08.985326-03:00"
+    },
+    {
+        "id_atendimento":  "2699a5c0-f582-4ef3-af50-cd1f4da67403",
+        "id_cliente":  "e98d2774-b60f-4516-8a69-a7c53146c13d",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-21T07:47:23.913889-03:00"
+    },
+    {
+        "id_atendimento":  "db546ebf-c1d2-467b-9c75-eebf0601e1eb",
+        "id_cliente":  "fd99d438-1405-4536-821e-5b3044b9e23b",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-20T12:20:49.730412-03:00"
+    },
+    {
+        "id_atendimento":  "ed5a1ac0-c6cb-493c-9bd5-01f9fea58cc3",
+        "id_cliente":  "4cd42c7c-8063-4155-adfe-a409218f47e0",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-20T10:11:52.754225-03:00"
+    },
+    {
+        "id_atendimento":  "edb05ba4-1fbe-44c5-8095-071718590af8",
+        "id_cliente":  "dce4f151-28be-464b-b8ba-23ff6b43ed63",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-20T09:42:31.139604-03:00"
+    },
+    {
+        "id_atendimento":  "08972de6-a3d3-4e38-8c47-7bf527ad3e31",
+        "id_cliente":  "41696c9e-3524-47ee-8db2-a58dac9daf6f",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-20T08:55:41.084234-03:00"
+    },
+    {
+        "id_atendimento":  "43a478af-3c88-45d1-8864-81fcfb072f36",
+        "id_cliente":  "459b6558-7064-45dc-afa3-313b609e0696",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-20T08:48:10.265668-03:00"
+    },
+    {
+        "id_atendimento":  "6a8a08a2-9259-48f8-b888-be8d16b4160f",
+        "id_cliente":  "4ad401b6-e675-4892-8a89-619e32001c45",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-20T08:47:01.278472-03:00"
+    },
+    {
+        "id_atendimento":  "fcb66749-4962-4fd9-95d7-a59b8512a0c2",
+        "id_cliente":  "c557dbf9-ac07-462b-bca0-570d7ff63425",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-20T07:51:42.077937-03:00"
+    },
+    {
+        "id_atendimento":  "3a212539-50ad-4447-8287-e868b3c89b7b",
+        "id_cliente":  "afd839df-dabd-489f-86ca-a56e84d8907d",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-19T13:51:05.668334-03:00"
+    },
+    {
+        "id_atendimento":  "001f7a8d-3d2d-459d-ae41-52a4f330610d",
+        "id_cliente":  "a2907167-81a2-42f4-a00c-af812620eb7a",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-19T13:02:40.780516-03:00"
+    },
+    {
+        "id_atendimento":  "d4a3ce73-f160-4bf6-be6d-895bb3ad8dd0",
+        "id_cliente":  "bdfddae4-1b6a-4da6-8a88-27953db43cab",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-19T11:24:19.41621-03:00"
+    },
+    {
+        "id_atendimento":  "80a44357-7398-4c01-8c29-16112e273289",
+        "id_cliente":  "98072e9f-0f7e-4d9d-99d0-40b47353fb0d",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-19T10:21:51.387138-03:00"
+    },
+    {
+        "id_atendimento":  "5628ae9f-6ef7-4d61-a628-78752a4eea34",
+        "id_cliente":  "5fddeef4-5afd-4d30-9aad-b5fbd08c4e7d",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-19T10:21:37.225303-03:00"
+    },
+    {
+        "id_atendimento":  "4530ba04-298c-4b8b-aaeb-7fba51844982",
+        "id_cliente":  "1719abd2-2df4-46e9-bbac-848319c15ada",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-19T10:16:11.51744-03:00"
+    },
+    {
+        "id_atendimento":  "5a0a6336-e9d9-438a-a604-b90f81e7eeba",
+        "id_cliente":  "62cbad10-3884-4f98-b6ec-5cf0fab49166",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-19T09:17:15.645521-03:00"
+    },
+    {
+        "id_atendimento":  "f31b1b18-01ef-41c4-9b6f-67b344bb387a",
+        "id_cliente":  "8409af4e-5fc3-4337-85c6-e3ea19936d42",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-19T09:02:24.349592-03:00"
+    },
+    {
+        "id_atendimento":  "9da89c54-9aba-4890-aa2c-fc57bcab7bac",
+        "id_cliente":  "b28d875e-9d05-481d-ba49-277eec6866c1",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-19T08:09:41.271355-03:00"
+    },
+    {
+        "id_atendimento":  "2c19bb0a-17f7-438b-a53e-ec9854f34790",
+        "id_cliente":  "aa36e890-10b9-45ab-96d9-b1ba22579972",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-19T06:25:37.641152-03:00"
+    },
+    {
+        "id_atendimento":  "3ce5b2f7-42b2-4556-8ab0-7a9829586628",
+        "id_cliente":  "c931377c-7b97-4aa2-b663-cf4ca51bc7e4",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-18T17:03:02.688114-03:00"
+    },
+    {
+        "id_atendimento":  "fa75739a-e24d-4bba-a48d-02a754b12265",
+        "id_cliente":  "fbd04977-ba06-4370-883c-d56bb05d355c",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-18T13:07:48.844503-03:00"
+    },
+    {
+        "id_atendimento":  "e7debb0b-2250-4e2c-83a1-9222d266deee",
+        "id_cliente":  "6be32f70-eb37-4a46-81de-1be7ab52efe7",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-18T12:17:35.752862-03:00"
+    },
+    {
+        "id_atendimento":  "c5cef3c6-0c07-44a2-a17a-1720382e3b2d",
+        "id_cliente":  "46e024e0-220c-4c08-bd2e-a3e232b61596",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-18T11:56:49.62504-03:00"
+    },
+    {
+        "id_atendimento":  "c9b1198a-3c63-4837-bbfd-efd8e20ea008",
+        "id_cliente":  "18c36adf-d2a4-493a-8089-ef23c60151e6",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-18T11:21:27.607206-03:00"
+    },
+    {
+        "id_atendimento":  "44f9f593-19d1-469d-abee-abcf8f95a3be",
+        "id_cliente":  "7bb35551-78ef-45b5-9724-99ad7d955b7a",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-18T11:16:53.537429-03:00"
+    },
+    {
+        "id_atendimento":  "b515faa7-dad9-42ef-98c8-952099e4c95c",
+        "id_cliente":  "fa0e5d87-f1d2-4e18-9732-95c83f7ec51b",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-18T10:57:09.201825-03:00"
+    },
+    {
+        "id_atendimento":  "0265056c-f6ee-47ff-a253-3f0753c00b3f",
+        "id_cliente":  "eaa6054b-1887-4426-93b7-3fdcb8278c57",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-18T10:49:15.348272-03:00"
+    },
+    {
+        "id_atendimento":  "127bf43f-79c8-459e-acac-eb29c080edc3",
+        "id_cliente":  "7e7b284e-4fd7-40ee-9fb9-9c738004202b",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-18T10:29:23.427631-03:00"
+    },
+    {
+        "id_atendimento":  "413d3e35-5033-4949-9fc8-4890ab9a00d6",
+        "id_cliente":  "dd6689ad-b459-4446-863f-a8100aea4dce",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-18T10:10:01.856887-03:00"
+    },
+    {
+        "id_atendimento":  "56538961-f82f-4d1f-acaa-c19cc16ea139",
+        "id_cliente":  "c828d762-f319-4b59-8afa-4b4d7ed56be5",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-18T09:59:38.429242-03:00"
+    },
+    {
+        "id_atendimento":  "2679cc3d-ea51-4ab6-a150-1db14220c2bb",
+        "id_cliente":  "9054c525-eda0-4bcf-81ae-f8183664c201",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-18T09:00:31.823253-03:00"
+    },
+    {
+        "id_atendimento":  "8e9d0d13-4df5-4496-982c-7dfbb88fc933",
+        "id_cliente":  "569073dd-7ed3-4d9f-8c69-90d4c2afdb9f",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-18T08:57:56.844119-03:00"
+    },
+    {
+        "id_atendimento":  "e2fc2fe4-b2d8-48a4-b2d2-6469eaeec119",
+        "id_cliente":  "74ca81c6-295a-4a30-a0a1-8c57ddc06eae",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-18T08:34:05.741957-03:00"
+    },
+    {
+        "id_atendimento":  "dc91670e-26e6-400a-a769-c2e8763891d5",
+        "id_cliente":  "a28483b1-ba9d-45c4-a244-dfee79a2cf58",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-17T23:56:15.925369-03:00"
+    },
+    {
+        "id_atendimento":  "4859cace-5d60-49b7-987d-c7109a6dab0e",
+        "id_cliente":  "72251287-a9e8-40c7-98b5-f06ef081693c",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-17T19:14:23.442193-03:00"
+    },
+    {
+        "id_atendimento":  "53c65bad-4707-4265-b88b-2a0e39f7f329",
+        "id_cliente":  "333119be-73c4-4b70-b1e6-948254cf8c95",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-17T14:20:13.902848-03:00"
+    },
+    {
+        "id_atendimento":  "7d63bd68-1cd2-445b-811f-7d16519af3a5",
+        "id_cliente":  "3b799d4e-08de-4b61-9ecb-087ce8ebe144",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-17T13:32:49.981652-03:00"
+    },
+    {
+        "id_atendimento":  "5058f376-3437-40d5-8103-3e509369a67a",
+        "id_cliente":  "06951c84-4602-4c28-a4cd-86ccda4166d9",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-17T02:36:00.624025-03:00"
+    },
+    {
+        "id_atendimento":  "4db226a7-296d-452d-ad52-4712df44d7c7",
+        "id_cliente":  "3b8c7f84-4259-4384-938a-bc5ac635368a",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-16T18:43:20.607615-03:00"
+    },
+    {
+        "id_atendimento":  "d4ba0488-a32d-4565-acf0-65af8352aefc",
+        "id_cliente":  "63c9741b-1068-42fd-b0e3-eaac0f950104",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-16T11:00:33.137279-03:00"
+    },
+    {
+        "id_atendimento":  "398ca444-afd7-46b4-aa05-1e2b0816c104",
+        "id_cliente":  "886d9070-3b77-4bf8-a2d2-f0deef7d8679",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-16T10:17:17.945465-03:00"
+    },
+    {
+        "id_atendimento":  "c0d741d5-ab94-4a60-b3b9-892b8a34429f",
+        "id_cliente":  "2bbde339-0050-437f-b90b-21bc31d618f0",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-15T17:08:28.039886-03:00"
+    },
+    {
+        "id_atendimento":  "dabaf871-4ff6-4d08-b955-fb209a105ab2",
+        "id_cliente":  "ab9f77db-d5d9-4cd9-acc0-e67ed739b8be",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-15T13:50:39.024695-03:00"
+    },
+    {
+        "id_atendimento":  "d6e4431b-6d36-4f1a-88ac-c1c8c6a3504c",
+        "id_cliente":  "6914f415-370a-438e-8d0f-673450ffa2c9",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-15T12:14:16.481384-03:00"
+    },
+    {
+        "id_atendimento":  "4606288b-99fc-465c-8a71-296ead4d0521",
+        "id_cliente":  "0394ab5c-2a87-49b8-83c0-37aa06099dc3",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-15T11:31:39.428803-03:00"
+    },
+    {
+        "id_atendimento":  "68d3553e-a4d6-41fc-82f0-30a369def8eb",
+        "id_cliente":  "6335a771-9462-4d77-b1fd-c208412e4968",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-15T10:55:26.042665-03:00"
+    },
+    {
+        "id_atendimento":  "549c5755-4299-4c64-b5eb-181c981f65cc",
+        "id_cliente":  "8f6ab537-921b-46a6-9a9b-ef0abde40100",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-15T10:27:18.420242-03:00"
+    },
+    {
+        "id_atendimento":  "c97771e9-a878-45bc-a525-e7555dc950c4",
+        "id_cliente":  "fa6b8f03-9888-46c0-9c93-ba9be86cc92c",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-15T09:22:09.714519-03:00"
+    },
+    {
+        "id_atendimento":  "66b23dd8-8eb5-4b94-99ab-6527dba2709d",
+        "id_cliente":  "238af309-fcbd-4fa8-83eb-dd5da918a42b",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-14T17:58:42.312826-03:00"
+    },
+    {
+        "id_atendimento":  "16af4723-a8ad-4c6f-9cad-4e439aa0af3f",
+        "id_cliente":  "12ce9ed1-22d2-4925-8f59-7915235575e1",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-14T13:54:53.907941-03:00"
+    },
+    {
+        "id_atendimento":  "13467a3b-bf36-4286-8c25-7359f7aea251",
+        "id_cliente":  "562e166e-8af2-4ec8-a8de-d71db5867c52",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-14T13:48:41.030304-03:00"
+    },
+    {
+        "id_atendimento":  "5598b556-03be-400b-a7af-60a4970d61b8",
+        "id_cliente":  "e8d0154d-2cdf-4710-9ee9-98dddc35e849",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-14T12:49:21.415018-03:00"
+    },
+    {
+        "id_atendimento":  "0ebf0a1d-cc85-4d89-818f-fac22357e48e",
+        "id_cliente":  "beb9ddd8-4832-4cd9-a094-f16b1b092ab8",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-14T12:42:40.913812-03:00"
+    },
+    {
+        "id_atendimento":  "23af7625-0dee-40d6-aa11-def7cdd87ee1",
+        "id_cliente":  "57030861-ffe7-4a6f-8bf4-e7fc21097331",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-11T14:53:28.644039-03:00"
+    },
+    {
+        "id_atendimento":  "fa311da1-1b01-46f7-bbb2-d1c7c3a79cd7",
+        "id_cliente":  "b6e7622e-e3e0-4f86-be5b-084cd05809a5",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-11T10:07:25.409376-03:00"
+    },
+    {
+        "id_atendimento":  "d89a35fd-404c-41d3-99b5-445b2bc3b9fd",
+        "id_cliente":  "d4ec8ed0-19ac-4d4c-b7a5-69101fe9eb77",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  "Thiago",
+        "criado":  "2026-05-07T11:23:10.828252-03:00"
+    },
+    {
+        "id_atendimento":  "284f7825-b13e-4901-adfa-66b36830e78f",
+        "id_cliente":  "4e4acf2a-4f38-4971-85cc-608fbb035efc",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-07T10:48:36.499621-03:00"
+    },
+    {
+        "id_atendimento":  "0d328ae8-90a4-4846-a9aa-d51c28164f78",
+        "id_cliente":  "6387e304-298f-462b-8ed1-f1c768cbe833",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-06T13:04:23.398189-03:00"
+    },
+    {
+        "id_atendimento":  "5b1cfcd1-f7bc-41cf-90c4-8096d72bce4e",
+        "id_cliente":  "641fff98-18bc-4d12-9e3f-a8e80e529a26",
+        "temperatura":  null,
+        "etapa_funil":  "Lead",
+        "status":  null,
+        "atendente":  null,
+        "criado":  "2026-05-04T14:02:29.146775-03:00"
+    },
+    {
+        "id_atendimento":  "1e5541b7-f7c2-41b7-a85e-bc7588360bba",
+        "id_cliente":  "384f511d-654c-438c-bbf2-c9e18b9a9d87",
+        "temperatura":  "Quente",
+        "etapa_funil":  "Ganho",
+        "status":  "Negociação",
+        "atendente":  "Thiago",
+        "criado":  "2026-05-04T08:36:58.920709-03:00"
+    },
+    {
+        "id_atendimento":  "4e3c1f9d-e181-4737-a65d-06ad59c02796",
+        "id_cliente":  "1eeb3530-caf0-434b-a9f5-aaf4a6003af7",
+        "temperatura":  "Morno",
+        "etapa_funil":  "Proposta",
+        "status":  "Proposta Enviada",
+        "atendente":  "Thiago",
+        "criado":  "2026-04-30T13:17:17.25913-03:00"
+    },
+    {
+        "id_atendimento":  "208f5d4d-3042-4f49-ae8e-fcc08a1dea93",
+        "id_cliente":  "225bd4fa-dd60-479e-b405-cd5ceb793fdc",
+        "temperatura":  "Morno",
+        "etapa_funil":  "Proposta",
+        "status":  "Aguardando",
+        "atendente":  "Thiago",
+        "criado":  "2026-04-30T13:07:43.58846-03:00"
+    },
+    {
+        "id_atendimento":  "66f37e14-f233-4408-8f61-356038d51ef9",
+        "id_cliente":  "83379a46-3981-4064-9a31-bd367aa97acb",
+        "temperatura":  "Quente",
+        "etapa_funil":  "Ganho",
+        "status":  "Em produção",
+        "atendente":  "Thiago",
+        "criado":  "2026-04-30T12:54:25.942695-03:00"
+    },
+    {
+        "id_atendimento":  "15ba1618-82d1-471b-9ae9-03bef43d1258",
+        "id_cliente":  "09e6fe35-1a19-4024-8c36-092e3fd1d4b4",
+        "temperatura":  "Morno",
+        "etapa_funil":  "Ganho",
+        "status":  "Pendência Financeira",
+        "atendente":  "Geice Rufino",
+        "criado":  "2026-04-30T11:30:20.837365-03:00"
+    },
+    {
+        "id_atendimento":  "7592ca2a-4397-4b52-95e8-118d4d9ae403",
+        "id_cliente":  "3b54137f-79b2-482e-894b-1a3f5afccbe8",
+        "temperatura":  "Frio",
+        "etapa_funil":  "Atendimento",
+        "status":  "Orçamento",
+        "atendente":  "Thiago",
+        "criado":  "2026-04-29T09:12:44.839794-03:00"
+    },
+    {
+        "id_atendimento":  "6a40f12c-501b-4108-aa28-c478a94f7dd3",
+        "id_cliente":  "db406d47-f235-49e4-899e-d5577acbc9ba",
+        "temperatura":  "Quente",
+        "etapa_funil":  "Ganho",
+        "status":  "Finalizado",
+        "atendente":  "Geice Rufino",
+        "criado":  "2026-04-28T16:01:18.355033-03:00"
+    }
+]
