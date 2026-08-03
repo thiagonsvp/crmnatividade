@@ -6289,6 +6289,21 @@
       return (tipo || '').toString().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim();
     }
 
+    // Formata a sintaxe de mensagens do WhatsApp sem permitir HTML arbitrário.
+    function formatMessageHtml(value, highlight = '') {
+      let text = esc(value || '');
+      if (highlight) {
+        const re = new RegExp(escRe(highlight), 'gi');
+        text = text.replace(re, match => `<span class="chat-highlight">${match}</span>`);
+      }
+      return text
+        .replace(/\*([^*\n]+)\*/g, '<strong>$1</strong>')
+        .replace(/_([^_\n]+)_/g, '<em>$1</em>')
+        .replace(/~([^~\n]+)~/g, '<del>$1</del>')
+        .replace(/```([^`\n]+)```/g, '<code>$1</code>')
+        .replace(/\r?\n/g, '<br>');
+    }
+
     function fileExtension(name) {
       const clean = (name || '').toString().split('?')[0].split('#')[0];
       const dot = clean.lastIndexOf('.');
@@ -6585,20 +6600,16 @@
 
         let content = '';
         if (isText) {
-          let txt = esc(m.mensagem || '');
-          if (highlight) {
-            const re = new RegExp(escRe(highlight), 'gi');
-            txt = txt.replace(re, match => `<span class="chat-highlight">${match}</span>`);
-          }
+          const txt = formatMessageHtml(m.mensagem || '', highlight);
           const textHtml = txt ? `<div>${txt}</div>` : (!attachment ? '<span style="opacity:.5;font-style:italic">mensagem vazia</span>' : '');
           content = `<div class="msg-bubble">${textHtml}${attachment}</div>`;
         } else if (attachment) {
           const player = kind === 'audio' ? `<audio controls src="${esc(m.url_anexo)}" style="max-width:240px;height:34px;margin-top:8px;display:block"></audio>` : '';
-          const caption = m.mensagem ? `<div class="chat-caption">${esc(m.mensagem)}</div>` : '';
+          const caption = m.mensagem ? `<div class="chat-caption">${formatMessageHtml(m.mensagem, highlight)}</div>` : '';
           content = `<div class="msg-bubble"><div class="msg-media">${esc(attachmentLabel(kind))}</div>${player}${attachment}${caption}</div>`;
         } else {
           // fallback: show message text if available, otherwise show type label
-          const fallbackText = m.mensagem ? esc(m.mensagem) : `<span style="opacity:.6;font-style:italic">[${esc(tipo)}]</span>`;
+          const fallbackText = m.mensagem ? formatMessageHtml(m.mensagem, highlight) : `<span style="opacity:.6;font-style:italic">[${esc(tipo)}]</span>`;
           content = `<div class="msg-bubble">${fallbackText}</div>`;
         }
 
