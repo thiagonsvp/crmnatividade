@@ -4894,9 +4894,16 @@
 
     async function loadCompaniesDropdown() {
       try {
-        const data = await sbGet('crm_clientes', 'select=empresa&empresa=not.is.null');
+        const [dataClients, dataUsers] = await Promise.all([
+          sbGet('crm_clientes', 'select=empresa&empresa=not.is.null'),
+          sbGet('crm_usuarios', 'select=empresa&empresa=not.is.null')
+        ]);
         const sel = document.getElementById('companySelect');
-        const list = [...new Set((data || []).map(d => d.empresa).filter(Boolean))].sort();
+        const allEmpresas = [
+          ...(dataClients || []).map(d => d.empresa),
+          ...(dataUsers || []).map(d => d.empresa)
+        ];
+        const list = [...new Set(allEmpresas.filter(Boolean))].sort();
         const savedCompany = getSavedCompany();
         sel.innerHTML = '<option value="">Todas as empresas</option>';
         list.forEach(c => {
